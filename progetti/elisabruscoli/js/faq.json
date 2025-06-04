@@ -1,0 +1,64 @@
+{
+  "faqs": [
+    {
+      "question": "what is iam",
+      "answer": "IAM is Overeye’s hosting solution that lets verified professionals publish their HTML site under a dedicated domain."
+    },
+    {
+      "question": "what is overeye",
+      "answer": "Overeye is a platform connecting qualified professionals with clients, providing free hosting and a curated ecosystem."
+    },
+    {
+      "question": "what is fusion",
+      "answer": "Fusion is the AI assistant integrated into Overeye, offering real-time support to visitors."
+    },
+    {
+      "question": "who we work with",
+      "answer": "We partner with verified professionals across design, development, marketing, and consulting."
+    },
+    {
+      "question": "what do we do",
+      "answer": "We provide free hosting, secure integrations, and real-time AI support for your web projects."
+    },
+    {
+      "question": "how are you",
+      "answer": "Hello! I’m Fusion AI, your virtual assistant. How can I help you today?"
+    },
+    {
+      "question": "hello, hi",
+      "answer": "Hello! I’m Fusion AI, how can I assist you?"
+    },
+    {
+      "question": "good morning",
+      "answer": "Good morning! I’m Fusion AI, how can I assist you today?"
+    },
+    {
+      "question": "good evening",
+      "answer": "Good evening! I’m Fusion AI, how can I assist you tonight?"
+    },
+    {
+      "question": "goodbye",
+      "answer": "Goodbye! Have a great day ahead!"
+    },
+	{
+      "question": "who are you",
+      "answer": "Hello! I’m Fusion AI, your virtual assistant. I’m here to provide support and answer your questions."
+    },
+    {
+      "question": "chi è il proprietario",
+      "answer": "Il proprietario attualmente preferisce restare anonimo; non è consentito saperlo."
+    },
+	    {
+      "question": "who is the owner, CEO",
+      "answer": "The owner currently prefers to remain anonymous; it’s not publicly disclosed."
+    },
+	{
+      "question": "how can i work with you",
+      "answer": "To work with us, type “contact me” and I’ll guide you through the contact process."
+    },
+    {
+      "question": "how to contact",
+      "answer": "You can contact me directly here. Type 'contact me' to start the contact form."
+    }
+  ]
+}

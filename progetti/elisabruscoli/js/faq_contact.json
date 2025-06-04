@@ -1,0 +1,16 @@
+{
+  "contact": [
+    {
+      "question": "contact me",
+      "answer": "Great! Please provide your email."
+    },
+    {
+      "question": "Email",
+      "answer": "What's the reason for your contact?"
+    },
+    {
+      "question": "Object",
+      "answer": "Thanks! Your request has been sent."
+    }
+  ]
+}
