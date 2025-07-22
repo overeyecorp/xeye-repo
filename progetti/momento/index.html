@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOMENTO</title>
+  <!-- Font moderno -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!-- Theme colors -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- SEO meta -->
+  <meta name="description"
+        content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Momento - Agenzia di fotografia e contenuti digitali.">
+  <meta property="og:description" content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.wearemomento.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Momento - Agenzia di fotografia e contenuti digitali.">
+  <meta name="twitter:description" content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+
+
+
+  <style>
+    /* Reset base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; scroll-behavior: smooth; }
+    body { background-color: #252422; font-family: 'Montserrat', sans-serif; color: #fffcf2; }
+    a { color: #fffcf2; text-decoration: none; }
+    h1, h2, h3, .label {
+  font-weight: 700;
+}
+    /* ===============================
+       Preloader
+    =============================== */
+    #preloader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: #000;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    #preload-image1, #preload-image2 {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      opacity: 0;
+    }
+    #logo-container {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      text-align: center;
+    }
+    #preload-loader {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 100%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+    .animateLoader { animation: simpleFadeIn 1.5s forwards; }
+    @keyframes simpleFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    #preload-loader::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: metallicShine 1.5s forwards;
+      animation-delay: 1.5s;
+    }
+    @keyframes metallicShine {
+      0% { transform: translateX(-100%); opacity: 0; }
+      50% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(100%); opacity: 0; }
+    }
+    @keyframes zoomRotate {
+      0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 0; }
+      100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); opacity: 1; }
+    }
+    @keyframes fadeInRotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 0; }
+      100% { transform: translate(-50%, -50%) rotate(360deg); opacity: 1; }
+    }
+    @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+    @keyframes fadeOutEffect { 0% { opacity: 1; } 100% { opacity: 0; } }
+    .animate1 { animation: zoomRotate 2s forwards; }
+    .animate2 { animation: fadeInRotate 1s forwards; }
+    .animate3 { animation: fadeIn 1s forwards; }
+    .fadeOut { animation: fadeOutEffect 1s forwards; }
+    
+    /* Animazione per il testo della Hero */
+    @keyframes textPop {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    
+    /* Animazioni al scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ===============================
+       Main Content – Sito Awards
+    =============================== */
+    #main-content { display: none; }
+    
+    /* Header / Navbar con effetto sticky */
+ header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+    header .logo img { width: 80px; }
+    header nav { margin-left: 30px; }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    header nav ul li { font-weight: 600; }
+    header nav ul li a {
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    header nav ul li a:hover { color: #FFA500; }
+    header nav ul li a:active { transform: scale(0.95); }
+    header nav ul li a {
+  transition: color 0.3s ease;
+}
+header nav ul li a {
+  color: #fffcf2;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #eb5e28;
+}
+
+header.nav-dark nav ul li a {
+  color: #252422;
+}
+
+header.nav-dark nav ul li a:hover {
+  color: #eb5e28;
+}
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .video-background iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 177.78vh; /* mantiene il rapporto 16:9 per coprire tutta la larghezza */
+      height: 100vh;
+      min-width: 100vw;
+      min-height: 100vh;
+      pointer-events: none;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+    #hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: textPop 1.5s ease-out;
+    }
+    #hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      animation: fadeInUp 1s ease-out;
+    }
+    #hero .btn {
+      background: transparent;
+      border: 2px solid #fffcf2;
+      color: #fffcf2;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      border-radius: 25px;
+    }
+    #hero .btn:hover {
+      background: #eb5e28;
+      border-color: #eb5e28;
+    }
+    
+    /* Sezione Chi Sono */
+    #about {
+      padding: 50px 20px;
+      background: #252422;
+    }
+    #about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+    }
+    .about-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .about-text {
+      max-width: 600px;
+      flex: 1 1 300px;
+    }
+    .about-text p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    /* Sezione Collaborazioni */
+    #partners {
+      padding: 30px 10px;
+      background: #fffcf2;
+      color: #252422;
+      text-align: center;
+    }
+    #partners h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .partners-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .partners-container img {
+      max-width: 120px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    .partners-container img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Portfolio Section */
+    #portfolio {
+      padding: 50px 20px;
+      background: #252422;
+    }
+    #portfolio h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .award-item {
+      background: transparent;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .award-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    }
+    .award-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .award-item:hover img {
+      transform: scale(1.05);
+    }
+    .award-item h3 {
+      margin-top: 15px;
+      font-size: 1.5em;
+    }
+    .award-item p {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+    
+    /* Sezione Contatti con Info e Form */
+    #contact {
+      padding: 50px 20px;
+      background: #252422;
+    }
+    #contact h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact-info p {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #fffcf2;
+      border-radius: 4px;
+      background: #fffcf2;
+      color: #252422;
+    }
+    /* Bottone centrato con margin-top maggiore */
+    #contact button {
+      margin: 15px auto 0 auto;
+      padding: 10px 20px;
+      border: none;
+      background: transparent;
+      border: 2px solid #fffcf2;
+      color: #fffcf2;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    #contact button:hover {
+      background: #eb5e28;
+      border-color: #eb5e28;
+    }
+    
+    /* Sezione Sede/Location */
+    #location {
+      padding: 50px 20px;
+      background: #252422;
+    }
+    #location h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+.location-container {
+  position: relative;
+  background: transparent;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+    .location-container iframe {
+      border: 0;
+      width: 100%;
+      height: 250px;
+    }
+    /* Overlay per rendere la mappa cliccabile */
+    .map-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111; /* stesso colore della sezione #location */
+  font-size: 0.9em;
+  margin-top: 0px;
+}
+
+    
+    /* Pulsante WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      filter: invert(1);
+    }
+    
+    /* Cookie Popup Overlay (Modal con blur) */
+    #cookie-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1200;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+    #cookie-popup-dialog {
+      background: #252422;
+      padding: 20px 30px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 90%;
+    }
+    #cookie-popup-dialog p {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+    #cookie-popup-dialog .btn {
+      margin: 0 5px;
+      padding: 8px 16px;
+      border: none;
+      background: transparent;
+      border: 2px solid #fffcf2;
+      color: #fffcf2;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    #cookie-popup-dialog .btn:hover {
+      background: #eb5e28;
+      border-color: #eb5e28;
+    }
+    
+    /* Media Query per dispositivi mobili */
+    @media (max-width: 768px) {
+      #hero h1 { font-size: 2.5em; }
+      #hero p { font-size: 1em; }
+      header nav ul { gap: 10px; }
+    }
+
+
+/* Inserire queste nuove regole CSS */
+.privacy-policy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #252422;
+}
+
+.privacy-policy a {
+  color: #fffcf2;
+  transition: color 0.3s ease;
+}
+
+.privacy-policy a:hover {
+  color: #eb5e28;
+}
+
+footer a {
+  color: #fffcf2;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #eb5e28;
+}
+
+.contact-info a {
+  color: #fffcf2;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.contact-info a:hover {
+  color: #eb5e28;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px; /* aggiunge spazio sotto il form */
+}
+
+.form-container label {
+  font-size: 0.95rem;
+  color: #fffcf2;
+}
+
+#contact input, #contact textarea {
+  margin-bottom: 10px;
+}
+
+.privacy-policy {
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+
+  header .logo {
+    margin: 0 auto;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  footer .copyright {
+    display: none;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+body.loaded #main-content {
+  display: flex !important;
+  flex-direction: column;
+}
+/* Rimuove l'ombra solo nella sezione "Chi Siamo" */
+#about .about-content img {
+  box-shadow: none;
+}
+
+/* Fissa la larghezza della foto “Chi Siamo” a 600px (o un valore a piacere) 
+   e impedisce che venga ingrandita dallo stretch del flexbox */
+#about .about-content img {
+  flex: 0 0 auto;      /* non cresce né si restringe nel flex container */
+  width: 600px;         /* dimensione di visualizzazione fissa */
+  height: auto;         /* mantiene le proporzioni */
+  max-width: 100%;      /* non supera mai i 600px su schermi piccoli */
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img id="preload-image1" src="icone/mmmmm.png" alt="Preload Image 1">
+    <img id="preload-image2" src="icone/contorno.png" alt="Preload Image 2">
+    <div id="logo-container">
+      <img id="preload-loader" src="icone/loader.png" alt="Loader">
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <header>
+      <div class="logo">
+        <img src="icone/loader.png" alt="Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#about">MOMENTO</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTATTI</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Hero Section con video di sfondo -->
+    <section id="hero">
+      <div class="video-background">
+<iframe
+    title="Video di sfondo muted"
+    src="https://www.youtube.com/embed/0t7r49I4pJ4?autoplay=1&mute=1&controls=0&loop=1&playlist=0t7r49I4pJ4&modestbranding=1&showinfo=0"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+></iframe>
+
+
+      </div>
+      <div class="video-overlay"></div>
+      <div class="hero-content">
+        <h1>MOMENTO</h1>
+        <p>La tua visione, la nostra missione. Sei pronto a distinguerti?</p>
+        <button class="btn" onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });">
+          Scopri chi siamo
+        </button>
+      </div>
+    </section>
+    
+    <!-- Sezione Chi Sono -->
+    <section id="about" class="animate-on-scroll">
+      <h2>CHI SIAMO?</h2>
+      <div class="about-content">
+        <img src="icone/chisiamo.png" alt="Fotografo">
+        <div class="about-text">
+<p>
+  <strong>Momento</strong> non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.
+</p>
+
+ <p>
+
+È il partner che scegli quando vuoi fare le cose sul serio.
+Siamo nati nel mondo digitale, ci muoviamo tra fotocamere e pixel con la stessa naturalezza con cui chiudiamo progetti vincenti. Da oltre 5 anni trasformiamo idee in contenuti visivi che non passano inosservati.
+
+Ogni scatto, ogni video, ogni storia è pensata per distinguerti, non per accontentare l’algoritmo.
+Momento non lavora per tutti. Lavoriamo con chi vuole lasciare il segno.
+Se cerchi qualcosa di ordinario, stai cercando nel posto sbagliato.
+        </p>
+          <p>
+            Se invece vuoi fare rumore, benvenuto.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    
+<!-- Nuova sezione portfolio -->
+<section id="portfolio" class="animate-on-scroll">
+  <h2>PORTFOLIO</h2>
+  <div class="portfolio-grid">
+    <!-- RIGA 1: Due immagini affiancate -->
+    <div class="portfolio-row">
+      <div class="portfolio-item" data-category="Eventi" data-description="Per scoprire altre foto di eventi, clicca <a href='https://momentomedia.myportfolio.com/aziendale' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/eventi.png">
+        <img src="icone/eventi.png" alt="Eventi">
+        <span class="label">Eventi</span>
+      </div>
+      <div class="portfolio-item" data-category="Moda" data-description="Per scoprire altre foto di moda, clicca <a href='https://momentomedia.myportfolio.com/moda' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/moda.png">
+        <img src="icone/moda.png" alt="Moda">
+        <span class="label">Moda</span>
+      </div>
+    </div>
+
+    <!-- RIGA 2: Una immagine grande -->
+    <div class="portfolio-row full-width">
+      <div class="portfolio-item full" data-category="Musica" data-description="Per scoprire altre foto di Automotive, clicca <a href='https://momentomedia.myportfolio.com/automotive' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/automotive.png">
+        <img src="icone/automotive.png" alt="Musica">
+        <span class="label">Automotive</span>
+      </div>
+    </div>
+
+    <!-- RIGA 3: Due immagini affiancate -->
+    <div class="portfolio-row">
+      <div class="portfolio-item" data-category="Cibo" data-description="Per scoprire altre foto sul cibo, clicca <a href='https://momentomedia.myportfolio.com/product' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/cibo.png">
+        <img src="icone/cibo.png" alt="Cibo">
+        <span class="label">
+         Food
+        </span>
+
+      </div>
+      <div class="portfolio-item" data-category="Interni" data-description="Per scoprire altre foto di interni, clicca <a href='https://momentomedia.myportfolio.com/ambiente' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/interni.png">
+        <img src="icone/interni.png" alt="Interni">
+        <span class="label">Interni</span>
+      </div>
+    </div>
+
+    <!-- RIGA 4: Una immagine grande -->
+    <div class="portfolio-row full-width">
+      <div class="portfolio-item full" data-category="Ritratti" data-description="Per scoprire altre foto sulla musica, clicca <a href='https://momentomedia.myportfolio.com/music' class='link-qui' target='_blank' rel='noopener'>qui.</a>" data-image="icone/musica.png">
+        <img src="icone/musica.png" alt="Ritratti">
+        <span class="label">Musica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modale tendina -->
+<div id="portfolio-modal" style="display:none">
+  <div class="modal-inner">
+    <button class="close-modal">&times;</button>
+    <div class="modal-image"></div>
+    <div class="modal-description"></div>
+  </div>
+</div>
+
+<style>
+
+.link-qui {
+  color: inherit;               /* eredita il colore bianco del label */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.link-qui:hover {
+  color: #eb5e28;               /* arancione acceso */
+  text-shadow: 0 0 8px rgba(255,165,0,0.8);
+}
+
+
+/* Portfolio grid and rows */
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.portfolio-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.portfolio-row.full-width .portfolio-item.full {
+  width: 100%;
+}
+
+/* Portfolio items */
+.portfolio-item {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Ensure proper layering */
+.portfolio-item img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Persistent gradient shadow under the image */
+.portfolio-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Intensify the shadow slightly on hover, but keep it always visible */
+.portfolio-item:hover::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* Hover zoom */
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Cinematic label: ancora più in basso, grande e deciso */
+.portfolio-item .label {
+  position: absolute;
+  bottom: 8%;                    /* spostata più in basso */
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  color: #fffcf2;
+  font-family: inherit;
+  font-size: 1.8em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Portfolio modal */
+#portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+.modal-inner {
+  background: #111;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+.modal-description {
+  color: #fffcf2;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.close-modal {
+  background: transparent;
+  border: none;
+  color: #fffcf2;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* Layout tweaks when content is loaded */
+body.loaded #main-content {
+  display: flex !important;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body.loaded footer {
+  margin-top: auto;
+}
+
+/* Footer & copyright */
+/* nuovo */
+.copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #252422;
+}
+.copyright a {
+  color: #fffcf2;
+  transition: color 0.3s ease;
+}
+.copyright a:hover {
+  color: #eb5e28;
+}
+
+
+
+</style>
+
+<script>
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const modal = document.getElementById('portfolio-modal');
+      modal.style.display = 'flex';
+      const img = item.getAttribute('data-image');
+      const desc = item.getAttribute('data-description');
+      const label = item.getAttribute('data-category');
+      modal.querySelector('.modal-image').innerHTML = `<img src="${img}" alt="${label}">`;
+      modal.querySelector('.modal-description').innerHTML = `<h3>${label}</h3><p>${desc}</p>`;
+    });
+  });
+
+  document.querySelector('.close-modal').addEventListener('click', () => {
+    document.getElementById('portfolio-modal').style.display = 'none';
+  });
+</script>
+
+
+
+    <!-- Sezione Sede/Location -->
+    <section id="location" class="animate-on-scroll">
+      <h2>DOVE SIAMO?</h2>
+      <div class="location-container">
+        <iframe src="https://www.google.com/maps?q=Piazza%20E.%20de%20Filippo,%2012,%2050051%20Castelfiorentino%20FI&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Overlay cliccabile per aprire Google Maps -->
+        <a href="https://www.google.com/maps?q=Piazza+E.+de+Filippo,+12,+50051+Castelfiorentino+FI" target="_blank" class="map-overlay"></a>
+      </div>
+    </section>
+
+
+
+<section id="contact" class="animate-on-scroll">
+  <h2>CONTATTACI</h2>
+
+  <div class="form-container">
+    <p style="text-align:center; font-size: 0.9rem; color: #ccc; margin-bottom: 10px;">
+      Il campo *oggetto* è generato automaticamente.
+    </p>
+    <form id="contact-form" name="contact" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" value="Nuova richiesta contatto MOMENTO" />
+      
+      <label for="email">La tua email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Il tuo messaggio</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Invia</button>
+    </form>
+  </div>
+
+  <div class="contact-info" style="text-align:center; margin-bottom: 40px;">
+    <p>
+      Per informazioni e collaborazioni, contattami via forms o altrimenti tramite 
+      <a href="#" id="fusionExploreLink" style="text-decoration: underline; cursor: pointer;">Fusion</a>.
+    </p>
+  </div>
+
+  <p class="privacy-policy" style="text-align:center; margin-bottom: 80px;">
+    <a href="./privacy.html">Privacy Policy</a>
+  </p>
+    <p class="privacy-policy" style="text-align:center; margin-bottom: 80px;">
+    <a href="./cookie-policy.html">Cookie Policy</a>
+  </p>
+
+
+  <p class="copyright" style="margin-top:20px; font-size:0.8rem; color:#777;">
+    © 2025 MOMENTO. All rights reserved. Made by 
+    <a href="https://www.overeye.net" target="_blank" rel="noopener">Overeye</a>.
+  </p>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+
+  // intercetta il submit
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // blocca il reload
+
+    // serializza i campi (inclusi i hidden)
+    const formData = new FormData(form);
+    const body = new URLSearchParams(formData).toString();
+
+    // invia via AJAX a Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    })
+    .then(response => {
+      if (response.ok) {
+        showToast('Messaggio inviato con successo!', true);
+        form.reset();
+      } else {
+        throw new Error('Errore network');
+      }
+    })
+    .catch(() => {
+      showToast('Si è verificato un errore, riprova più tardi.', false);
+    });
+  });
+
+  // funzione di utilità per il popup
+  function showToast(text, success) {
+    const toast = document.createElement('div');
+    toast.textContent = text;
+    Object.assign(toast.style, {
+      position: 'fixed',
+      top: '20px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      padding: '12px 20px',
+      background: success ? '#28a745' : '#dc3545',
+      color: '#fff',
+      borderRadius: '4px',
+      boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+      zIndex: 10000,
+      fontFamily: 'sans-serif'
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+  }
+});
+</script>
+
+
+
+<script>
+  document.getElementById('fusionExploreLink').addEventListener('click', function (e) {
+    e.preventDefault();
+    const chatBox = document.getElementById('iam-chatbot-box');
+    const chatBtn = document.getElementById('iam-chatbot-button');
+
+    if (chatBox && chatBtn) {
+      const isVisible = chatBox.style.display === 'flex';
+      chatBox.style.display = isVisible ? 'none' : 'flex';
+
+      if (!isVisible) {
+        chatBtn.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+
+
+  <script>
+    
+   // Script del preloader e visualizzazione del main content
+    const img1 = document.getElementById('preload-image1');
+    const img2 = document.getElementById('preload-image2');
+    const loader = document.getElementById('preload-loader');
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+    
+    img1.classList.add('animate1');
+    setTimeout(() => { img2.classList.add('animate2'); }, 2000);
+    setTimeout(() => {
+      img1.style.animationPlayState = 'paused';
+      img2.style.animationPlayState = 'paused';
+    }, 3000);
+    setTimeout(() => { loader.classList.add('animateLoader'); }, 3500);
+    setTimeout(() => {
+      preloader.classList.add('fadeOut');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block';
+        checkCookieConsent(); // Controlla consenso cookie dopo aver mostrato il main content
+      }, 1000);
+    }, 5000);
+    
+    // Scroll fluido per la navbar
+    document.querySelectorAll('header nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    
+    // Sticky header: cambia stile al scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+    
+    // Intersection Observer per animare le sezioni in viewport
+    document.addEventListener('DOMContentLoaded', function () {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+      });
+    });
+    
+  </script>
+
+  <script>
+window.addEventListener('scroll', function () {
+  const partnersSection = document.querySelector('#partners');
+  const header = document.querySelector('header');
+  const rect = partnersSection.getBoundingClientRect();
+
+  if (rect.top <= 80 && rect.bottom >= 80) {
+    header.classList.add('nav-dark');
+  } else {
+    header.classList.remove('nav-dark');
+  }
+});
+
+</script>
+
+
+    
+    
+
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- 1. Google Consent Mode (default denied) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+
+<!-- 2. Full-Width Cookie Banner -->
+<!-- 2. Full-Width Cookie Banner -->
+<div id="cookie-banner" role="region" aria-label="Cookie Consent Banner" style="display:none;">
+  <div class="cookie-banner-content">
+
+    <!-- nuova icona biscotto -->
+    <div class="cookie-icon" aria-hidden="true">
+      <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="cookieGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#fff9e6;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#f4c152;stop-opacity:1"/>
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#cookieGrad)" />
+        <!-- “gocce” di cioccolato -->
+        <circle cx="24" cy="24" r="4" fill="#8d5524" />
+        <circle cx="40" cy="36" r="5" fill="#8d5524" />
+        <circle cx="30" cy="44" r="3" fill="#8d5524" />
+      </svg>
+    </div>
+
+    <div class="cookie-text">
+      <p>
+        👋 Vuoi dei biscotti? 🍪 Attiva i nostri cookie per rendere la tua esperienza sul sito ancora più dolce e su misura per te!
+        <a href="./cookie-policy.html" target="_blank" rel="noopener">Scopri di più</a>.
+      </p>
+      <details class="cookie-details">
+        <summary>Cookie Details</summary>
+        <ul>
+          <li><strong>Essential:</strong> necessari per la funzionalità del sito.</li>
+          <li><strong>Analytics:</strong> statistiche anonime per migliorare i contenuti.</li>
+          <li><strong>Marketing:</strong> annunci personalizzati in base alle preferenze.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="cookie-actions">
+      <button class="cookie-btn primary" id="accept-all">🍪 Accetta tutto</button>
+      <button class="cookie-btn secondary" id="reject-all">🚫 Rifiuta tutto</button>
+      <button class="cookie-btn tertiary" id="cookie-settings">⚙️ Preferenze</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 3. Modal for Cookie Preferences -->
+<div id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" aria-hidden="true" style="display:none;">
+  <div class="modal-content">
+    <button class="close-modal" id="close-modal" aria-label="Close modal">&times;</button>
+    <h2 id="cookie-modal-title">Preferenze Cookie</h2>
+    <p>seleziona quali cookie vuoi abilitare:</p>
+    <div class="cookie-category">
+      <label>Essential Cookies</label>
+      <input type="checkbox" checked disabled>
+    </div>
+    <div class="cookie-category">
+      <label for="cookie-analytics">Analytics Cookies</label>
+      <input type="checkbox" id="cookie-analytics">
+    </div>
+    <div class="cookie-category">
+      <label for="cookie-marketing">Marketing Cookies</label>
+      <input type="checkbox" id="cookie-marketing">
+    </div>
+    <div class="modal-actions">
+      <button id="save-preferences" class="cookie-btn primary">Save Preferences</button>
+      <button id="cancel-preferences" class="cookie-btn secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Persistent Toggle Icon -->
+<button id="cookie-toggle" title="Open cookie settings" aria-label="Open cookie settings" style="display:none;">
+  <img src="cookie.png" alt="Cookie Icon" />
+</button>
+
+<style>
+/* ========================================
+   COOKIE CONSENT BANNER (isolated scope)
+   ======================================== */
+
+/* Base styles (mobile-first) */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  width: 100%;
+  padding: 12px;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#cookie-banner.show {
+  transform: translateY(0);
+}
+
+#cookie-banner .cookie-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon */
+#cookie-banner .cookie-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+/* Text */
+#cookie-banner .cookie-text {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+}
+#cookie-banner .cookie-text p {
+  margin: 0;
+}
+#cookie-banner .cookie-text a {
+  color: #006cff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#cookie-banner .cookie-text a:hover,
+#cookie-banner .cookie-text a:focus {
+  color: #004bb5;
+}
+
+/* Details */
+#cookie-banner .cookie-details {
+  font-size: 0.85rem;
+  width: 100%;
+}
+#cookie-banner .cookie-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #006cff;
+  list-style: none;
+  display: inline-block;
+}
+#cookie-banner .cookie-details summary::-webkit-details-marker {
+  display: none;
+}
+#cookie-banner .cookie-details summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s;
+}
+#cookie-banner .cookie-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+#cookie-banner .cookie-details ul {
+  margin: 6px 0 0 18px;
+  list-style: disc;
+  color: #333;
+}
+
+/* Actions */
+#cookie-banner .cookie-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Buttons */
+#cookie-banner .cookie-btn {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  min-width: 120px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary */
+#cookie-banner .cookie-btn.primary {
+  background: #006cff;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 108, 255, 0.3);
+}
+#cookie-banner .cookie-btn.primary:hover {
+  background: #0051cc;
+  box-shadow: 0 3px 8px rgba(0, 81, 204, 0.3);
+}
+#cookie-banner .cookie-btn.primary:active {
+  transform: translateY(1px);
+}
+
+/* Secondary */
+#cookie-banner .cookie-btn.secondary {
+  background: #f5f5f5;
+  color: #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+#cookie-banner .cookie-btn.secondary:hover {
+  background: #e0e0e0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+#cookie-banner .cookie-btn.secondary:active {
+  transform: translateY(1px);
+}
+
+/* Tertiary */
+#cookie-banner .cookie-btn.tertiary {
+  background: transparent;
+  color: #000000;
+  font-weight: 500;
+}
+#cookie-banner .cookie-btn.tertiary:hover {
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: underline;
+}
+#cookie-banner .cookie-btn.tertiary:active {
+  transform: translateY(1px);
+}
+
+/* Modal Overlay */
+#cookie-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+#cookie-modal.show {
+  display: flex;
+}
+#cookie-modal .modal-content {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  padding: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+#cookie-modal h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+#cookie-modal p {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* Modal categories */
+#cookie-modal .cookie-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+#cookie-modal .cookie-category label {
+  font-size: 0.9rem;
+}
+#cookie-modal .cookie-category input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* Modal actions */
+#cookie-modal .modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+#cookie-modal .modal-actions button {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+#cookie-modal .modal-actions button.primary {
+  background: #006cff;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 108, 255, 0.3);
+}
+#cookie-modal .modal-actions button.primary:hover {
+  background: #0051cc;
+  box-shadow: 0 3px 8px rgba(0, 81, 204, 0.3);
+}
+#cookie-modal .modal-actions button.secondary {
+  background: #f5f5f5;
+  color: #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+#cookie-modal .modal-actions button.secondary:hover {
+  background: #e0e0e0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button */
+#cookie-modal .close-modal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+#cookie-modal .close-modal:hover {
+  color: #444444;
+}
+
+/* ================================
+   Toggle Icon
+   ================================ */
+#cookie-toggle { position:fixed; bottom:20px; left:20px; background:transparent; border:none; cursor:pointer; z-index:1500; width:20px; height:20px; padding:0; transition:transform .2s; }
+#cookie-toggle img { width:100%; height:100%; filter:brightness(0) invert(1); }
+#cookie-toggle:hover img { transform:scale(1.15); }
+
+/* Desktop overrides */
+@media (min-width: 769px) {
+  #cookie-banner {
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(100%);
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 16px 24px;
+  }
+  #cookie-banner .cookie-banner-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #cookie-banner .cookie-text {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex: 1 1 auto;
+  }
+  #cookie-banner .cookie-actions {
+    flex-direction: row;
+    width: auto;
+    gap: 10px;
+    margin-top: 0;
+  }
+  #cookie-modal .modal-content {
+    padding: 24px 32px;
+  }
+  #cookie-modal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  #cookie-modal p {
+    font-size: 0.95rem;
+  }
+  #cookie-modal .cookie-category label {
+    font-size: 0.95rem;
+  }
+  #cookie-modal .modal-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #cookie-modal .modal-actions button {
+    flex: 1 1 auto;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Quando diventa visibile, rimane centrato */
+  #cookie-banner.show {
+    transform: translateX(-50%) translateY(0) !important;
+  }
+}
+
+
+</style>
+
+<!-- 5. JavaScript Logic -->
+<script>
+  const cookieConfig = {
+    cookieName: 'cookieConsent',
+    expiryDays: 365,
+    consentData: { essential: true, analytics: false, marketing: false }
+  };
+
+  function setCookie(name, value, days) {
+    const expires = days ? '; expires=' + new Date(Date.now() + days * 864e5).toUTCString() : '';
+    document.cookie = name + '=' + encodeURIComponent(value)
+      + expires + '; path=/; Secure; SameSite=Lax';
+  }
+
+  function getCookie(name) {
+    return document.cookie.split('; ').reduce((r, v) => {
+      const [k, val] = v.split('=');
+      return k === name ? decodeURIComponent(val) : r;
+    }, null);
+  }
+
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=0; path=/';
+  }
+
+  const banner = document.getElementById('cookie-banner');
+  const modal  = document.getElementById('cookie-modal');
+  const toggle = document.getElementById('cookie-toggle');
+
+  function showBanner() {
+    banner.style.display = 'flex';
+    requestAnimationFrame(() => banner.classList.add('show'));
+  }
+
+  function hideBanner() {
+    banner.classList.remove('show');
+    banner.style.display = 'none';
+  }
+
+  function showModal() {
+    // sincronizza lo stato dei checkbox
+    document.getElementById('cookie-analytics').checked  = cookieConfig.consentData.analytics;
+    document.getElementById('cookie-marketing').checked  = cookieConfig.consentData.marketing;
+
+    modal.style.display = 'flex';
+    modal.classList.add('show');
+    trapFocus(modal);
+  }
+
+  function hideModal() {
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+  }
+
+  function showToggle() {
+    toggle.style.display = 'flex';
+  }
+
+  function trapFocus(dialog) {
+    const focusable = dialog.querySelectorAll('button, a, input:not([disabled])');
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    first.focus();
+    dialog.addEventListener('keydown', e => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+      if (e.key === 'Escape') hideModal();
+    });
+  }
+
+  function saveConsentToServer() {
+    const url  = '/api/consent';
+    const data = JSON.stringify({ consent: cookieConfig.consentData });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, data);
+    } else {
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: data
+      }).catch(console.error);
+    }
+  }
+
+  document.getElementById('accept-all').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = true;
+    cookieConfig.consentData.marketing = true;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    loadGoogleAnalytics();
+    loadFacebookPixel();
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  document.getElementById('reject-all').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = false;
+    cookieConfig.consentData.marketing = false;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    ['_ga','_gid','_fbp'].forEach(eraseCookie);
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  document.getElementById('cookie-settings').addEventListener('click', showModal);
+  document.getElementById('close-modal').addEventListener('click', hideModal);
+  document.getElementById('cancel-preferences').addEventListener('click', hideModal);
+
+  document.getElementById('save-preferences').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = document.getElementById('cookie-analytics').checked;
+    cookieConfig.consentData.marketing = document.getElementById('cookie-marketing').checked;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    if (cookieConfig.consentData.analytics) loadGoogleAnalytics();
+    if (cookieConfig.consentData.marketing) loadFacebookPixel();
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  toggle.addEventListener('click', showModal);
+
+  window.addEventListener('load', () => {
+    const saved = getCookie(cookieConfig.cookieName);
+    if (!saved) {
+      showBanner();
+    } else {
+      cookieConfig.consentData = JSON.parse(saved);
+      if (cookieConfig.consentData.analytics) loadGoogleAnalytics();
+      if (cookieConfig.consentData.marketing) loadFacebookPixel();
+      showToggle();
+    }
+  });
+
+  function loadCategory(cat) {
+    document.querySelectorAll(`script[data-cookie="${cat}"]`).forEach(s => {
+      if (!s.loaded) {
+        s.loaded = true;
+        const ns = document.createElement('script');
+        ns.src   = s.src;
+        ns.async = s.hasAttribute('async');
+        document.head.appendChild(ns);
+      }
+    });
+  }
+
+  function loadGoogleAnalytics() {
+    loadCategory('analytics');
+    gtag('consent','update',{analytics_storage:'granted'});
+    gtag('js', new Date());
+    gtag('config','G-ABCDEFGH',{anonymize_ip:true});
+  }
+
+  function loadFacebookPixel() {
+    loadCategory('marketing');
+    gtag('consent','update',{ad_storage:'granted'});
+  }
+</script>
+
+<!-- 6. Third-Party Scripts Blocked Until Consent -->
+<script data-cookie="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFGH"></script>
+<script data-cookie="marketing" async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  // quando ottieni il consenso, fai:
+  fbq('init', 'TUO_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+
+
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+
+
+  <script src="js/fuse.js"></script> <!-- Assicurati che fuse.js sia nella stessa cartella -->
+  <script src="js/iam-assist-falcon.js" defer></script>
+  
+  <!-- Dentro <body>, da qualche parte (anche in fondo) javascript-obfuscator iam-assist-falcon.js --output iam-assist-falcon-obs.js -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - MOMENTO x Overeye</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!-- Theme colors -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- SEO meta -->
+  <meta name="description"
+        content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Momento - Agenzia di fotografia e contenuti digitali.">
+  <meta property="og:description" content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.wearemomento.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Momento - Agenzia di fotografia e contenuti digitali.">
+  <meta name="twitter:description" content="Momento non è una semplice agenzia creativa. Noi lavoriamo per chi vuole guidare il cambiamento.">
+  <meta name="twitter:image"       content="https://www.wearemomento.com/favicon/preview-overeye.jpg">
+  
+
+  <style>
+    /* Reset and Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 40px;
+    }
+    a { color: #00c6ff; text-decoration: none; }
+    
+    /* Header with Animated Eye on the Left */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 20px;
+      z-index: 1100;
+    }
+    .header .logo {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .header .logo .logo-eye {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .header .logo .logo-eye::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 11px;
+      height: 11px;
+      background: #000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: eyeMoveSmall 10s ease-in-out infinite;
+    }
+    .header .logo .logo-eye::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 5;
+      animation: eyeShadeSmall 10s linear infinite;
+    }
+    .header .logo .logo-text {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @keyframes eyeMoveSmall {
+      0% { transform: translate(-50%, -50%); }
+      5.56% { transform: translate(-50%, -50%) translateX(-6px); }
+      16.67% { transform: translate(-50%, -50%) translateX(-6px); }
+      22.22% { transform: translate(-50%, -50%); }
+      33.33% { transform: translate(-50%, -50%); }
+      38.89% { transform: translate(-50%, -50%) translateX(6px); }
+      50% { transform: translate(-50%, -50%) translateX(6px); }
+      55.56% { transform: translate(-50%, -50%); }
+      66.67% { transform: translate(-50%, -50%); }
+      72.22% { transform: translate(-50%, -50%) translateY(6px); }
+      83.33% { transform: translate(-50%, -50%) translateY(6px); }
+      88.89% { transform: translate(-50%, -50%); }
+      100% { transform: translate(-50%, -50%); }
+    }
+    @keyframes eyeShadeSmall {
+      0%, 22.22% { transform: translateY(-50%); }
+      27.78% { transform: translateY(-50%); }
+      30% { transform: translateY(0); }
+      31.11% { transform: translateY(-50%); }
+      33.33% { transform: translateY(-50%); }
+      55.56% { transform: translateY(-50%); }
+      61.11% { transform: translateY(-50%); }
+      63.33% { transform: translateY(0); }
+      64.44% { transform: translateY(-50%); }
+      66.67% { transform: translateY(-50%); }
+      88.89% { transform: translateY(-50%); }
+      94.44% { transform: translateY(-50%); }
+      96.67% { transform: translateY(0); }
+      97.78% { transform: translateY(-50%); }
+      100% { transform: translateY(-50%); }
+    }
+    
+    /* Main Content */
+    .main-content {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 20px;
+      background: trasparent;
+      border-radius: 8px;
+    }
+    .main-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333;
+    }
+    .main-content h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .main-content p,
+    .main-content li {
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    .main-content ul {
+      margin-left: 20px;
+      list-style: disc;
+    }
+    
+    /* Back Button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      margin-top: 40px;
+    }
+    .back-btn svg {
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+    }
+    .back-btn:hover {
+      background: #eaeaea;
+      transform: translateX(-4px);
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #c9d1d9;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-eye" id="headerEye"></div>
+      <span class="logo-text">vereye x MOMENTO</span>
+    </div>
+  </header>
+  
+  <!-- MAIN CONTENT: PRIVACY POLICY -->
+  <main class="main-content">
+    <h1>Privacy Policy</h1>
+    <p><em>Last Updated: April 2025</em></p>
+    
+    <!-- Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>At Overeye, your privacy is of utmost importance. This Privacy Policy explains how we collect, use, process, store, and secure your personal data. We are committed to ensuring the highest level of data protection and transparency in accordance with applicable laws.</p>
+    </section>
+    
+    <!-- Information We Collect -->
+    <section>
+      <h2>Information We Collect</h2>
+      <p>We collect both personal and non‑personal information when you interact with our website. Personal information includes data you voluntarily provide, such as your name, email address, or other identifying details. Non‑personal information includes data such as your IP address, browser type, usage patterns, and device information.</p>
+      <p>In addition, Overeye collects the following types of data—either directly or through third parties:
+        <br>
+        <strong>Tracking tools, usage data, number of users, city, device information, session statistics, city latitude and longitude, browser details, responses to questions, clicks, keypress events, motion sensor events, mouse movements, scroll position, and touch events.</strong>
+      </p>
+      <p>Certain information is mandatory for providing our services. If any data is marked as optional, you may choose not to provide it; however, this might affect the functionality of our service.</p>
+    </section>
+    
+    <!-- How We Use Your Information -->
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p>Your data is used to personalize and enhance your online experience, maintain and improve our services, and communicate with you. Specifically, your data may be used for:
+      </p>
+      <ul>
+        <li>Fulfilling contractual obligations and pre-contractual measures;</li>
+        <li>Performing statistical analyses and tracking usage;</li>
+        <li>Protecting our website from fraudulent or spam activity;</li>
+        <li>Managing and displaying content from external platforms;</li>
+        <li>And ensuring the overall security and functionality of our services.</li>
+      </ul>
+      <p>Your personal information is not shared with third parties except when required by law or when you have provided explicit consent. Third-party service providers receive only the information necessary to perform their functions on our behalf.</p>
+    </section>
+    
+    <!-- Cookies and Tracking Technologies -->
+    <section>
+      <h2>Cookies and Tracking Technologies</h2>
+      <p>Our website utilizes cookies and similar tracking technologies to remember your preferences, analyze site traffic, and enhance functionality. These technologies include tools such as Google Tag Manager, Google Analytics 4, and Google Fonts.</p>
+      <p>You can adjust your cookie settings at any time through your browser settings or our privacy tools. For further details, please refer to our Cookie Policy.</p>
+    </section>
+    
+    <!-- Data Security -->
+    <section>
+      <h2>Data Security</h2>
+      <p>We implement robust technical, administrative, and physical security measures designed to prevent unauthorized access, alteration, disclosure, or destruction of your personal data. Our security practices are continuously reviewed and updated in accordance with industry standards.</p>
+    </section>
+    
+    <!-- Data Processing and Retention -->
+    <section>
+      <h2>Data Processing and Retention</h2>
+      <p>Your personal data is processed using electronic and telematic tools and may be accessed by authorized personnel as well as external service providers (e.g., hosting, technical support, email services). Data processing occurs at our operational premises and in other locations where our service partners are based. In some cases, your data may be transferred to countries other than your own.</p>
+      <p>We retain your personal data only for as long as is necessary to fulfill the purposes for which it was collected, or to comply with legal obligations. Once the retention period expires, your data will be securely deleted or anonymized.</p>
+    </section>
+    
+    <!-- Legal Basis for Processing -->
+    <section>
+      <h2>Legal Basis for Processing</h2>
+      <p>We process your personal data only when one of the following conditions applies:</p>
+      <ul>
+        <li>You have given explicit consent for one or more specific purposes;</li>
+        <li>Processing is necessary for the performance of a contract with you or in order to take pre-contractual steps;</li>
+        <li>Processing is required to comply with a legal obligation;</li>
+        <li>Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority;</li>
+        <li>Processing is necessary for the purposes of our legitimate interests or those of a third party.</li>
+      </ul>
+      <p>Please contact us if you require further clarification regarding the legal basis for any specific processing activity.</p>
+    </section>
+    
+    <!-- Your Rights -->
+    <section>
+      <h2>Your Rights</h2>
+      <p>You have the right to access, correct, update, or delete your personal information. Additionally, you may restrict or object to the processing of your data, request data portability, or withdraw your consent for data processing at any time where consent is the basis for processing.</p>
+      <p>If you believe your rights have been infringed or that our processing practices are non‑compliant with applicable laws, you have the right to lodge a complaint with the relevant data protection authority.</p>
+    </section>
+    
+    <!-- Third-Party Services and Processing Details -->
+    <section>
+      <h2>Third-Party Services and Processing Details</h2>
+      <p>We employ several third-party services to operate our website and deliver our services effectively. Below is a summary of these services and the types of data processed:</p>
+      <ul>
+        <li>
+          <strong>Tag Management:</strong> We use Google Tag Manager (Google Ireland Limited) to manage scripts and tags on our site. Data Processed: usage data.
+        </li>
+        <li>
+          <strong>Hosting and Backend Infrastructure:</strong> Our website is hosted by OVHcloud (OVH Srl). Data Processed: usage data.
+        </li>
+        <li>
+          <strong>Spam Protection:</strong> We use Google reCAPTCHA (Google Ireland Limited) to safeguard our site from spam and abuse. Data Processed: clicks, usage data, keypress events, motion sensor events, touch events, mouse movements, scroll position, and responses to questions.
+        </li>
+        <li>
+          <strong>Statistics:</strong> We use Google Analytics 4 (Google Ireland Limited) to analyze user activity and website traffic. IP addresses collected are anonymized prior to storage. Data Processed: city, usage data, browser and device information, latitude, longitude, number of users, session statistics, and tracking tools.
+        </li>
+        <li>
+          <strong>Content Display:</strong> Google Fonts (Google Ireland Limited) is used to display website fonts. Data Processed: usage data and tracking tools.
+        </li>
+      </ul>
+      <p>Please review the privacy policies of these third-party providers for additional information on how they process your data.</p>
+    </section>
+    
+    <!-- Contact Information -->
+    <section>
+      <h2>Contact Us</h2>
+      <p>For any questions or complaints regarding your personal data processing, please contact: <a href="mailto:legal@overeye.net">legal@overeye.net</a>.</p>
+      <ul>
+        <li><strong>Data Controller:</strong> Overeye@2025 - Project</li>
+
+      </ul>
+    </section>
+    
+    <!-- Changes to This Privacy Policy -->
+    <section>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect changes in our practices or to comply with legal requirements. Any modifications will be posted on this page and, if feasible, a notification will be sent to you via our website or email. Please review this policy periodically. The date of the latest update is shown above.</p>
+    </section>
+    
+    <!-- Definitions and Legal References -->
+    <section>
+      <h2>Definitions and Legal References</h2>
+      <p><strong>Personal Data:</strong> Any information that can directly or indirectly identify a natural person.</p>
+      <p><strong>Usage Data:</strong> Information automatically collected during the use of our website, such as IP addresses, browser details, operating system, visit times, and navigation paths.</p>
+      <p><strong>User:</strong> The individual who accesses or uses our website and services.</p>
+      <p><strong>Data Controller:</strong> The legal entity that determines the purposes and means of processing personal data.</p>
+      <p><strong>Data Processor:</strong> Any entity that processes personal data on behalf of the Data Controller.</p>
+    </section>
+    
+    <!-- Back Button -->
+    <a href="./index.html" class="back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 19l-7-7 7-7v14z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+      Back to MOMENTO
+    </a>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Overeye. All rights reserved.</p>
+  </footer>
+</body>
+</html>

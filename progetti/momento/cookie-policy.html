@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie Policy - MOMENTO x Overeye</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Favicon links can be added here -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_overeye/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_overeye/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_overeye/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon_overeye/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicon_overeye/site.webmanifest">
+  <link rel="mask-icon" href="/favicon_overeye/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <style>
+    /* Reset and Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 40px;
+    }
+    a { color: #00c6ff; text-decoration: none; }
+    
+    /* Header with Animated Eye on the Left */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 20px;
+      z-index: 1100;
+    }
+    .header .logo {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .header .logo .logo-eye {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .header .logo .logo-eye::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 11px;
+      height: 11px;
+      background: #000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: eyeMoveSmall 10s ease-in-out infinite;
+    }
+    .header .logo .logo-eye::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 5;
+      animation: eyeShadeSmall 10s linear infinite;
+    }
+    .header .logo .logo-text {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @keyframes eyeMoveSmall {
+      0% { transform: translate(-50%, -50%); }
+      5.56% { transform: translate(-50%, -50%) translateX(-6px); }
+      16.67% { transform: translate(-50%, -50%) translateX(-6px); }
+      22.22% { transform: translate(-50%, -50%); }
+      33.33% { transform: translate(-50%, -50%); }
+      38.89% { transform: translate(-50%, -50%) translateX(6px); }
+      50% { transform: translate(-50%, -50%) translateX(6px); }
+      55.56% { transform: translate(-50%, -50%); }
+      66.67% { transform: translate(-50%, -50%); }
+      72.22% { transform: translate(-50%, -50%) translateY(6px); }
+      83.33% { transform: translate(-50%, -50%) translateY(6px); }
+      88.89% { transform: translate(-50%, -50%); }
+      100% { transform: translate(-50%, -50%); }
+    }
+    @keyframes eyeShadeSmall {
+      0%, 22.22% { transform: translateY(-50%); }
+      27.78% { transform: translateY(-50%); }
+      30% { transform: translateY(0); }
+      31.11% { transform: translateY(-50%); }
+      33.33% { transform: translateY(-50%); }
+      55.56% { transform: translateY(-50%); }
+      61.11% { transform: translateY(-50%); }
+      63.33% { transform: translateY(0); }
+      64.44% { transform: translateY(-50%); }
+      66.67% { transform: translateY(-50%); }
+      88.89% { transform: translateY(-50%); }
+      94.44% { transform: translateY(-50%); }
+      96.67% { transform: translateY(0); }
+      97.78% { transform: translateY(-50%); }
+      100% { transform: translateY(-50%); }
+    }
+    
+    /* Main Content */
+    .main-content {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 20px;
+      background: trasparent;
+      border-radius: 8px;
+    }
+    .main-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333;
+    }
+    .main-content h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .main-content p,
+    .main-content li {
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    .main-content ul {
+      margin-left: 20px;
+      list-style: disc;
+    }
+    
+    /* Back Button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      margin-top: 40px;
+    }
+    .back-btn svg {
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+    }
+    .back-btn:hover {
+      background: #eaeaea;
+      transform: translateX(-4px);
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #c9d1d9;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-eye" id="headerEye"></div>
+      <span class="logo-text">vereye X Momento</span>
+    </div>
+  </header>
+  
+<!-- MAIN CONTENT: COOKIE POLICY -->
+<main class="main-content">
+  <h1>Cookie Policy</h1>
+  <p><em>Last Updated: June 2025</em></p>
+  
+  <!-- Introduction -->
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      Welcome to Overeye. This Cookie Policy explains how we use cookies and similar tracking technologies when you visit or interact with our website. Cookies are small text files placed on your device (computer, tablet, or mobile) when you access our site. They help us improve your experience, analyze site traffic, and deliver personalized content. By continuing to browse or use our site, you consent to the use of cookies as described in this policy. If you do not agree, you can adjust your settings at any time or refuse cookies through your browser.
+    </p>
+  </section>
+
+  <!-- What Are Cookies? -->
+  <section>
+    <h2>What Are Cookies?</h2>
+    <p>
+      Cookies are text files containing small amounts of data that are downloaded to your device when you visit a website. There are several types of cookies:
+    </p>
+    <ul>
+      <li>
+        <strong>Session Cookies:</strong> Temporarily stored in your browser’s memory and deleted when you close your browser. These cookies help the website recognize you during your single visit and allow essential functionality (e.g., keeping you logged in while navigating pages).
+      </li>
+      <li>
+        <strong>Persistent Cookies:</strong> Remain on your device for a predetermined period even after you close your browser. They remember your preferences and website interactions over multiple visits (e.g., language selection, saved login credentials).
+      </li>
+      <li>
+        <strong>First-Party Cookies:</strong> Set and managed by our website domain (overeye.net). We use them for core functionality and to remember user settings.
+      </li>
+      <li>
+        <strong>Third-Party Cookies:</strong> Set by domains other than overeye.net. These are used by third-party providers to deliver services like analytics, advertising, and social media integration.
+      </li>
+    </ul>
+  </section>
+
+  <!-- How We Use Cookies -->
+  <section>
+    <h2>How We Use Cookies</h2>
+    <p>
+      Overeye uses cookies for the following purposes:
+    </p>
+    <ul>
+      <li>
+        <strong>Essential Cookies:</strong> Necessary for the website to function correctly. They enable core features such as page navigation, secure areas, and form submissions. Without these cookies, some parts of our site may not work properly.
+      </li>
+      <li>
+        <strong>Preference Cookies:</strong> Remember information that changes the way the website behaves or looks, such as your preferred language or the region you are in. This ensures a more personalized experience.
+      </li>
+      <li>
+        <strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website by collecting and reporting information anonymously. We use tools like Google Analytics 4 and Google Tag Manager to monitor site performance, user flow, and usage statistics. The data collected includes page views, time spent on pages, click paths, and geographic location (anonymized).
+      </li>
+      <li>
+        <strong>Marketing and Advertising Cookies:</strong> Used to deliver relevant advertisements to you both on our site and on third-party sites. They track your browsing habits and build a profile of your interests, allowing us or our advertising partners to display tailored content. These cookies can also be used to limit the number of times you see an ad and help measure the effectiveness of ad campaigns.
+      </li>
+      <li>
+        <strong>Social Media Cookies:</strong> Enable you to share content directly from our website to your social media platforms, such as Facebook, LinkedIn, and Twitter. Third-party social media services may set cookies when you interact with their plugins or embedded content.
+      </li>
+    </ul>
+    <p>
+      We do not use cookies to collect sensitive personal information such as race, religion, political opinions, health data, or biometric data.
+    </p>
+  </section>
+
+  <!-- Types of Cookies We Use -->
+  <section>
+    <h2>Types of Cookies We Use</h2>
+    <ul>
+      <li>
+        <strong>Strictly Necessary Cookies:</strong>
+        <ul>
+          <li>These cookies are essential to provide you with services available through our site, such as secure login, form submission, and remembering items in your shopping cart (if applicable).</li>
+          <li>Examples: 
+            <ul>
+              <li><code>cookieConsent</code> – Remembers your cookie preferences for one year.</li>
+              <li><code>session_id</code> – Maintains your browsing session across pages, expires when you close your browser.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Performance and Analytics Cookies:</strong>
+        <ul>
+          <li>These cookies collect information about how visitors use our site, including the number of visitors, pages visited, time spent on pages, and any error messages encountered. All information collected is aggregated and anonymous. It is only used to improve how our website works.</li>
+          <li>Examples (Third-Party): 
+            <ul>
+              <li><code>_ga</code> – Google Analytics 4, tracks user sessions and interactions (expires after 2 years).</li>
+              <li><code>_gid</code> – Google Analytics 4, distinguishes users (expires after 24 hours).</li>
+              <li><code>_gat_gtag_UA_* </code> – Google Analytics throttling cookie (expires after 1 minute).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Functional and Preference Cookies:</strong>
+        <ul>
+          <li>These cookies allow the website to remember choices you make (such as language or region) and provide enhanced, personalized features. The information these cookies collect may be anonymized and cannot track your browsing activity on other websites.</li>
+          <li>Examples:
+            <ul>
+              <li><code>language_selection</code> – Stores your chosen language preference (e.g., <code>en_US</code> or <code>it_IT</code>).</li>
+              <li><code>theme_preference</code> – Remembers if you prefer a dark or light theme on the site.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Marketing and Targeting Cookies:</strong>
+        <ul>
+          <li>These cookies are set by our advertising partners to build a profile of your interests and show you relevant ads on other sites. They record your visit to our site, pages you have visited, and links you have followed.</li>
+          <li>Examples (Third-Party):
+            <ul>
+              <li><code>fr</code> – Facebook “like” button and Facebook login (expires after 3 months).</li>
+              <li><code>IDE</code> – DoubleClick (Google) advertising (expires after 1 year).</li>
+              <li><code>__Secure-3PAPISID</code>, <code>__Secure-APISID</code>, <code>__Secure-HSID</code> – Used by Google to track user preferences and deliver personalized ads (expires after 2 years).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Social Media Cookies:</strong>
+        <ul>
+          <li>Used when you share information using a social media sharing button or “like” button on our site, or when you link your account or engage with our content on social media sites.</li>
+          <li>Examples (Third-Party):
+            <ul>
+              <li><code>_fbp</code> – Facebook Pixel, used to deliver advertisements when you visit Facebook or a digital platform powered by Facebook advertising (expires after 3 months).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Third-Party Cookies and Providers -->
+  <section>
+    <h2>Third-Party Cookies and Providers</h2>
+    <p>
+      In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website, deliver advertisements on and through the website, perform analytics, and provide other services. These providers have their own cookie and privacy policies, which you should review separately. Below is a list of key third-party services we use:
+    </p>
+    <ul>
+      <li>
+        <strong>Google Analytics 4 (Google Ireland Limited):</strong>
+        <ul>
+          <li>Purpose: Analyzes site traffic and user behavior to help us optimize content, improve navigation, and measure marketing campaign performance.</li>
+          <li>Data Collected: Anonymized IP address (masked), device/browser information, geographic region, session start/end, pages viewed, and interaction events.</li>
+          <li>Retention: Data is stored for up to 14 months on Google servers, after which it is automatically deleted or aggregated.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Google Tag Manager (Google Ireland Limited):</strong>
+        <ul>
+          <li>Purpose: Manages and deploys marketing and analytics tags (snippets of code) on our site without modifying the codebase directly.</li>
+          <li>Data Collected: No personal data is collected by Tag Manager itself; it facilitates other tags such as Google Analytics or advertising pixels to operate.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Google Fonts (Google Ireland Limited):</strong>
+        <ul>
+          <li>Purpose: Serves web fonts to ensure consistent typography and styling across different browsers and devices.</li>
+          <li>Data Collected: Usage data (requests for font files), IP address, and user-agent string. No personal data is retained by Google Fonts.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Facebook Pixel (Facebook Ireland Limited):</strong>
+        <ul>
+          <li>Purpose: Tracks conversions, builds audiences for ad campaigns, and delivers targeted advertising on Facebook and Instagram.</li>
+          <li>Data Collected: Anonymized user interactions (page views, button clicks), device/browser information, and hashed email addresses if you submit forms on our site.</li>
+          <li>Retention: Data is retained according to Facebook’s data policy, typically up to 180 days unless you configure a different retention period in your Facebook Business Manager.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Hotjar (Hotjar Ltd.):</strong>
+        <ul>
+          <li>Purpose: Provides heatmaps, session recordings, and feedback polls to understand user behavior and improve site usability.</li>
+          <li>Data Collected: Mouse movements, scroll depth, clicks, form interactions, device/browser information, and IP address (anonymized). No personal identifiers are captured unless voluntarily submitted via feedback tools.</li>
+          <li>Retention: Anonymized user data is generally stored for up to 365 days; session recordings older than 365 days are automatically deleted.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      For details on each third party’s use of data and your rights in relation to that data, please review their respective privacy and cookie policies.
+    </p>
+  </section>
+
+  <!-- Managing and Controlling Cookies -->
+  <section>
+    <h2>Managing and Controlling Cookies</h2>
+    <p>
+      You can manage or disable cookies at any time using your browser settings or via our on-site cookie preference tool. Please note that blocking or deleting certain cookies may impair your ability to use some features on our site. Below are instructions for common browsers:
+    </p>
+    <ul>
+      <li>
+        <strong>Google Chrome:</strong> Go to Settings &gt; Privacy and security &gt; Cookies and other site data. From there, you can block third-party cookies, clear cookies, or set site-specific permissions.
+      </li>
+      <li>
+        <strong>Mozilla Firefox:</strong> Go to Options &gt; Privacy & Security &gt; Cookies and Site Data. You can manage data, delete cookies, or set custom cookie policies.
+      </li>
+      <li>
+        <strong>Safari (macOS):</strong> Go to Preferences &gt; Privacy &gt; Cookies and website data. You can block all cookies or manage website-specific data.
+      </li>
+      <li>
+        <strong>Microsoft Edge:</strong> Go to Settings &gt; Cookies and site permissions &gt; Manage and delete cookies and site data. You can block, clear, or set exemptions.
+      </li>
+      <li>
+        <strong>Mobile Browsers:</strong> Most mobile browsers allow you to clear browsing data or disable cookies via their settings menu (e.g., Settings &gt; Privacy on iOS or Android).
+      </li>
+    </ul>
+    <p>
+      Alternatively, you can use our cookie preference center by clicking the “Cookie Settings” button on the banner or persistent icon. From there, you can opt in or out of specific categories of cookies (e.g., Analytics, Marketing, Functional).
+    </p>
+  </section>
+
+  <!-- Data Retention and Storage -->
+  <section>
+    <h2>Data Retention and Storage</h2>
+    <p>
+      We retain cookie-related data only for as long as necessary to fulfill the purpose for which the cookie was set. Specifically:
+    </p>
+    <ul>
+      <li>
+        <strong>Session Cookies:</strong> Deleted when you close your browser.
+      </li>
+      <li>
+        <strong>Persistent Cookies:</strong> Retained for a maximum of two years or until you delete them via your browser settings, whichever comes first.
+      </li>
+      <li>
+        <strong>Analytics Cookies:</strong> Data is stored for 14 months on third-party servers (e.g., Google Analytics) before being automatically deleted or aggregated.
+      </li>
+      <li>
+        <strong>Marketing Cookies:</strong> Retained for up to 12 months on third-party servers (e.g., Facebook Pixel, DoubleClick).
+      </li>
+    </ul>
+    <p>
+      Any data derived from cookies that is no longer necessary or that you have withdrawn consent for will be deleted or anonymized. We do not combine cookie data with any personally identifiable information unless you have explicitly provided it (e.g., by submitting a form).
+    </p>
+  </section>
+
+  <!-- Non-Cookie Tracking Technologies -->
+  <section>
+    <h2>Non-Cookie Tracking Technologies</h2>
+    <p>
+      In addition to cookies, we may use other tracking technologies such as local storage, session storage, web beacons, and pixel tags. These technologies serve similar purposes as cookies—storing preferences, tracking usage, and measuring performance—but function differently at the technical level. For example:
+    </p>
+    <ul>
+      <li>
+        <strong>Local Storage / Session Storage:</strong> Data stored locally in your browser that persists beyond a single session (local storage) or only for the duration of your browsing session (session storage). Used for storing user preferences without sending data back to the server on every request.
+      </li>
+      <li>
+        <strong>Web Beacons / Pixel Tags:</strong> Small, transparent images embedded in web pages or emails that allow us to track visits, page views, and email opens. These are often used by analytics and marketing partners.
+      </li>
+    </ul>
+    <p>
+      You can control or delete web beacons and local storage items via your browser settings. To learn more, refer to the documentation of your specific browser.
+    </p>
+  </section>
+
+  <!-- Children’s Privacy and Cookies -->
+  <section>
+    <h2>Children’s Privacy and Cookies</h2>
+    <p>
+      Our website is not intended for children under 16 years of age. We do not knowingly collect or use cookies to gather personal information from children. If we become aware that a child under 16 has provided us with personal data, we will take steps to delete such information and stop all data processing activities related to that child.
+    </p>
+  </section>
+
+  <!-- Changes to This Cookie Policy -->
+  <section>
+    <h2>Changes to This Cookie Policy</h2>
+    <p>
+      We may update this Cookie Policy periodically to reflect changes in our use of cookies, applicable laws, or industry practices. When we make material changes, we will post the updated policy here with a revised “Last Updated” date. We encourage you to review this page regularly to stay informed about how we use cookies.
+    </p>
+  </section>
+
+  <!-- Contact Information -->
+  <section>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Cookie Policy or our use of cookies, please contact us at:
+    </p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:legal@overeye.net">legal@overeye.net</a></li>
+    </ul>
+  </section>
+
+  <!-- Definitions -->
+  <section>
+    <h2>Definitions</h2>
+    <p><strong>Cookie:</strong> A small text file placed on your device by a website to store your preferences and track your activity.</p>
+    <p><strong>First-Party Cookie:</strong> A cookie set by the website domain you are visiting directly.</p>
+    <p><strong>Third-Party Cookie:</strong> A cookie set by a domain other than the one you are visiting, typically by a partner or service provider.</p>
+    <p><strong>Local Storage:</strong> A web storage mechanism allowing data to be stored in your browser beyond a single session.</p>
+    <p><strong>Session Storage:</strong> A web storage mechanism that stores data only for the duration of your browsing session.</p>
+    <p><strong>Web Beacon / Pixel Tag:</strong> A tiny, transparent image embedded in a web page or email that tracks user behavior such as page views or email opens.</p>
+    <p><strong>Personal Data:</strong> Any information that can directly or indirectly identify a natural person.</p>
+    <p><strong>Data Controller:</strong> The entity that determines the purposes and means of processing personal data (Overeye).</p>
+  </section>
+
+
+    
+    <!-- Back Button -->
+    <a href="https://www.wearemomento.com" class="back-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 19l-7-7 7-7v14z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+      Back to Momento
+    </a>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Overeye. All rights reserved.</p>
+  </footer>
+</body>
+</html>

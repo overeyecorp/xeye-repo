@@ -1,0 +1,16 @@
+{
+  "contact": [
+    {
+      "question": "contattami",
+      "answer": "Ottimo! forniscimi una tua E-mail"
+    },
+    {
+      "question": "E-mail",
+      "answer": "Il motivo del perchè mi stai contattando?"
+    },
+    {
+      "question": "Motivo",
+      "answer": "Grazie! la tua richiesta è stata inoltrata a momento! ti contatterò presto!"
+    }
+  ]
+}
