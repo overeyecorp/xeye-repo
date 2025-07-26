@@ -1,40 +1,1594 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><base href="https://raw.githubusercontent.com/overeyecorp/xeye-repo/main/progetti/elisabruscoli/" />
-        <meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
         <title>Elisa Bruscoli - Dietista Professionale</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Free Website Template" name="keywords" />
-        <meta content="Free Website Template" name="description" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon" />
+        <link href="img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-        <link href="lib/animate/animate.min.css" rel="stylesheet" />
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_eb/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_eb/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_eb/favicon-16x16.png" />
-  <link rel="shortcut icon" href="/favicon_eb/favicon.ico" type="image/x-icon" />
-  <link rel="manifest" href="/favicon_eb/site.webmanifest" />
-  <link rel="mask-icon" href="/favicon_eb/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_eb/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_eb/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_eb/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon_eb/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicon_eb/site.webmanifest">
+  <link rel="mask-icon" href="/favicon_eb/safari-pinned-tab.svg" color="#5bbad5">
   
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-config" content="/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+
+
+
+<style>
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    color: #797979;
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #414141;
+}
+
+a {
+    color: #313131;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #fff0e8;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: #fff0e8;
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 50px #fff0e8;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+}
+
+.btn:hover {
+    color: #fff0e8;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #fff0e8;
+    border-color: #fff0e8;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    z-index: 999;
+}
+
+#loader.show {
+    -webkit-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    -o-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    transition: opacity .6s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .loader {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 5px solid #dddddd;
+    border-top: 5px solid #fff0e8;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 8px 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9;
+}
+
+.back-to-top i {
+    color: #ffffff;
+}
+
+.back-to-top:hover i {
+    color: #414141;
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+/* Brand */
+.navbar .navbar-brand {
+    margin: 0;
+    font-size: 45px;
+    line-height: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: .5s;
+    color: #333333; /* carbone */
+}
+
+/* Dropdown-menu background */
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #F7EDEA; /* avorio */
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 30px 60px;
+        background: transparent !important;
+        border-bottom: none !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #ffffff !important; /* pesca */
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    /* Brand sticky mantiene il colore */
+    .navbar.nav-sticky .navbar-brand {
+        color: #333333;
+    }
+
+    /* Nav-links desktop default */
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link:focus {
+        padding: 10px 10px 8px;
+        color: #333333; /* carbone */
+        font-size: 15px;
+        font-weight: 500;
+        transition: color .3s;
+    }
+    
+    /* Hover/active desktop */
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: #326A69; /* teal soft */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px;
+        background: #333333 !important; /* carbone */
+    }
+    
+    /* Brand mobile */
+    .navbar .navbar-brand {
+        color: #FFF0E8; /* pesca */
+    }
+    
+    .navbar .navbar-nav {
+        margin-top: 15px;
+    }
+    
+    .navbar a.nav-link {
+        display: block;
+        padding: 5px;
+        color: #FFF0E8; /* pesca */
+        transition: color .3s;
+    }
+    
+    /* Hover/active mobile */
+    .navbar a.nav-link:hover,
+    .navbar a.nav-link.active {
+        color: #326A69; /* teal soft */
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+        background: #F7EDEA; /* avorio */
+    }
+}
+
+
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 120px 0 0 0;
+    overflow: hidden;
+    background: linear-gradient(#FFF0E8, #F7EDEA), url(../img/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+    padding-right: 75px;
+}
+
+.hero .hero-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.hero .hero-content {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text p {
+    color: #333333;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h1 {
+    color: #333333;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h2 {
+    display: inline-block;
+    margin: 0;
+    height: 35px;
+    color: #333333;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.hero .hero-text .typed-text {
+    display: none;
+}
+
+.hero .hero-text .typed-cursor {
+    font-size: 35px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.hero .hero-btn .btn {
+    margin-top: 35px;
+    color: #ffffff;
+    background: #326A69;
+    box-shadow: inset 0 0 0 50px #326A69;
+    border: 2px solid transparent;
+    transition: ease-out 0.3s;
+}
+
+.hero .hero-btn .btn:hover {
+    color: #326A69;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #326A69;
+    border-color: #326A69;
+}
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 60px;
+    }
+    
+    .hero .hero-content {
+        padding: 0 15px;
+    }
+    
+    .hero .hero-text p {
+        font-size: 20px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 45px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 25px;
+        height: 25px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .hero,
+    .hero .hero-text,
+    .hero .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 22px;
+        height: 22px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 10px 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 18px;
+        height: 18px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+}
+
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.section-header p {
+    display: inline-block;
+    margin: 0 30px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #ffffff;
+}
+
+.section-header p::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    top: 11px;
+    right: 0;
+    left: -30px;
+    background: #326A69;
+    z-index: -1;
+}
+
+.section-header p::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    top: 11px;
+    left: 3px;
+    background: #326A69;
+    z-index: 1;
+}
+
+.section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    margin: -45px 0 45px 0;
+}
+
+.about .col-lg-6 {
+    padding: 0;
+}
+
+.about .section-header {
+    margin-bottom: 30px;
+}
+
+.about .about-img {
+    position: relative;
+    height: 100%;
+}
+
+.about .about-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .about-content {
+    padding: 0 60px;
+}
+
+.about .about-text p {
+    font-size: 16px;
+}
+
+.about .skills {
+    margin-bottom: 30px;
+}
+
+.about .skill-name {
+    margin-top: 15px;
+}
+
+.about .skill-name p {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about .skill-name p:last-child {
+    float: right;
+}
+
+.about .progress {
+    height: 10px;
+    border-radius: 10px;
+    background: #dddddd;
+}
+
+.about .progress .progress-bar {
+    width: 0px;
+    background: #326A69;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.about .about-text a.btn {
+    margin-top: 15px;
+}
+
+@media (max-width: 991.98px) {
+    .about .about-content {
+        padding: 45px 15px 0 15px;
+    }
+}
+
+
+/*******************************/
+/******* Experience CSS ********/
+/*******************************/
+.experience {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.experience .timeline {
+    position: relative;
+    width: 100%;
+}
+
+.experience .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #326A69;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.experience .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+    left: 0;
+    padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.experience .timeline .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid #326A69;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.right::after {
+    left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 1;
+  border: 10px solid;
+  border-color: transparent transparent transparent #dddddd;
+}
+
+.experience .timeline .timeline-item.right::before {
+  left: 10px;
+  border-color: transparent #dddddd transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #326A69;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+    text-align: left;
+    left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+    text-align: right;
+    right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 5px solid #dddddd;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.experience .timeline .timeline-item.right .timeline-text {
+    border-right: none;
+    border-left: 5px solid #dddddd;
+}
+
+.experience .timeline .timeline-text h2 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.experience .timeline .timeline-text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.experience .timeline .timeline-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+    .experience .timeline::after {
+        left: 8px;
+    }
+
+    .experience .timeline .timeline-item {
+        width: 100%;
+        padding-left: 38px;
+    }
+    
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+    
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+    
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        left: 18px;
+        border-color: transparent #dddddd transparent transparent;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-text,
+    .experience .timeline .timeline-item.right .timeline-text {
+        border-right: none;
+        border-left: 5px solid #dddddd;
+    }
+}
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: ease-out 0.5s;
+}
+
+.service .service-item:hover {
+    box-shadow: inset 800px 0 0 0 #326A69;
+}
+
+.service .service-icon {
+    position: relative;
+    width: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #326A69;
+    background: #ffffff;
+}
+
+.service .service-icon i {
+    position: relative;
+    font-size: 60px;
+    color: #326A69;
+    transition: .3s;
+}
+
+.service .service-item:hover i {
+    font-size: 75px;
+}
+
+.service .service-text {
+    position: relative;
+    width: calc(100% - 120px);
+    padding: 0 30px;
+}
+
+.service .service-text h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 1s;
+}
+
+.service .service-text p {
+    margin: 0;
+    font-size: 16px;
+    transition: 1s;
+}
+
+.service .service-item:hover .service-text h3,
+.service .service-item:hover .service-text p {
+    color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+    .service .service-text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .service .service-text p {
+        font-size: 14px;
+    }
+}
+
+
+
+/*******************************/
+/********* Pricing CSS *********/
+/*******************************/
+.price {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.price .row {
+    padding: 0 15px;
+}
+
+.price .col-md-4 {
+    padding: 0;
+}
+
+.price .price-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+.price .featured-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.price .price-header,
+.price .price-body,
+.price .price-footer {
+    position: relative;
+    text-align: center;
+}
+
+.price .price-header {
+    padding: 45px 0 30px 0;
+    color: #414141;
+}
+
+.price .price-item.featured-item .price-header {
+    color: #326A69;
+}
+
+.price .price-title h2 {
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.price .price-prices h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.price .price-prices h2 small {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 9px;
+    margin-left: -12px;
+}
+
+.price .price-prices h2 span {
+    margin-left: 1px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.price .price-item.featured-item h2 {
+    color: #326A69;
+}
+
+.price .price-body {
+    padding: 0 0 20px 0;
+}
+
+.price .price-description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.price .price-description ul li {
+    padding: 0 0 20px 0;
+}
+
+.price .price-item .price-action {
+    padding-bottom: 45px;
+}
+
+.price .price-item .price-action .btn {
+    color: #ffffff;
+    background: #414141;
+    box-shadow: inset 0 0 0 50px #414141;
+}
+
+.price .price-item .price-action .btn:hover {
+    color: #414141;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #414141;
+    border-color: #414141;
+}
+
+.price .price-item.featured-item .price-action .btn {
+    color: #ffffff;
+    background: #326A69;
+    box-shadow: inset 0 0 0 50px #326A69;
+}
+
+.price .price-item.featured-item .price-action .btn:hover {
+    color: #326A69;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #326A69;
+    border-color: #326A69;
+}
+
+/* Styling specifico per la nuova sezione Consulenze */
+.price-header .price-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.price-prices h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+.price-prices span {
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: super;
+}
+.price-body .price-description li {
+  margin-bottom: 0.75rem;
+  font-size: 15px;
+}
+.price-item.featured-item {
+  border: 2px solid #326A69;
+}
+.price-item.featured-item .btn {
+  background: #326A69;
+  box-shadow: inset 0 0 0 50px #326A69;
+}
+
+/* Due colonne equidistanti e spaziatura */
+.price .row {
+  margin-top: 2rem;
+}
+.price-item {
+  border: 1px solid #eaeaea;
+}
+.price-item.featured-item {
+  border-color: #326A69;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.price-header .price-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.price-prices h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.price-prices span {
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: super;
+}
+.price-body .price-description li {
+  margin-bottom: 0.75rem;
+  font-size: 15px;
+}
+.price-action .btn {
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Icona in cima al pacchetto */
+.price-item .icon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.price-item .icon i {
+  transition: transform .3s;
+}
+.price-item:hover .icon i {
+  transform: scale(1.1);
+}
+
+/* Stili comuni */
+.price-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Online: rosso brand */
+.price-item.online {
+  border-color: #326A69;
+}
+.price-item.online .price-header .price-title h2,
+.price-item.online .price-prices h2 {
+  color: #326A69;
+}
+.btn-online {
+  color: #fff;
+  background: #326A69;
+  box-shadow: inset 0 0 0 50px #326A69;
+}
+.btn-online:hover {
+  color: #326A69;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 #326A69;
+  border: 2px solid #326A69;
+}
+
+/* Studio: grigio neutro */
+.price-item.studio {
+  border-color: #555;
+}
+.price-item.studio .price-header .price-title h2,
+.price-item.studio .price-prices h2 {
+  color: #555;
+}
+.btn-studio {
+  color: #fff;
+  background: #555;
+  box-shadow: inset 0 0 0 50px #555;
+}
+.btn-studio:hover {
+  color: #555;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 #555;
+  border: 2px solid #555;
+}
+
+/* Prezzo */
+.price-prices h2 {
+  font-size: 32px;
+  margin: 0.5rem 0;
+}
+.price-prices span {
+  font-size: 16px;
+  vertical-align: super;
+}
+
+/* Lista servizi */
+.price-body .price-description {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.price-body .price-description li {
+  margin-bottom: 0.75rem;
+  font-size: 15px;
+}
 
 
 
 
 
+
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    background: #326A69;
+}
+
+.contact .container-fluid {
+    background: url(../img/contact.jpg) left center no-repeat;
+    background-size: contain;
+}
+
+.contact .contact-form {
+    position: relative;
+    padding: 90px 0 90px 45px;
+    background: #326A69;
+}
+
+.contact .contact-form input {
+    color: #ffffff;
+    padding: 15px 0;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form textarea {
+    color: #ffffff;
+    height: 90px;
+    padding: 15px 0;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form .form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.contact .contact-form .form-control:-ms-input-placeholder,
+.contact .contact-form .form-control::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.contact .contact-form .btn {
+    margin-top: 35px;
+    color: #326A69;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.contact .contact-form .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+.contact .help-block ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 14px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+    .contact .container-fluid {
+        background: none;
+    }
+    
+    .contact .contact-form {
+        padding: 90px 0;
+    }
+}
+/* 1) Spacing e distanza form */
+#contact {
+  padding-top: 120px;          /* sposta la sezione più in basso */
+}
+#contact .section-header {
+  margin-bottom: 0.5rem;       /* avvicina header e form */
+}
+
+/* 2) Colore bianco per titolo e sottotitolo */
+#contact .section-header p,
+#contact .section-header h2 {
+  color: #fff;
+}
+
+/* 3) Sfondo rosso per il <p> decorato */
+#contact .section-header p {
+  position: relative;
+  background: #326A69;         /* nasconde la linea sotto il testo */
+  z-index: 1;
+}
+
+/* 4) Linea a sinistra e puntino bianchi */
+#contact .section-header p::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  top: 11px;
+  left: -30px;                 /* sporge a sinistra */
+  width: 30px;                 /* lunghezza desiderata */
+  background: #fff;
+  z-index: -1;
+}
+#contact .section-header p::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 11px;
+  left: 3px;                   /* accanto al testo */
+  background: #fff;
+  z-index: 2;
+}
+
+/* Contact: istruzione prerequisiti sotto il titolo */
+#contact .section-header .contact-instruction {
+  font-size: 0.75rem;        /* più piccolo */
+  color: #fff;               /* testo bianco */
+  background: transparent;
+  margin: 0.5rem 0 1.5rem;   /* spazio sopra e sotto */
+  padding: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+}
+/* Rimuove pseudo‐elementi di section-header */
+#contact .section-header .contact-instruction::before,
+#contact .section-header .contact-instruction::after {
+  content: none !important;
+}
+/* Stile del link interno */
+#contact .contact-instruction a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Al hover/focus il link diventa nero */
+#contact .contact-instruction a:hover,
+#contact .contact-instruction a:focus {
+  color: #000;
+}
+
+#contact .contact-instruction {
+  margin-bottom: 0.5rem !important;
+}
+#contact .contact-form {
+  margin-top: 0.5rem;
+}
+
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 45px;
+    background: #326A69;
+}
+
+.footer .container-fluid {
+    padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .footer-info h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer .footer-info h3 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-menu p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+    border: none;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #414141;
+}
+
+.footer .copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    top: 0;
+    left: 25%;
+    background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+    color: #414141;
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-info h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .footer .footer-info h3 {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .footer .footer-menu p {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
+}
+
+/* Footer – Privacy Policy */
+.footer-info .footer-policy {
+  text-align: center;          /* centra orizzontalmente */
+  margin: 1rem 0;              /* spazio sopra e sotto */
+}
+.footer-info .footer-policy a {
+  color: #fff;                 /* bianco di default */
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-info .footer-policy a:hover {
+  color: #000000;              /* “illumina” col tuo rosso brand */
+}
+
+
+
+
+
+
+
+
+  /* Sezione "I nostri studi" */
+    .studies {
+      padding: 4rem 0;
+      background: #f2f2f2;
+    }
+    .studies-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .study-item {
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .study-item:hover {
+      transform: scale(1.02);
+    }
+    .study-item iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    .study-item p {
+      padding: 1rem;
+      font-size: 1rem;
+      color: #326a69;  /* Modificato il verde */
+      margin: 0;
+    }
+
+/* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    #preloader .preloader-content {
+      text-align: center;
+    }
+    #preloader h1 {
+      font-size: 3rem;
+      color: #000;
+      letter-spacing: 5px;
+    }
+    /* Emoji food nel preloader */
+    #preloader .food-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 2rem;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    #preloader .food {
+      animation: bounce 1.5s infinite;
+    }
+
+    .studies {
+  background: none;    /* o background: #ffffff; */
+}
+
+
+/* Rendi lo <a> block-level e l’intero .study-item cliccabile */
+.studies-list a.study-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* Mantieni il padding e lo stile già definiti */
+.studies-list .study-item {
+  padding: 0; /* se ne hai, oppure lascia invariato */
+}
+/* Se vuoi un piccolo hover effect su tutto il card */
+.studies-list a.study-item:hover {
+  transform: scale(1.02);
+}
+
+/* Istruzione mappa */
+.map-instruction {
+  font-size: 0.875rem;
+  color: #555;             /* un grigio scuro, discreto */
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;   /* spazio prima delle card */
+  font-style: italic;
+}
+
+/* Override per la piccola istruzione sotto “Vieni a trovarmi” */
+#studies .section-header .map-instruction {
+  display: block;            /* occuperà tutta la larghezza */
+  background: transparent;   /* niente sfondo bianco */
+  color: #000;               /* testo nero */
+  font-size: 0.75rem;        /* più piccola */
+  font-style: normal;        /* niente corsivo */
+  text-transform: none;      /* niente maiuscole */
+  letter-spacing: normal;    /* spaziatura normale */
+  margin: 0.25rem 0 1rem;    /* poco spazio sopra, più sotto */
+  padding: 0;                /* azzera eventuali padding */
+}
+
+/* Rimuove qualsiasi pseudo-elemento (::before/::after) */
+#studies .section-header .map-instruction::before,
+#studies .section-header .map-instruction::after {
+  content: none !important;
+}
+
+/* Spazio extra tra la sezione Studi (mappe) e la FAQ */
+#studies {
+  margin-bottom: 3rem;    /* regola a piacere */
+}
+
+/* Offset dell’ancora per evitare che la FAQ venga “tagliata” dallo sticky navbar */
+#faq {
+  scroll-margin-top: 100px;   /* spazio riservato allo sticky navbar */
+  margin-top: 4rem;           /* spazio extra fra il navbar e il titolo FAQ */
+}
+
+/* Logo: rimuove eventuale sfondo e mantiene solo il disegno in nero */
+.navbar .navbar-brand img {
+  background: transparent;           /* nessuno sfondo */
+  filter: brightness(0) saturate(100%); /* tutto nero */
+  transition: filter .3s ease;
+}
+/* Forza il logo ad avere un’altezza massima di 50px (adatta a navbar standard) */
+.navbar .navbar-brand img {
+  max-height: 20px;
+  width: auto;
+}
+
+/* Al passaggio del mouse: “illumina” il logo di verde #326A69 */
+.navbar .navbar-brand:hover img {
+  /* questi valori ricreano circa il verde #326A69 via filtro */
+  filter: brightness(0) saturate(100%)
+          invert(39%) sepia(40%) saturate(509%)
+          hue-rotate(121deg) brightness(92%) contrast(92%);
+}
+
+
+</style>
 
 <script>
   // Disabilita il restore automatico della posizione di scroll
@@ -54,62 +1608,1441 @@
 
 
 
-    <style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}body{color:rgb(121, 121, 121);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);font-family:Montserrat, sans-serif;}h1, h2, h3, h4, h5, h6{color:rgb(65, 65, 65);}a{color:rgb(49, 49, 49);transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}a:hover, a:active, a:focus{color:rgb(255, 240, 232);outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;}.btn:focus{box-shadow:none;}.form-control:focus{box-shadow:none;}.container-fluid{max-width:1366px;}.btn{padding-top:12px;padding-right:25px;padding-bottom:12px;padding-left:25px;font-size:14px;font-weight:600;letter-spacing:1px;color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 240, 232);border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;box-shadow:rgb(255, 240, 232) 0px 0px 0px 50px inset;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease-out;transition-delay:0s;transition-property:all;}.btn:hover{color:rgb(255, 240, 232);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(255, 240, 232) 0px 0px 0px 0px inset;border-top-color:rgb(255, 240, 232);border-right-color:rgb(255, 240, 232);border-bottom-color:rgb(255, 240, 232);border-left-color:rgb(255, 240, 232);}#loader.show{transition-behavior:normal, normal;transition-duration:0.6s, 0s;transition-timing-function:ease-out, linear;transition-delay:0s, 0s;transition-property:opacity, visibility;visibility:visible;opacity:1;}#loader .loader{position:relative;width:45px;height:45px;border-right-width:5px;border-bottom-width:5px;border-left-width:5px;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-color:rgb(221, 221, 221);border-bottom-color:rgb(221, 221, 221);border-left-color:rgb(221, 221, 221);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-width:5px;border-top-style:solid;border-top-color:rgb(255, 240, 232);border-top-left-radius:50%;border-top-right-radius:50%;border-bottom-right-radius:50%;border-bottom-left-radius:50%;animation-duration:2s;animation-timing-function:linear;animation-delay:0s;animation-iteration-count:infinite;animation-direction:normal;animation-fill-mode:none;animation-play-state:running;animation-name:spin;animation-timeline:auto;animation-range-start:normal;animation-range-end:normal;}.back-to-top i{color:rgb(255, 255, 255);}.back-to-top:hover i{color:rgb(65, 65, 65);}.navbar{position:relative;transition-behavior:normal;transition-duration:0.5s;transition-timing-function:ease;transition-delay:0s;transition-property:all;z-index:999;}.navbar.nav-sticky{position:fixed;top:0px;width:100%;box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 5px;}.navbar .navbar-brand{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-size:45px;line-height:0;font-weight:700;letter-spacing:2px;transition-behavior:normal;transition-duration:0.5s;transition-timing-function:ease;transition-delay:0s;transition-property:all;color:rgb(51, 51, 51);}.navbar .dropdown-menu{margin-top:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(247, 237, 234);}.hero{position:relative;width:100%;margin-bottom:45px;padding-top:120px;padding-right:0px;padding-bottom:0px;padding-left:0px;overflow-x:hidden;overflow-y:hidden;background-image:linear-gradient(rgb(255, 240, 232), rgb(247, 237, 234)), url("../img/hero-bg.jpg");background-color:initial;background-position-x:50%;background-position-y:50%;background-repeat:no-repeat;background-size:cover;}.hero .container-fluid{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.hero .hero-image{position:relative;text-align:right;padding-right:75px;}.hero .hero-image img{max-width:80%;max-height:80%;}.hero .hero-content{position:relative;padding-left:75px;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;}.hero .hero-text p{color:rgb(51, 51, 51);font-size:25px;font-weight:600;margin-bottom:15px;}.hero .hero-text h1{color:rgb(51, 51, 51);font-size:60px;font-weight:700;letter-spacing:3px;margin-bottom:15px;}.hero .hero-text h2{display:inline-block;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;height:35px;color:rgb(51, 51, 51);font-size:35px;font-weight:600;}.hero .hero-text .typed-text{display:none;}.hero .hero-text .typed-cursor{font-size:35px;font-weight:300;color:rgb(51, 51, 51);}.hero .hero-btn .btn{margin-top:35px;color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);box-shadow:rgb(50, 106, 105) 0px 0px 0px 50px inset;border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease-out;transition-delay:0s;transition-property:all;}.hero .hero-btn .btn:hover{color:rgb(50, 106, 105);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(50, 106, 105) 0px 0px 0px 0px inset;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);}.hero .hero-btn .btn:first-child{margin-right:10px;}.section-header{position:relative;margin-bottom:45px;}.section-header p{display:inline-block;margin-top:0px;margin-right:30px;margin-left:30px;margin-bottom:10px;padding-left:15px;position:relative;font-size:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);}.section-header p::before{position:absolute;content:"";height:3px;top:11px;right:0px;left:-30px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);z-index:-1;}.section-header p::after{position:absolute;content:"";width:3px;height:3px;top:11px;left:3px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);z-index:1;}.section-header h2{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;position:relative;font-size:45px;font-weight:700;}.about{position:relative;width:100%;margin-top:-45px;margin-right:0px;margin-bottom:45px;margin-left:0px;}.about .col-lg-6{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.about .section-header{margin-bottom:30px;}.about .about-img{position:relative;height:100%;}.about .about-img img{position:relative;width:100%;height:100%;object-fit:cover;}.about .about-content{padding-top:0px;padding-right:60px;padding-bottom:0px;padding-left:60px;}.about .about-text p{font-size:16px;}.about .skills{margin-bottom:30px;}.about .skill-name{margin-top:15px;}.about .skill-name p{display:inline-block;margin-bottom:5px;font-size:16px;font-weight:400;}.about .skill-name p:last-child{float:right;}.about .progress{height:10px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:10px;border-bottom-left-radius:10px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(221, 221, 221);}.about .progress .progress-bar{width:0px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:10px;border-bottom-left-radius:10px;transition-behavior:normal;transition-duration:2s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}.about .about-text a.btn{margin-top:15px;}.experience{position:relative;padding-top:45px;padding-right:0px;padding-bottom:15px;padding-left:0px;}.experience .timeline{position:relative;width:100%;}.experience .timeline::after{content:"";position:absolute;width:2px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);top:0px;bottom:0px;left:50%;margin-left:-1px;}.experience .timeline .timeline-item{position:relative;background-image:inherit;background-position-x:inherit;background-position-y:inherit;background-size:inherit;background-repeat:inherit;background-attachment:inherit;background-origin:inherit;background-clip:inherit;background-color:inherit;width:50%;margin-bottom:30px;}.experience .timeline .timeline-item.left{left:0px;padding-right:30px;}.experience .timeline .timeline-item.right{left:50%;padding-left:30px;}.experience .timeline .timeline-item::after{content:"";position:absolute;width:16px;height:16px;top:48px;right:-8px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-right-radius:16px;border-bottom-left-radius:16px;z-index:1;}.experience .timeline .timeline-item.right::after{left:-8px;}.experience .timeline .timeline-item::before{content:"";position:absolute;width:0px;height:0px;top:46px;right:10px;z-index:1;border-top-width:10px;border-right-width:10px;border-bottom-width:10px;border-left-width:10px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:rgb(221, 221, 221);}.experience .timeline .timeline-item.right::before{left:10px;border-top-color:transparent;border-right-color:rgb(221, 221, 221);border-bottom-color:transparent;border-left-color:transparent;}.experience .timeline .timeline-date{position:absolute;width:100%;top:44px;font-size:16px;font-weight:600;color:rgb(50, 106, 105);text-transform:uppercase;letter-spacing:1px;z-index:1;}.experience .timeline .timeline-item.left .timeline-date{text-align:left;left:calc(100% + 55px);}.experience .timeline .timeline-item.right .timeline-date{text-align:right;right:calc(100% + 55px);}.experience .timeline .timeline-text{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);position:relative;border-right-width:5px;border-right-style:solid;border-right-color:rgb(221, 221, 221);box-shadow:rgba(0, 0, 0, 0.08) 0px 0px 60px;}.experience .timeline .timeline-item.right .timeline-text{border-right-width:initial;border-right-style:none;border-right-color:initial;border-left-width:5px;border-left-style:solid;border-left-color:rgb(221, 221, 221);}.experience .timeline .timeline-text h2{margin-top:0px;margin-right:0px;margin-bottom:5px;margin-left:0px;font-size:22px;font-weight:600;}.experience .timeline .timeline-text h4{margin-top:0px;margin-right:0px;margin-bottom:10px;margin-left:0px;font-size:16px;font-style:italic;font-weight:400;}.experience .timeline .timeline-text p{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-size:16px;}.service{position:relative;width:100%;padding-top:45px;padding-right:0px;padding-bottom:15px;padding-left:0px;}.service .service-item{position:relative;margin-bottom:30px;display:flex;align-items:center;box-shadow:transparent 0px 0px 0px 0px inset;transition-behavior:normal;transition-duration:0.5s;transition-timing-function:ease-out;transition-delay:0s;transition-property:all;}.service .service-item:hover{box-shadow:rgb(50, 106, 105) 800px 0px 0px 0px inset;}.service .service-icon{position:relative;width:150px;min-height:150px;display:flex;align-items:center;justify-content:center;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);}.service .service-icon i{position:relative;font-size:60px;color:rgb(50, 106, 105);transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}.service .service-item:hover i{font-size:75px;}.service .service-text{position:relative;width:calc(100% - 120px);padding-top:0px;padding-right:30px;padding-bottom:0px;padding-left:30px;}.service .service-text h3{margin-bottom:10px;font-size:20px;font-weight:600;transition-behavior:normal;transition-duration:1s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}.service .service-text p{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-size:16px;transition-behavior:normal;transition-duration:1s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}.service .service-item:hover .service-text h3, .service .service-item:hover .service-text p{color:rgb(255, 255, 255);}.price{position:relative;width:100%;padding-top:45px;padding-right:0px;padding-bottom:15px;padding-left:0px;}.price .row{padding-top:0px;padding-right:15px;padding-bottom:0px;padding-left:15px;}.price .col-md-4{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.price .price-item{position:relative;margin-bottom:30px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);}.price .featured-item{box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 30px;z-index:1;}.price .price-header, .price .price-body, .price .price-footer{position:relative;text-align:center;}.price .price-header{padding-top:45px;padding-right:0px;padding-bottom:30px;padding-left:0px;color:rgb(65, 65, 65);}.price .price-item.featured-item .price-header{color:rgb(50, 106, 105);}.price .price-title h2{font-size:25px;font-weight:400;text-transform:uppercase;}.price .price-prices h2{font-size:45px;font-weight:700;margin-left:10px;}.price .price-prices h2 small{position:absolute;font-size:18px;font-weight:400;margin-top:9px;margin-left:-12px;}.price .price-prices h2 span{margin-left:1px;font-size:18px;font-weight:400;}.price .price-item.featured-item h2{color:rgb(50, 106, 105);}.price .price-body{padding-top:0px;padding-right:0px;padding-bottom:20px;padding-left:0px;}.price .price-description ul{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;list-style-position:initial;list-style-image:initial;list-style-type:none;}.price .price-description ul li{padding-top:0px;padding-right:0px;padding-bottom:20px;padding-left:0px;}.price .price-item .price-action{padding-bottom:45px;}.price .price-item .price-action .btn{color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(65, 65, 65);box-shadow:rgb(65, 65, 65) 0px 0px 0px 50px inset;}.price .price-item .price-action .btn:hover{color:rgb(65, 65, 65);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(65, 65, 65) 0px 0px 0px 0px inset;border-top-color:rgb(65, 65, 65);border-right-color:rgb(65, 65, 65);border-bottom-color:rgb(65, 65, 65);border-left-color:rgb(65, 65, 65);}.price .price-item.featured-item .price-action .btn{color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);box-shadow:rgb(50, 106, 105) 0px 0px 0px 50px inset;}.price .price-item.featured-item .price-action .btn:hover{color:rgb(50, 106, 105);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(50, 106, 105) 0px 0px 0px 0px inset;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);}.price-header .price-title h2{font-size:24px;font-weight:600;margin-bottom:5px;}.price-prices h2{font-size:36px;font-weight:700;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.price-prices span{font-size:16px;font-weight:400;vertical-align:super;}.price-body .price-description li{margin-bottom:0.75rem;font-size:15px;}.price-item.featured-item{border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.price-item.featured-item .btn{background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);box-shadow:rgb(50, 106, 105) 0px 0px 0px 50px inset;}.price .row{margin-top:2rem;}.price-item{border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(234, 234, 234);border-right-color:rgb(234, 234, 234);border-bottom-color:rgb(234, 234, 234);border-left-color:rgb(234, 234, 234);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.price-item.featured-item{border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);box-shadow:rgba(0, 0, 0, 0.1) 0px 4px 8px;}.price-header .price-title h2{font-size:24px;font-weight:600;}.price-prices h2{font-size:34px;font-weight:700;margin-top:0.5rem;margin-right:0px;margin-bottom:0.5rem;margin-left:0px;}.price-prices span{font-size:16px;font-weight:400;vertical-align:super;}.price-body .price-description li{margin-bottom:0.75rem;font-size:15px;}.price-action .btn{padding-top:10px;padding-right:25px;padding-bottom:10px;padding-left:25px;font-size:14px;font-weight:600;}.price-item .icon{text-align:center;margin-bottom:1rem;}.price-item .icon i{transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:transform;}.price-item:hover .icon i{transform:scale(1.1);}.price-item{border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(224, 224, 224);border-right-color:rgb(224, 224, 224);border-bottom-color:rgb(224, 224, 224);border-left-color:rgb(224, 224, 224);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-right-radius:8px;border-bottom-left-radius:8px;padding-top:1.5rem;padding-right:1.5rem;padding-bottom:1.5rem;padding-left:1.5rem;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);box-shadow:rgba(0, 0, 0, 0.04) 0px 2px 6px;display:flex;flex-direction:column;justify-content:space-between;}.price-item.online{border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);}.price-item.online .price-header .price-title h2, .price-item.online .price-prices h2{color:rgb(50, 106, 105);}.btn-online{color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);box-shadow:rgb(50, 106, 105) 0px 0px 0px 50px inset;}.btn-online:hover{color:rgb(50, 106, 105);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(50, 106, 105) 0px 0px 0px 0px inset;border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(50, 106, 105);border-right-color:rgb(50, 106, 105);border-bottom-color:rgb(50, 106, 105);border-left-color:rgb(50, 106, 105);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.price-item.studio{border-top-color:rgb(85, 85, 85);border-right-color:rgb(85, 85, 85);border-bottom-color:rgb(85, 85, 85);border-left-color:rgb(85, 85, 85);}.price-item.studio .price-header .price-title h2, .price-item.studio .price-prices h2{color:rgb(85, 85, 85);}.btn-studio{color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(85, 85, 85);box-shadow:rgb(85, 85, 85) 0px 0px 0px 50px inset;}.btn-studio:hover{color:rgb(85, 85, 85);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(85, 85, 85) 0px 0px 0px 0px inset;border-top-width:2px;border-right-width:2px;border-bottom-width:2px;border-left-width:2px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(85, 85, 85);border-right-color:rgb(85, 85, 85);border-bottom-color:rgb(85, 85, 85);border-left-color:rgb(85, 85, 85);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.price-prices h2{font-size:32px;margin-top:0.5rem;margin-right:0px;margin-bottom:0.5rem;margin-left:0px;}.price-prices span{font-size:16px;vertical-align:super;}.price-body .price-description{list-style-position:initial;list-style-image:initial;list-style-type:none;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:1rem;margin-right:0px;margin-bottom:1rem;margin-left:0px;}.price-body .price-description li{margin-bottom:0.75rem;font-size:15px;}.contact{position:relative;width:100%;margin-top:45px;margin-right:0px;margin-bottom:45px;margin-left:0px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);}.contact .container-fluid{background-image:url("../img/contact.jpg");background-position-x:0%;background-position-y:50%;background-repeat:no-repeat;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;background-size:contain;}.contact .contact-form{position:relative;padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:45px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);}.contact .contact-form input{color:rgb(255, 255, 255);padding-top:15px;padding-right:0px;padding-bottom:15px;padding-left:0px;background-image:none;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;border-top-width:initial;border-right-width:initial;border-left-width:initial;border-top-style:none;border-right-style:none;border-left-style:none;border-top-color:initial;border-right-color:initial;border-left-color:initial;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(255, 255, 255, 0.5);}.contact .contact-form textarea{color:rgb(255, 255, 255);height:90px;padding-top:15px;padding-right:0px;padding-bottom:15px;padding-left:0px;background-image:none;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;border-top-width:initial;border-right-width:initial;border-left-width:initial;border-top-style:none;border-right-style:none;border-left-style:none;border-top-color:initial;border-right-color:initial;border-left-color:initial;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(255, 255, 255, 0.5);}.contact .contact-form .form-control::placeholder{color:rgb(255, 255, 255);opacity:1;}.contact .contact-form .btn{margin-top:35px;color:rgb(50, 106, 105);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);box-shadow:rgb(255, 255, 255) 0px 0px 0px 50px inset;}.contact .contact-form .btn:hover{color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;box-shadow:rgb(255, 255, 255) 0px 0px 0px 0px inset;border-top-color:rgb(255, 255, 255);border-right-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);border-left-color:rgb(255, 255, 255);}.contact .help-block ul{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;list-style-type:none;font-size:14px;font-style:italic;color:rgb(255, 255, 255);}#contact{padding-top:120px;}#contact .section-header{margin-bottom:0.5rem;}#contact .section-header p, #contact .section-header h2{color:rgb(255, 255, 255);}#contact .section-header p{position:relative;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);z-index:1;}#contact .section-header p::before{content:"";position:absolute;height:3px;top:11px;left:-30px;width:30px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);z-index:-1;}#contact .section-header p::after{content:"";position:absolute;width:3px;height:3px;top:11px;left:3px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);z-index:2;}#contact .section-header .contact-instruction{font-size:0.75rem;color:rgb(255, 255, 255);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;margin-top:0.5rem;margin-right:0px;margin-bottom:1.5rem;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;text-transform:none;letter-spacing:normal;text-align:center;}#contact .section-header .contact-instruction::before, #contact .section-header .contact-instruction::after{content:none !important;}#contact .contact-instruction a{color:rgb(255, 255, 255);text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:color;}#contact .contact-instruction a:hover, #contact .contact-instruction a:focus{color:rgb(0, 0, 0);}#contact .contact-instruction{margin-bottom:0.5rem !important;}#contact .contact-form{margin-top:0.5rem;}.footer{position:relative;margin-top:45px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(50, 106, 105);}.footer .container-fluid{padding-top:60px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.footer .footer-info{position:relative;width:100%;text-align:center;}.footer .footer-info h2{margin-bottom:20px;font-size:30px;font-weight:700;color:rgb(255, 255, 255);}.footer .footer-info h3{margin-bottom:25px;font-size:22px;font-weight:600;color:rgb(255, 255, 255);}.footer .footer-menu{width:100%;display:flex;justify-content:center;}.footer .footer-menu p{color:rgb(255, 255, 255);font-size:22px;font-weight:600;line-height:20px;padding-top:0px;padding-right:15px;padding-bottom:0px;padding-left:15px;border-right-width:1px;border-right-style:solid;border-right-color:rgb(255, 255, 255);}.footer .footer-menu p:last-child{border-top-width:initial;border-right-width:initial;border-bottom-width:initial;border-left-width:initial;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.footer .footer-social{position:relative;margin-top:15px;}.footer .footer-social a{display:inline-block;}.footer .footer-social a i{margin-right:15px;font-size:20px;color:rgb(255, 255, 255);transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:all;}.footer .footer-social a:last-child i{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.footer .footer-social a:hover i{color:rgb(65, 65, 65);}.footer .copyright{position:relative;text-align:center;margin-top:30px;padding-top:25px;padding-bottom:25px;}.footer .copyright::before{position:absolute;content:"";width:50%;height:1px;top:0px;left:25%;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgba(255, 255, 255, 0.2);}.footer .copyright p{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;color:rgb(255, 255, 255);}.footer .copyright .col-md-6:last-child p{text-align:right;}.footer .copyright p a{color:rgb(255, 255, 255);font-weight:600;}.footer .copyright p a:hover{color:rgb(65, 65, 65);}.footer-info .footer-policy{text-align:center;margin-top:1rem;margin-right:0px;margin-bottom:1rem;margin-left:0px;}.footer-info .footer-policy a{color:rgb(255, 255, 255);font-size:0.9rem;text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:color;}.footer-info .footer-policy a:hover{color:rgb(0, 0, 0);}.studies{padding-top:4rem;padding-right:0px;padding-bottom:4rem;padding-left:0px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(242, 242, 242);}.studies-list{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));row-gap:1.5rem;column-gap:1.5rem;align-items:start;}.study-item{background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(234, 234, 234);border-right-color:rgb(234, 234, 234);border-bottom-color:rgb(234, 234, 234);border-left-color:rgb(234, 234, 234);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-right-radius:8px;border-bottom-left-radius:8px;overflow-x:hidden;overflow-y:hidden;box-shadow:rgba(0, 0, 0, 0.05) 0px 2px 4px;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:transform;}.study-item:hover{transform:scale(1.02);}.study-item iframe{width:100%;height:300px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;}.study-item p{padding-top:1rem;padding-right:1rem;padding-bottom:1rem;padding-left:1rem;font-size:1rem;color:rgb(50, 106, 105);margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#preloader .preloader-content{text-align:center;}#preloader h1{font-size:3rem;color:rgb(0, 0, 0);letter-spacing:5px;}#preloader .food-icons{margin-top:20px;display:flex;justify-content:center;row-gap:10px;column-gap:10px;font-size:2rem;}#preloader .food{animation-duration:1.5s;animation-timing-function:ease;animation-delay:0s;animation-iteration-count:infinite;animation-direction:normal;animation-fill-mode:none;animation-play-state:running;animation-name:bounce;animation-timeline:auto;animation-range-start:normal;animation-range-end:normal;}.studies{background-image:none;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;}.studies-list a.study-item{display:block;text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;color:inherit;cursor:pointer;}.studies-list .study-item{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}.studies-list a.study-item:hover{transform:scale(1.02);}.map-instruction{font-size:0.875rem;color:rgb(85, 85, 85);margin-top:0.5rem;margin-bottom:1.5rem;font-style:italic;}#studies .section-header .map-instruction{display:block;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;color:rgb(0, 0, 0);font-size:0.75rem;font-style:normal;text-transform:none;letter-spacing:normal;margin-top:0.25rem;margin-right:0px;margin-bottom:1rem;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;}#studies .section-header .map-instruction::before, #studies .section-header .map-instruction::after{content:none !important;}#studies{margin-bottom:3rem;}#faq{scroll-margin-top:100px;margin-top:4rem;}.navbar .navbar-brand img{background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;filter:brightness(0) saturate(100%);transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:filter;}.navbar .navbar-brand img{max-height:20px;width:auto;}.navbar .navbar-brand:hover img{filter:brightness(0) saturate(100%) invert(39%) sepia(40%) saturate(509%) hue-rotate(121deg) brightness(92%) contrast(92%);}@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}@keyframes bounce{0%, 100%{transform:translateY(0px);}50%{transform:translateY(-10px);}}@media (min-width: 992px){.navbar{position:absolute;width:100%;padding-top:30px;padding-right:60px;padding-bottom:30px;padding-left:60px;z-index:9;background-image:initial !important;background-position-x:initial !important;background-position-y:initial !important;background-size:initial !important;background-repeat:initial !important;background-attachment:initial !important;background-origin:initial !important;background-clip:initial !important;background-color:transparent !important;border-bottom-width:initial !important;border-bottom-style:none !important;border-bottom-color:initial !important;}.navbar.nav-sticky{padding-top:10px;padding-right:60px;padding-bottom:10px;padding-left:60px;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0, 0, 0, 0.1);background-image:initial !important;background-position-x:initial !important;background-position-y:initial !important;background-size:initial !important;background-repeat:initial !important;background-attachment:initial !important;background-origin:initial !important;background-clip:initial !important;background-color:rgb(255, 255, 255) !important;}.navbar.nav-sticky .navbar-brand{color:rgb(51, 51, 51);}.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus{padding-top:10px;padding-right:10px;padding-bottom:8px;padding-left:10px;color:rgb(51, 51, 51);font-size:15px;font-weight:500;transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:color;}.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light.nav-sticky .navbar-nav .nav-link:hover, .navbar-light.nav-sticky .navbar-nav .nav-link.active{color:rgb(50, 106, 105);}}@media (max-width: 991.98px){.navbar{padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;background-image:initial !important;background-position-x:initial !important;background-position-y:initial !important;background-size:initial !important;background-repeat:initial !important;background-attachment:initial !important;background-origin:initial !important;background-clip:initial !important;background-color:rgb(51, 51, 51) !important;}.navbar .navbar-brand{color:rgb(255, 240, 232);}.navbar .navbar-nav{margin-top:15px;}.navbar a.nav-link{display:block;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;color:rgb(255, 240, 232);transition-behavior:normal;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:color;}.navbar a.nav-link:hover, .navbar a.nav-link.active{color:rgb(50, 106, 105);}.navbar .dropdown-menu{box-shadow:none;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(247, 237, 234);}.hero{padding-top:60px;}.hero .hero-content{padding-top:0px;padding-right:15px;padding-bottom:0px;padding-left:15px;}.hero .hero-text p{font-size:20px;}.hero .hero-text h1{font-size:45px;}.hero .hero-text h2{font-size:25px;height:25px;}.hero .hero-btn .btn{padding-top:12px;padding-right:30px;padding-bottom:12px;padding-left:30px;letter-spacing:1px;}.about .about-content{padding-top:45px;padding-right:15px;padding-bottom:0px;padding-left:15px;}}@media (max-width: 767.98px){.hero{padding-top:60px;padding-bottom:60px;}.hero, .hero .hero-text, .hero .hero-btn{width:100%;text-align:center;}.hero .hero-text p{font-size:18px;}.hero .hero-text h1{font-size:35px;}.hero .hero-text h2{font-size:22px;height:22px;}.hero .hero-btn .btn{padding-top:10px;padding-right:15px;padding-bottom:10px;padding-left:15px;letter-spacing:1px;}.section-header h2{font-size:30px;}.experience .timeline::after{left:8px;}.experience .timeline .timeline-item{width:100%;padding-left:38px;}.experience .timeline .timeline-item.left{padding-right:0px;}.experience .timeline .timeline-item.right{left:0%;padding-left:38px;}.experience .timeline .timeline-item.left::after, .experience .timeline .timeline-item.right::after{left:0px;}.experience .timeline .timeline-item.left::before, .experience .timeline .timeline-item.right::before{left:18px;border-top-color:transparent;border-right-color:rgb(221, 221, 221);border-bottom-color:transparent;border-left-color:transparent;}.experience .timeline .timeline-item.left .timeline-date, .experience .timeline .timeline-item.right .timeline-date{position:relative;top:0px;right:auto;left:0px;text-align:left;margin-bottom:10px;}.experience .timeline .timeline-item.left .timeline-text, .experience .timeline .timeline-item.right .timeline-text{border-right-width:initial;border-right-style:none;border-right-color:initial;border-left-width:5px;border-left-style:solid;border-left-color:rgb(221, 221, 221);}.contact .container-fluid{background-image:none;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;}.contact .contact-form{padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:0px;}}@media (max-width: 575.98px){.hero .hero-text p{font-size:16px;}.hero .hero-text h1{font-size:30px;}.hero .hero-text h2{font-size:18px;height:18px;}.hero .hero-btn .btn{padding-top:8px;padding-right:10px;padding-bottom:8px;padding-left:10px;letter-spacing:0px;}.service .service-text h3{font-size:16px;margin-bottom:5px;}.service .service-text p{font-size:14px;}.footer .footer-info h2{margin-bottom:20px;font-size:20px;font-weight:600;}.footer .footer-info h3{margin-bottom:20px;font-size:16px;}.footer .footer-menu p{font-size:16px;line-height:16px;padding-top:0px;padding-right:5px;padding-bottom:0px;padding-left:5px;}}</style></head>
+    </head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51"><div class="navbar navbar-expand-lg bg-light navbar-light"><div class="container-fluid"><button type="button" data-toggle="collapse" data-target="#navbarCollapse" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div id="navbarCollapse" class="collapse navbar-collapse justify-content-between"><div class="navbar-nav ml-auto"><a href="#home" class="nav-item nav-link active">Home</a><a href="#about" class="nav-item nav-link">Chi sono</a><a href="#service" class="nav-item nav-link">Qualifiche</a><a href="#experience" class="nav-item nav-link">Percorso</a><a href="#price" class="nav-item nav-link">Consulenze</a><a href="#contact" class="nav-item nav-link">Contattami</a><a href="#studies" class="nav-item nav-link">Dove</a><a href="#faq" class="nav-item nav-link">FAQ</a></div></div></div></div><!-- Nav Bar End --><!-- Hero Start --><div id="home" class="hero"><div class="container-fluid"><div class="row align-items-center"><div class="col-sm-12 col-md-6"><div class="hero-content"><div class="hero-text"><h1 id="idtkx">Elisa Bruscoli</h1><p id="ilc8s">Dietista nutrizionista.<br />Benessere, Equilibrio, Stile di vita.</p><h2></h2><div class="typed-text">Benessere. , Equilibrio. , Stile di vita. </div></div><div class="hero-btn"><a href="#about" class="btn">Scopri chi sono</a><!-- punta al form di contatto --><a href="#contact" class="btn">Contattami</a></div></div></div><div class="col-sm-12 col-md-6 d-none d-md-block"><div class="hero-image"><img src="img/hero.png" alt="Hero Image" /></div></div></div></div></div><!-- Hero End --><!-- FEATURES SECTION --><div class="container"><div class="features-list"><div class="feature-item"><i class="fas fa-utensils"></i><p>IMPARO A MANGIARE</p></div><div class="feature-item"><i class="fas fa-hand-holding-heart"></i><p>MIGLIORO IL RAPPORTO COL CIBO</p></div><div class="feature-item"><i class="fas fa-apple-alt"></i><p>LAVORO SUI SEGNALI DI FAME-SAZIETÀ</p></div><div class="feature-item"><i class="fas fa-paper-plane"></i><p>SCELGO CON FLESSIBILITÀ</p></div></div></div><!-- About Start --><div data-wow-delay="0.1s" id="about" class="about wow fadeInUp"><div class="container-fluid"><div class="row align-items-center"><div class="col-lg-6"><div class="about-img"><img src="img/about.jpg" alt="Image" /></div></div><div class="col-lg-6"><div class="about-content"><div class="section-header text-left"><p>Chi sono?</p><h2>Sono Elisa Bruscoli,</h2></div><div class="about-text"><p>
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <h1>Elisa Bruscoli</h1>
+      <div class="food-icons">
+        <span class="food">🍎</span>
+        <span class="food">🥦</span>
+        <span class="food">🍇</span>
+        <span class="food">🥕</span>
+        <span class="food">🍕</span>
+        <span class="food">🍩</span>
+        <span class="food">🍰</span>
+        <span class="food">🍌</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Al caricamento della pagina, nascondi il preloader dopo 3 secondi
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const preloader = document.getElementById('preloader');
+      // Effetto fade‐out
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+      // Dopo la dissolvenza, rimuovi il preloader e riattiva lo scroll
+      setTimeout(function() {
+        preloader.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }, 500);
+    }, 3000);
+  });
+</script>
+
+  
+  <!-- Disabilita lo scroll durante il preloader -->
+  <script>
+    document.body.style.overflow = 'hidden';
+  </script>
+  
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+   <!-- <img src="logo.png" alt="Elisa Bruscoli" class="navbar-logo"> -->
+</a>
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">Chi sono</a>
+                        <a href="#service" class="nav-item nav-link">Qualifiche</a>
+                        <a href="#experience" class="nav-item nav-link">Percorso</a>
+                        <a href="#price" class="nav-item nav-link">Consulenze</a>
+                        <a href="#contact" class="nav-item nav-link">Contattami</a>
+                        <a href="#studies" class="nav-item nav-link">Dove</a>
+                        <a href="#faq" class="nav-item nav-link">FAQ</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+
+        <!-- Hero Start -->
+        <div class="hero" id="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                
+                                <h1>Elisa Bruscoli.</h1>
+                                <p>Dietista e nutrizionista.</p>
+                                <h2></h2>
+                                <div class="typed-text">Benessere. , Equilibrio. , Stile di vita. </div>
+                            </div>
+                            <div class="hero-btn">
+            <a class="btn" href="#about">Scopri chi sono</a>
+            <!-- punta al form di contatto -->
+            <a class="btn" href="#contact">Contattami</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="img/hero.png" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+
+ 
+
+  <!-- FEATURES SECTION -->
+
+    <div class="container">
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fas fa-utensils"></i>
+          <p>IMPARO A MANGIARE</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-hand-holding-heart"></i>
+          <p>MIGLIORO IL RAPPORTO COL CIBO</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-apple-alt"></i>
+          <p>LAVORO SUI SEGNALI DI FAME-SAZIETÀ</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-balance-scale"></i>
+          <p>SCELGO CON FLESSIBILITÀ</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<style>
+/* FEATURES SECTION */
+.features {
+  padding: 4rem 0;
+  background: #fff; /* o un colore di sfondo a tua scelta */
+}
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: start;   /* allinea ogni card in alto nella riga del grid */
+}
+.feature-item i {
+  font-size: 2.5rem;
+  color: #326a69; /* il tuo verde personalizzato */
+  margin-bottom: 0.75rem;
+}
+.feature-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Alla fine del tuo style.css o del tag <style> */
+.features {
+  padding: 4rem 0 8rem;  /* spazio in basso maggiore */
+}
+
+.about {
+  margin-top: 6rem;      /* spazio in alto più ampio */
+}
+
+@media (max-width: 991.98px) {
+  /* Sfondo bianco sul mobile */
+  .navbar {
+    background: #ffffff !important;
+  }
+
+  /* Colore del brand */
+  .navbar .navbar-brand {
+    color: #333333 !important;
+  }
+
+  /* Colore dei link */
+  .navbar .navbar-nav .nav-link {
+    color: #333333 !important;
+  }
+
+  /* Hover/active colore verde come sul desktop */
+  .navbar .navbar-nav .nav-link:hover,
+  .navbar .navbar-nav .nav-link.active {
+    color: #326A69 !important;
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+<!-- About Start -->
+<div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="about-img">
+          <img src="img/about.jpg" alt="Image">
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-content">
+          <div class="section-header text-left">
+            <p>Chi sono?</p>
+            <h2>Sono Elisa Bruscoli,</h2>
+          </div>
+
+          <div class="about-text">
+            <p>
               sono una dietista nutrizionista laureata presso l’Università degli Studi di Firenze e
               specializzata in <strong>counseling nutrizionale</strong> per la modifica dello stile di vita
               (Master di I livello, Università di Pavia – 110 e lode).
-            </p><p>
+            </p>
+
+            <p>
               Lavoro in libera professione e affianco adulti, giovani adulti, sportivi che desiderano
               raggiungere obiettivi di salute, di prestazioni atletiche e di comportamento alimentare.
-            </p><p>
+            </p>
+
+            <p>
               Il mio approccio si basa su educazione alimentare, ascolto attivo e flessibilità.
               In questo spazio partendo da un colloquio approfondito creeremo un percorso su misura,
               dunque, in studio, il tempo che dedico alla persona è centrale: esploriamo insieme le abitudini,
               i bisogni reali e i vissuti legati al cibo, senza giudizio.
-            </p><p>
+            </p>
+
+            <p>
               Il mio obiettivo non è il controllo, ma l’autonomia: aiutarti a sviluppare competenze
               e fiducia nelle tue scelte, per tornare a vivere l’alimentazione con più libertà,
               equilibrio e serenità.
-            </p></div><!-- /.about-text --></div><!-- /.about-content --></div></div></div></div><!-- About End --><!-- Service Start --><div id="service" class="service"><div class="container"><div data-wow-delay="0.1s" class="section-header text-center wow zoomIn"><p>Le mie qualifiche?</p><h2 id="i717zm">I miei studi e riconoscimenti</h2></div><div class="row"><div data-wow-delay="0.0s" class="col-lg-6 wow fadeInUp"><div class="service-item"><div class="service-icon"><i class="fas fa-graduation-cap"></i></div><div class="service-text"><h3>Laurea in Dietistica </h3><p>
+            </p>
+          </div><!-- /.about-text -->
+        </div><!-- /.about-content -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+
+        
+        
+        <!-- Service Start -->
+        <div class="service" id="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Le mie qualifiche?</p>
+                    <h2>I miei studi e riconoscimenti.</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Laurea in Dietistica </h3>
+                                <p>
                                     Università degli Studi di Firenze
-                                </p></div></div></div><div data-wow-delay="0.2s" class="col-lg-6 wow fadeInUp"><div class="service-item"><div class="service-icon"><i class="fas fa-user-graduate"></i></div><div class="service-text"><h3 id="iecbfd">Master specialistico in Counseling nutrizionale per la modifica dello stile di vita: dal sedentario allo sportivo</h3><p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Master specialistico in Counseling nutrizionale per la modifica dello stile di vita: dal sedentario allo sportivo</h3>
+                                <p>
                                     Università degli Studi di Pavia 
-                                </p></div></div></div></div></div></div><!-- Service End --><!-- Experience Start --><div id="experience" class="experience"><div class="container"><header data-wow-delay="0.1s" class="section-header text-center wow zoomIn"><p id="ikad4z">come iniziare?</p><h2>Scopri il percorso passo-passo</h2></header><div class="timeline"><!-- Fase 1: Contatto --><div data-wow-delay="0.1s" class="timeline-item left wow slideInLeft"><div class="timeline-text"><div class="timeline-date">FASE 1</div><h2>Invio richiesta</h2><h4>Compila il form online</h4><ul><li>Compila il form online con i tuoi dati.</li><li id="ij68ue">Indica la tua preferenza: visite online o in studio.</li><li id="ioclgm">Descrivi brevemente i tuoi obiettivi.</li><li>Verrai ricontattato entro 48 ore per un colloquio conoscitivo.</li></ul></div></div><!-- Fase 2: Colloquio conoscitivo --><div data-wow-delay="0.1s" class="timeline-item right wow slideInRight"><div class="timeline-text"><div class="timeline-date">ENTRO 48H</div><h2>Colloquio gratuito</h2><h4>Telefonico o video‐call</h4><ul><li id="ifvy0m">Durante questa chiamata, valuterò le tue esigenze e ti fornirò tutte le informazioni necessarie.</li><li id="i5fjjo">Raccolta di eventuali patologie e farmaci in uso.</li><li id="is02x5">Ricorda di avere a disposizione: esami del sangue degli ultimi 12 mesi e l'impegnativa medica (se necessaria).</li><li>Firma del consenso privacy (GDPR).</li></ul></div></div><!-- Fase 3: Prima consulenza --><div data-wow-delay="0.1s" class="timeline-item left wow slideInLeft"><div class="timeline-text"><div class="timeline-date">IL PRIMO INCONTRO</div><h2>Prima visita</h2><h4>In studio o online (60 min)</h4><ul><li>Anamnesi medica e nutrizionale dettagliata (inclusa storia clinica e patologie rilevanti).</li><li>Raccolta storia del peso e abitudini alimentari.</li><li>Misurazioni antropometriche (peso, altezza, BMI, circonferenze) - se necessario BIA e plicometria.</li><li>Impostazione degli obiettivi a breve e lungo termine.</li></ul></div></div><!-- Fase 4: Inizio percorso --><div data-wow-delay="0.1s" class="timeline-item right wow slideInRight"><div class="timeline-text"><div class="timeline-date">CONSEGNA DEL MATERIALE NUTRIZIONALE</div><h2 id="i9ujkh">Inizio del piano alimentare</h2><h4 id="iesu55">Breve confronto gratuito di 15-20 minuti </h4><p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        
+        
+<!-- Experience Start -->
+<div class="experience" id="experience">
+  <div class="container">
+    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>Hai bisogno di una dieta?</p>
+      <h2>Scopri il percorso passo-passo</h2>
+    </header>
+    <div class="timeline">
+      <!-- Fase 1: Contatto -->
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">FASE 1</div>
+          <h2>Invio richiesta</h2>
+          <h4>Compila il form online</h4>
+          <ul>
+            <li>Compila il form online con i tuoi dati.</li>
+            <li>Indica la tua preferenza: consulenza online o in studio.</li>
+            <li>Descrivi brevemente i tuoi obiettivi.</li>
+            <li>Verrai ricontattato entro 48 ore per un colloquio conoscitivo.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Fase 2: Colloquio conoscitivo -->
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">ENTRO 48H</div>
+          <h2>Colloquio gratuito</h2>
+          <h4>Telefonico o video‐call</h4>
+          <ul>
+            <li>Durante questa chiamata, valuteremo le tue esigenze e ti forniremo tutte le informazioni necessarie.</li>
+            <li>Raccolta di eventuali patologie e farmaci in uso.</li>
+            <li>Ricorda di avere a disposizione: esami del sangue degli ultimi 12 mesi e l'impegnativa medica (se necessaria).</li>
+            <li>Firma del consenso privacy (GDPR).</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Fase 3: Prima consulenza -->
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">IL PRIMO INCONTRO</div>
+          <h2>Prima visita</h2>
+          <h4>In studio o online (60 min)</h4>
+          <ul>
+            <li>Anamnesi medica e nutrizionale dettagliata (inclusa storia clinica e patologie rilevanti).</li>
+            <li>Raccolta storia del peso e abitudini alimentari.</li>
+            <li>Misurazioni antropometriche (peso, altezza, BMI, circonferenze) - se necessario BIA e plicometria.</li>
+            <li>Impostazione degli obiettivi a breve e lungo termine.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Fase 4: Inizio percorso -->
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">CONSEGNA DEL MATERIALE NUTRIZIONALE</div>
+          <h2>Avvio del piano alimentare</h2>
+          <h4>Breve confronto di 15-20 minuti</h4>
+          <p>
             Entro la settimana successiva al nostro incontro, riceverai il tuo piano personalizzato (in studio o tramite videochiamata).
-          </p><p>
+          </p>
+          <p>
             Sarà completo di consigli pratici su porzioni, ricette e abitudini da seguire.
-          </p></div></div><!-- Fase 5: Monitoraggio --><div data-wow-delay="0.1s" class="timeline-item left wow slideInLeft"><div class="timeline-text"><div class="timeline-date">Frequenza variabile, in base alle tue esigenze (generalmente ogni 2-4 settimane)</div><h2>Visite successive</h2><h4>(durata di 30-45 min)</h4><p>
+          </p>
+        </div>
+      </div>
+      <!-- Fase 5: Monitoraggio -->
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">Frequenza variabile, in base alle tue esigenze (generalmente ogni 2-4 settimane)</div>
+          <h2>Visite successive</h2>
+          <h4>(durata di 30-45 min)</h4>
+          <p>
             Durante questi incontri, valuteremo insieme i tuoi progressi, adatteremo il piano alle tue esigenze e ti offrirò ascolto, supporto e motivazione per superare dubbi o difficoltà.
-          </p></div></div><!-- Fase 6: Conclusione --><div data-wow-delay="0.1s" class="timeline-item right wow slideInRight"><div class="timeline-text"><div class="timeline-date">Conclusione del percorso</div><h2 id="i7bdyf">Visita finale</h2><!--  <h4>Chiusura del percorso</h4> --><p id="ibll45">In questo ultimo incontro, valuteremo insieme i risultati raggiunti e ti fornirò strategie pratiche per consolidare e mantenere i tuoi traguardi di benessere a lungo termine.
-          </p></div></div></div></div></div><!-- Experience End --><!-- Consulenze Start --><!-- Consulenze Start --><div id="price" class="price"><div class="container"><div data-wow-delay="0.1s" class="section-header text-center wow zoomIn"><p id="itt4p6">visite</p><h2 id="idvjmd">Scegli la tua modalità</h2></div><div class="price-item studio"><div class="icon"><i class="fas fa-clinic-medical fa-2x"></i></div><div class="price-header"><div class="price-title"><h2 id="it73ns">visita In Studio</h2></div><div class="price-prices"><h2 id="iid0xf">€90<span id="ij4bbd">/ prima visita</span></h2></div><p class="price-note"><strong id="i2u7sh">Le visite successive €50</strong></p></div><div class="price-body"><ul class="price-description"><li>Incontro faccia-a-faccia (60 min)</li><li>Anamnesi e misure antropometriche</li><li>Piano alimentare stampabile</li><li>Follow-up telefonico entro 3 giorni</li></ul></div><div class="price-footer"><div class="price-action"><a href="#contact" class="btn btn-studio">Prenota Studio</a></div></div></div><div class="row justify-content-center"><!-- CONSULENZA ONLINE --><div data-wow-delay="0.1s" class="col-md-5 wow fadeInUp"><div class="price-item online"><!-- Icona --><div class="icon"></div><!-- Header --><div class="price-header"><div class="price-title"><h2 id="i8pcej">visita in studio</h2></div><div class="price-prices"><h2 id="ihjlok">€90<span id="ir24um">/ prima visita</span></h2></div><p class="price-note"><strong id="iwudry">Le visite successive €50</strong></p></div><!-- Body --><div class="price-body"><ul class="price-description"><li id="i3csxn"><b>Incontro faccia-a-faccia</b> (60 min)</li><li id="i6i7p4">Anamnesi e misure antropometriche</li><li id="iiwyy6">Piano alimentare stampabile</li><li id="i9x45x">Follow-up telefonico entro 3 giorni</li></ul></div><!-- Action --><div class="price-footer"><div class="price-action"><a href="#contact" class="btn btn-online">Prenota Online</a></div></div></div></div><!-- CONSULENZA IN STUDIO --><div data-wow-delay="0.3s" class="col-md-5 wow fadeInUp"><div class="price-item online"><!-- Icona --><div class="icon"></div><!-- Header --><div class="price-header"><div class="price-title"><h2 id="i8pcej-3">visita Online</h2></div><div class="price-prices"><h2 id="ihjlok-3">€90<span id="ir24um-3">/ prima visita</span></h2></div><p class="price-note"><strong id="iwudry-3">Le visite successive €50</strong></p></div><!-- Body --><div class="price-body"><ul class="price-description"><li><strong>Video‐call</strong> via Zoom/Teams (60 min)</li><li>Piano alimentare digitale</li><li>Supporto via email fino a 7 giorni</li><li>Materiali e ricette personalizzate</li></ul></div><!-- Action --><div class="price-footer"><div class="price-action"><a href="#contact" class="btn btn-online">Prenota Online</a></div></div></div></div></div></div></div><!-- Consulenze End --><!-- Consulenze End --><!-- Contact Start --><section data-wow-delay="0.1s" id="contact" class="contact wow fadeInUp"><div class="container"><!-- Section Header personalizzato --><div class="section-header text-center"><p id="iesnja">Contattami</p><h2 id="iv9jy8">Richiedi la tua visita</h2><p class="contact-instruction">Prima di compilare il form segui questa linea guida sui documenti necessari per la prima visita,
-        <a href="requisiti.html">clicca qui per vedere i documenti.</a></p></div><!-- Form centrato --><div class="row justify-content-center"><div class="col-lg-6"><div class="contact-form"><div id="success"></div><form name="sentMessage" id="contactForm" method="POST" data-netlify="true"><!-- Netlify hidden fields --><input type="hidden" name="form-name" value="sentMessage" /><div class="control-group"><input type="text" id="name" name="name" placeholder="Nome e Cognome" required="" data-validation-required-message="Per favore inserisci il tuo nome" class="form-control" /><p class="help-block"></p></div><div class="control-group"><input type="email" id="email" name="email" placeholder="Email" required="" data-validation-required-message="Per favore inserisci la tua email" class="form-control" /><p class="help-block"></p></div><div class="control-group"><input type="text" id="subject" name="subject" placeholder="Oggetto" required="" data-validation-required-message="Per favore inserisci l'oggetto" class="form-control" /><p class="help-block"></p></div><div class="control-group"><textarea id="message" name="message" placeholder="Il tuo messaggio" required="" data-validation-required-message="Per favore inserisci un messaggio" class="form-control"></textarea><p class="help-block"></p></div><!-- Checkbox obbligatorio: documenti preparati --><div class="control-group form-check mb-4"><input type="checkbox" id="preparedDocs" name="preparedDocs" required="" class="form-check-input" /><label for="preparedDocs" id="iaozle" class="form-check-label"><strong id="in8896">
-                  Mi preparò i documenti necessari per la prima visita;  
+          </p>
+        </div>
+      </div>
+      <!-- Fase 6: Conclusione -->
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">Conclusione del percorso</div>
+          <h2>Visita finale</h2>
+          <!--  <h4>Chiusura del percorso</h4> -->
+          <p>
+            In questo incontro finale, valuteremo insieme i risultati raggiunti e ti fornirò strategie pratiche per consolidare e mantenere i tuoi traguardi di benessere a lungo termine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Experience End -->
+
+        
+        
+        
+        
+<!-- Consulenze Start -->
+<!-- Visite Start -->
+<div class="price" id="price">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>Visite</p>
+      <h2>Scegli la tua modalità</h2>
+    </div>
+    <div class="row justify-content-center">
+      <!-- VISITA IN STUDIO -->
+      <div class="col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="price-item studio">
+          <!-- Icona edificio/studio -->
+          <div class="icon">
+            <i class="fas fa-building fa-2x"></i>
+          </div>
+          <!-- Header -->
+          <div class="price-header">
+            <div class="price-title">
+              <h2>Visita In Studio</h2>
+            </div>
+            <div class="price-prices">
+              <h2>€90<span>/ prima visita</span></h2>
+            </div>
+            <p class="price-note"><strong>Le visite successive €50</strong></p>
+          </div>
+          <!-- Body -->
+          <div class="price-body">
+            <ul class="price-description">
+              <li>Incontro faccia‑a‑faccia (60 min)</li>
+              <li>Anamnesi e misure antropometriche</li>
+              <li>Piano alimentare stampabile</li>
+              <li>Follow‑up telefonico entro 3 giorni</li>
+            </ul>
+          </div>
+          <!-- Action -->
+          <div class="price-footer">
+            <div class="price-action">
+              <a class="btn btn-studio" href="#contact">Prenota Studio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- VISITA ONLINE -->
+      <div class="col-md-5 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="price-item online">
+          <!-- Icona casetta -->
+           <div class="icon">
+            <i class="fas fa-video fa-2x"></i>
+          </div>
+
+          <!-- Header -->
+          <div class="price-header">
+            <div class="price-title">
+              <h2>Visita Online</h2>
+            </div>
+            <div class="price-prices">
+              <h2>€90<span>/ prima visita</span></h2>
+            </div>
+            <p class="price-note"><strong>Le visite successive €50</strong></p>
+          </div>
+          <!-- Body -->
+          <div class="price-body">
+            <ul class="price-description">
+              <li><strong>Video‐call</strong> via Zoom/Teams (60 min)</li>
+              <li>Piano alimentare digitale</li>
+              <li>Supporto via email fino a 7 giorni</li>
+              <li>Materiali e ricette personalizzate</li>
+            </ul>
+          </div>
+          <!-- Action -->
+          <div class="price-footer">
+            <div class="price-action">
+              <a class="btn btn-online" href="#contact">Prenota Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Consulenze End -->
+
+
+        
+  
+        
+    
+
+
+
+
+<!-- Contact Start -->
+<section class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+  <div class="container">
+    <!-- Section Header personalizzato -->
+    <div class="section-header text-center">
+      <p style="color: #fff;">Contattami</p>
+      <h2 style="color: #fff;">Richiedi la tua visita</h2>
+      <p class="contact-instruction">
+        Prima di compilare il form segui questa linea guida sui documenti necessari per la prima visita,
+        <a href="requisiti.html">clicca qui per vedere i documenti.</a>
+      </p>
+    </div>
+    <!-- Form centrato -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="contact-form">
+          <div id="success"></div>
+          <form name="sentMessage" id="contactForm" method="POST" data-netlify="true">
+            <!-- Netlify hidden fields -->
+            <input type="hidden" name="form-name" value="sentMessage">
+
+            <div class="control-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Nome e Cognome"
+                required
+                data-validation-required-message="Per favore inserisci il tuo nome"
+                style="color: #fff; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.5);"
+              />
+              <p class="help-block"></p>
+            </div>
+
+            <div class="control-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                data-validation-required-message="Per favore inserisci la tua email"
+                style="color: #fff; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.5);"
+              />
+              <p class="help-block"></p>
+            </div>
+
+            <div class="control-group">
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="subject"
+                placeholder="Oggetto"
+                required
+                data-validation-required-message="Per favore inserisci l'oggetto"
+                style="color: #fff; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.5);"
+              />
+              <p class="help-block"></p>
+            </div>
+
+            <div class="control-group">
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Il tuo messaggio"
+                required
+                data-validation-required-message="Per favore inserisci un messaggio"
+                style="color: #fff; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.5);"
+              ></textarea>
+              <p class="help-block"></p>
+            </div>
+
+            <!-- Checkbox obbligatorio: documenti preparati -->
+            <div class="control-group form-check mb-4">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="preparedDocs"
+                name="preparedDocs"
+                required
+              />
+              <label class="form-check-label" for="preparedDocs" style="color: #fff;">
+                <strong>
+                  Mi sono preparato i documenti necessari per la prima visita;  
                   li porterò stampati in studio, altrimenti, se online, li invierò via mail.
-                </strong></label><p class="help-block text-danger"></p></div><!-- Checkbox obbligatorio: privacy --><div class="control-group form-check mb-4"><input type="checkbox" id="privacyPolicy" name="privacyPolicy" required="" class="form-check-input" /><label for="privacyPolicy" id="ik8i2e" class="form-check-label"><strong>
+                </strong>
+              </label>
+              <p class="help-block text-danger"></p>
+            </div>
+
+            <!-- Checkbox obbligatorio: privacy -->
+            <div class="control-group form-check mb-4">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="privacyPolicy"
+                name="privacyPolicy"
+                required
+              />
+              <label class="form-check-label" for="privacyPolicy" style="color: #fff;">
+                <strong>
                   Dichiaro di aver letto l'informativa privacy e acconsento al trattamento dei miei dati personali ai sensi del GDPR (Reg. UE 679/2016).
-                </strong></label><p class="help-block text-danger"></p></div><div class="text-center"><button type="submit" id="sendMessageButton" class="btn btn-online">
+                </strong>
+              </label>
+              <p class="help-block text-danger"></p>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-online" type="submit" id="sendMessageButton">
                 Invia Messaggio
-              </button></div></form></div></div></div></div></section><!-- Contact End --><!-- NUOVA SEZIONE: I NOSTRI STUDI --><section id="studies" class="studies js-scroll"><div class="container"><div data-wow-delay="0.1s" class="section-header text-center wow zoomIn"><p id="i9frsi">Dove</p><h2>Vieni a trovarmi</h2><!-- Istruzione in piccolo --><p class="map-instruction">Clicca sulla mappa per avviare la navigazione</p></div><div class="studies-list"><a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Luigi+Cherubini,+53,+Empoli+(FI)" target="_blank" class="study-item"><iframe frameborder="0" src="https://www.google.com/maps?q=Via+Luigi+Cherubini,+53,+Empoli+(FI)&amp;output=embed" allowfullscreen="" loading="lazy"></iframe><p>Empoli (FI)<br />Via Luigi Cherubini, 53</p></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Via+della+Pace,+16,+Montelupo+Fiorentino+(FI)" target="_blank" class="study-item"><iframe frameborder="0" src="https://www.google.com/maps?q=Via+della+Pace,+16,+Montelupo+Fiorentino+(FI)&amp;output=embed" allowfullscreen="" loading="lazy"></iframe><p>Montelupo Fiorentino (FI)<br />Via della Pace, 16</p></a></div></div></section><!-- FAQ Start --><section data-wow-delay="0.1s" id="faq" class="faq wow fadeInUp"><div class="container"><div class="section-header text-center"><p>FAQ</p><h2>Domande Frequenti</h2></div><div id="faqAccordion" class="faq-accordion"><!-- Domanda 1 --><div class="card"><div id="faqHeading1" class="card-header"><h5 class="mb-0"><button data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1" class="btn btn-link collapsed"><i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact End -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(response => {
+      if (response.ok) {
+        Swal.fire({
+          toast: true,
+          position: 'top-end',
+          icon: 'success',
+          title: 'Messaggio inviato!',
+          showConfirmButton: false,
+          timer: 2500,
+          timerProgressBar: true,
+          background: '#ffffff',
+          iconColor: '#EF233C',
+          customClass: { popup: 'shadow rounded' }
+        });
+        form.reset();
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Ops…',
+          text: 'Qualcosa è andato storto, riprova più tardi',
+        });
+      }
+    })
+    .catch(() => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Errore di rete',
+        text: 'Controlla la tua connessione e riprova',
+      });
+    });
+  });
+});
+</script>
+
+
+
+<!-- NUOVA SEZIONE: I NOSTRI STUDI -->
+<section class="studies js-scroll" id="studies">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>Dove</p>
+      <h2>Vieni a trovarmi</h2>
+      <!-- Istruzione in piccolo -->
+      <p class="map-instruction">Clicca sulla mappa per avviare la navigazione</p>
+    </div>
+    <div class="studies-list">
+      <a class="study-item" href="https://www.google.com/maps/search/?api=1&query=Via+Luigi+Cherubini,+53,+Empoli+(FI)" target="_blank">
+        <iframe src="https://www.google.com/maps?q=Via+Luigi+Cherubini,+53,+Empoli+(FI)&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <p>Empoli (FI)<br>Via Luigi Cherubini, 53</p>
+      </a>
+      <a class="study-item" href="https://www.google.com/maps/search/?api=1&query=Via+della+Pace,+16,+Montelupo+Fiorentino+(FI)" target="_blank">
+        <iframe src="https://www.google.com/maps?q=Via+della+Pace,+16,+Montelupo+Fiorentino+(FI)&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <p>Montelupo Fiorentino (FI)<br>Via della Pace, 16</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ Start -->
+<section class="faq wow fadeInUp" data-wow-delay="0.1s" id="faq">
+  <div class="container">
+    <div class="section-header text-center">
+      <p>FAQ</p>
+      <h2>Domande Frequenti</h2>
+    </div>
+    <div id="faqAccordion" class="faq-accordion">
+      <!-- Domanda 1 -->
+      <div class="card">
+        <div class="card-header" id="faqHeading1">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                    data-target="#faqCollapse1" aria-expanded="false"
+                    aria-controls="faqCollapse1">
+              <i class="fas fa-plus"></i>
               Che cosa si intende per counseling nutrizionale?
-            </button></h5></div><div id="faqCollapse1" aria-labelledby="faqHeading1" data-parent="#faqAccordion" class="collapse"><div class="card-body">
-            E’ un approccio che si basa sulle conoscenze scientifiche, ma anche sulla comunicazione e sulla relazione e punta a superare una delle maggiori<br />
+            </button>
+          </h5>
+        </div>
+        <div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1"
+             data-parent="#faqAccordion">
+          <div class="card-body">
+            E’ un approccio che si basa sulle conoscenze scientifiche, ma anche sulla comunicazione e sulla relazione e punta a superare una delle maggiori<br>
             difficoltà che le persone riscontrano quando si trovano di fronte ad un cambiamento del proprio stile alimentare: conservare nel tempo i risultati raggiunti.
-          </div></div></div><!-- Domanda 2 --><div class="card"><div id="faqHeading2" class="card-header"><h5 class="mb-0"><button data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" class="btn btn-link collapsed"><i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Domanda 2 -->
+      <div class="card">
+        <div class="card-header" id="faqHeading2">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                    data-target="#faqCollapse2" aria-expanded="false"
+                    aria-controls="faqCollapse2">
+              <i class="fas fa-plus"></i>
               Come preparo i documenti ed esami prima della prima visita?
-            </button></h5></div><div id="faqCollapse2" aria-labelledby="faqHeading2" data-parent="#faqAccordion" class="collapse"><div class="card-body">
+            </button>
+          </h5>
+        </div>
+        <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2"
+             data-parent="#faqAccordion">
+          <div class="card-body">
             Ti serviranno gli esami del sangue degli ultimi 12 mesi, eventuali impegnative mediche per patologie e il consenso al trattamento dati.
-          </div></div></div><!-- Domanda 3 --><div class="card"><div id="faqHeading3" class="card-header"><h5 class="mb-0"><button data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" class="btn btn-link collapsed"><i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Domanda 3 -->
+      <div class="card">
+        <div class="card-header" id="faqHeading3">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                    data-target="#faqCollapse3" aria-expanded="false"
+                    aria-controls="faqCollapse3">
+              <i class="fas fa-plus"></i>
               Quanto dura il percorso nutrizionale?
-            </button></h5></div><div id="faqCollapse3" aria-labelledby="faqHeading3" data-parent="#faqAccordion" class="collapse"><div class="card-body">
+            </button>
+          </h5>
+        </div>
+        <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3"
+             data-parent="#faqAccordion">
+          <div class="card-body">
             Il percorso nutrizionale ha una durata variabile sulla base delle esigenze personali e nutrizionali di ogni singolo paziente.
-          </div></div></div><!-- Domanda 4 --><div class="card"><div id="faqHeading4" class="card-header"><h5 class="mb-0"><button data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4" class="btn btn-link collapsed"><i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Domanda 4 -->
+      <div class="card">
+        <div class="card-header" id="faqHeading4">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                    data-target="#faqCollapse4" aria-expanded="false"
+                    aria-controls="faqCollapse4">
+              <i class="fas fa-plus"></i>
               Offri piani per patologie specifiche?
-            </button></h5></div><div id="faqCollapse4" aria-labelledby="faqHeading4" data-parent="#faqAccordion" class="collapse"><div class="card-body">
+            </button>
+          </h5>
+        </div>
+        <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4"
+             data-parent="#faqAccordion">
+          <div class="card-body">
             Sì: diabete, ipertensione, celiachia e altre... il piano nutrizionale viene sempre personalizzato in base alle tue esigenze mediche.
-          </div></div></div><!-- Domanda 5 --><div class="card"><div id="faqHeading5" class="card-header"><h5 class="mb-0"><button data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5" class="btn btn-link collapsed"><i class="fas fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Domanda 5 -->
+      <div class="card">
+        <div class="card-header" id="faqHeading5">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                    data-target="#faqCollapse5" aria-expanded="false"
+                    aria-controls="faqCollapse5">
+              <i class="fas fa-plus"></i>
               Come posso mantenere i risultati dopo il percorso?
-            </button></h5></div><div id="faqCollapse5" aria-labelledby="faqHeading5" data-parent="#faqAccordion" class="collapse"><div class="card-body">
+            </button>
+          </h5>
+        </div>
+        <div id="faqCollapse5" class="collapse" aria-labelledby="faqHeading5"
+             data-parent="#faqAccordion">
+          <div class="card-body">
             Fornisco strategie di mantenimento, menù flessibili e promemoria periodici per non abbandonare le buone abitudini.
-          </div></div></div></div></div></section><!-- FAQ End --><!-- Footer Start --><div data-wow-delay="0.3s" class="footer wow fadeIn"><div class="container-fluid"><div class="container"><div class="footer-info"><div class="footer-menu"><p>Seguimi sui social:</p></div><div class="footer-social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-facebook-f"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="fab fa-instagram"></i></a><a href=""><i class="fab fa-linkedin-in"></i></a></div><!-- Privacy Policy --><p class="footer-policy"><a href="./privacy.html">Privacy Policy</a></p></div></div><div class="container copyright"><p>© Elisa Bruscoli, All Rights Reserved | Made By <a href="https://www.overeye.net">Overeye</a>.</p></div></div></div><!-- Footer End --><!-- Pre Loader --><!-- JavaScript Libraries --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- 1. Google Consent Mode (default denied) --><!-- 2. Full-Width Cookie Banner --><!-- 2. Full-Width Cookie Banner --><div id="cookie-banner" role="region" aria-label="Cookie Consent Banner"><div class="cookie-banner-content"><!-- nuova icona biscotto --><div class="cookie-text"></div></div></div><!-- 3. Modal for Cookie Preferences --><div id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" aria-hidden="true"></div><!-- 4. Persistent Toggle Icon --><!-- 5. JavaScript Logic --><!-- 6. Third-Party Scripts Blocked Until Consent --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Banner di Consenso Cookie --><!-- Assicurati che fuse.js sia nella stessa cartella --><!-- Dentro <body>, da qualche parte (anche in fondo) javascript-obfuscator iam-assist-falcon.js --output iam-assist-falcon-obs.js --><!-- SweetAlert2 --></body></html>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ End -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const accordion = document.getElementById('faqAccordion');
+  accordion.addEventListener('show.bs.collapse', function(e) {
+    e.target.previousElementSibling.querySelector('i.fas')
+      .classList.replace('fa-plus','fa-minus');
+  });
+  accordion.addEventListener('hide.bs.collapse', function(e) {
+    e.target.previousElementSibling.querySelector('i.fas')
+      .classList.replace('fa-minus','fa-plus');
+  });
+});
+</script>
+
+
+
+<style>
+/* FAQ Accordion */
+.faq-accordion .card {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+.faq-accordion .card-header {
+  background: transparent;
+  padding: 0.75rem 1rem;
+}
+
+/* Bottone FAQ di base: full-width e posiziona l’icona */
+.faq-accordion .btn-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 2rem;             /* spazio per l’icona */
+  color: #fff;                    /* testo bianco di default */
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Icona +/– sempre in posizione fissa */
+.faq-accordion .btn-link .fas {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s;
+  color: currentColor;            /* eredita il colore del testo */
+}
+
+/* Hover o focus (anche se chiuso): testo nero, sfondo bianco */
+.faq-accordion .btn-link:hover,
+.faq-accordion .btn-link:focus {
+  color: #000;
+  background: #fff;
+}
+
+/* Stato aperto (aria-expanded="true"): testo nero, sfondo bianco */
+.faq-accordion .btn-link[aria-expanded="true"] {
+  color: #000;
+  background: #fff;
+}
+
+/* Rotazione icona quando aperto */
+.faq-accordion .btn-link[aria-expanded="true"] .fas {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* override solo per i bottoni delle FAQ */
+.faq-accordion .btn.btn-link {
+  background: #326A69;                /* verde principale */
+  box-shadow: inset 0 0 0 50px #326A69;
+  color: #ffffff;                     /* testo bianco */
+}
+
+.faq-accordion .btn.btn-link:hover,
+.faq-accordion .btn.btn-link[aria-expanded="true"] {
+  background: #245652;                /* verde scuro per hover/aperto */
+  box-shadow: inset 0 0 0 50px #245652;
+}
+
+
+</style>
+
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-menu">
+          <p>Seguimi sui social:</p>
+        </div>
+       <div class="footer-social">
+          <a href="https://www.instagram.com/dietista.elisabruscoli/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/elisa-bruscoli-8504b4326/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <!-- Privacy Policy -->
+        <p class="footer-policy">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./cookie-policy.html">Cookie Policy</a>
+        </p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; Elisa Bruscoli, All Rights Reserved | Made By <a href="https://www.overeye.net">Overeye</a>.</p>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+        
+        
+
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <script>
+
+
+(function ($) {
+    "use strict";
+    
+    // loader
+    var loader = function () {
+        setTimeout(function () {
+            if ($('#loader').length > 0) {
+                $('#loader').removeClass('show');
+            }
+        }, 1);
+    };
+    loader();
+    
+    
+    // Initiate the wowjs
+    new WOW().init();
+    
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+    
+    
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.navbar').addClass('nav-sticky');
+        } else {
+            $('.navbar').removeClass('nav-sticky');
+        }
+    });
+    
+    
+// Smooth scrolling per navbar links e bottoni Hero
+// Modifica questa riga nello script in fondo al tuo <body>:
+$(".navbar-nav a, .hero-btn .btn, .price-item .btn").on('click', function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(this.hash).offset().top - 45
+    }, 1500, 'easeInOutExpo');
+    // gestisci active solo per la navbar
+    if ($(this).parents('.navbar-nav').length) {
+      $('.navbar-nav .active').removeClass('active');
+      $(this).closest('a').addClass('active');
+    }
+  }
+});
+
+
+    
+    
+    // Typed Initiate
+    if ($('.hero .hero-text h2').length == 1) {
+        var typed_strings = $('.hero .hero-text .typed-text').text();
+        var typed = new Typed('.hero .hero-text h2', {
+            strings: typed_strings.split(', '),
+            typeSpeed: 100,
+            backSpeed: 20,
+            smartBackspace: false,
+            loop: true
+        });
+    }
+    
+    
+    // Skills
+    $('.skills').waypoint(function () {
+        $('.progress .progress-bar').each(function () {
+            $(this).css("width", $(this).attr("aria-valuenow") + '%');
+        });
+    }, {offset: '80%'});
+
+
+    // Testimonials carousel
+    $(".testimonials-carousel").owlCarousel({
+        center: true,
+        autoplay: true,
+        dots: true,
+        loop: true,
+        responsive: {
+            0:{
+                items:1
+            }
+        }
+    });
+    
+    
+    
+    // Portfolio filter
+    var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
+
+    $('#portfolio-filter li').on('click', function () {
+        $("#portfolio-filter li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+        portfolioIsotope.isotope({filter: $(this).data('filter')});
+    });
+    
+})(jQuery);
+</script>
+
+
+
+
+
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- 1. Google Consent Mode (default denied) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+
+<!-- 2. Full-Width Cookie Banner -->
+<!-- 2. Full-Width Cookie Banner -->
+<div id="cookie-banner" role="region" aria-label="Cookie Consent Banner" style="display:none;">
+  <div class="cookie-banner-content">
+
+    <!-- nuova icona biscotto -->
+    <div class="cookie-icon" aria-hidden="true">
+      <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="cookieGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style="stop-color:#fff9e6;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#f4c152;stop-opacity:1"/>
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#cookieGrad)" />
+        <!-- “gocce” di cioccolato -->
+        <circle cx="24" cy="24" r="4" fill="#8d5524" />
+        <circle cx="40" cy="36" r="5" fill="#8d5524" />
+        <circle cx="30" cy="44" r="3" fill="#8d5524" />
+      </svg>
+    </div>
+
+    <div class="cookie-text">
+      <p>
+        👋 Vuoi dei biscotti? 🍪 Attiva i nostri cookie per rendere la tua esperienza sul sito ancora più dolce e su misura per te!
+        <a href="./cookie-policy.html" target="_blank" rel="noopener">Scopri di più</a>.
+      </p>
+      <details class="cookie-details">
+        <summary>Cookie Details</summary>
+        <ul>
+          <li><strong>Essential:</strong> necessari per la funzionalità del sito.</li>
+          <li><strong>Analytics:</strong> statistiche anonime per migliorare i contenuti.</li>
+          <li><strong>Marketing:</strong> annunci personalizzati in base alle preferenze.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="cookie-actions">
+      <button class="cookie-btn primary" id="accept-all">🍪 Accetta tutto</button>
+      <button class="cookie-btn secondary" id="reject-all">🚫 Rifiuta tutto</button>
+      <button class="cookie-btn tertiary" id="cookie-settings">⚙️ Preferenze</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 3. Modal for Cookie Preferences -->
+<div id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" aria-hidden="true" style="display:none;">
+  <div class="modal-content">
+    <button class="close-modal" id="close-modal" aria-label="Close modal">&times;</button>
+    <h2 id="cookie-modal-title">Preferenze Cookie</h2>
+    <p>seleziona quali cookie vuoi abilitare:</p>
+    <div class="cookie-category">
+      <label>Essential Cookies</label>
+      <input type="checkbox" checked disabled>
+    </div>
+    <div class="cookie-category">
+      <label for="cookie-analytics">Analytics Cookies</label>
+      <input type="checkbox" id="cookie-analytics">
+    </div>
+    <div class="cookie-category">
+      <label for="cookie-marketing">Marketing Cookies</label>
+      <input type="checkbox" id="cookie-marketing">
+    </div>
+    <div class="modal-actions">
+      <button id="save-preferences" class="cookie-btn primary">Save Preferences</button>
+      <button id="cancel-preferences" class="cookie-btn secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Persistent Toggle Icon -->
+<button id="cookie-toggle" title="Open cookie settings" aria-label="Open cookie settings" style="display:none;">
+  <img src="cookie.png" alt="Cookie Icon" />
+</button>
+
+<style>
+/* ================================
+   Global Styles
+   ================================ */
+body { font-family: 'Inter', sans-serif; margin:0; padding:0; }
+a { color:#006cff; text-decoration:none; transition:color .2s; }
+a:hover,a:focus { color:#004bb5; }
+
+/* ================================
+   Banner Container
+   ================================ */
+#cookie-banner { position:fixed; bottom:20px; left:50%; transform:translateX(-50%) translateY(100%); background:#fff; color:#333; box-shadow:0 4px 12px rgba(0,0,0,0.15); border-radius:8px; width:90%; max-width:900px; z-index:2000; transition:transform .2s ease; }
+#cookie-banner.show { transform:translateX(-50%) translateY(0); }
+.cookie-banner-content { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:20px 24px; }
+
+/* ================================
+   Text and Details
+   ================================ */
+.cookie-text { flex:1 1 300px; font-size:.95rem; line-height:1.5; }
+.cookie-text p { margin:0; }
+.cookie-text a { font-weight:500; }
+.cookie-details { margin-top:8px; font-size:.9rem; }
+.cookie-details summary { cursor:pointer; font-weight:600; color:#006cff; }
+.cookie-details summary::-webkit-details-marker { display:none; }
+.cookie-details summary::before { display:inline-block; transition:transform .2s; }
+.cookie-details[open] summary::before { transform:rotate(90deg); }
+.cookie-details ul { margin:6px 0 0 18px; list-style:disc; color:#555; }
+
+/* ================================
+   Buttons
+   ================================ */
+.cookie-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.cookie-btn { padding:10px 18px; font-size:.9rem; border-radius:6px; border:none; cursor:pointer; min-width:120px; height:42px; transition:background .2s,box-shadow .2s,transform .1s; display:inline-flex; align-items:center; justify-content:center; }
+.cookie-btn.primary { background:#006cff; color:#fff; box-shadow:0 2px 6px rgba(0,108,255,0.3); }
+.cookie-btn.primary:hover { background:#0051cc; box-shadow:0 3px 8px rgba(0,81,204,0.3); }
+.cookie-btn.primary:active { transform:translateY(1px); }
+.cookie-btn.secondary { background:#f5f5f5; color:#333; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.cookie-btn.secondary:hover { background:#e0e0e0; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
+.cookie-btn.secondary:active { transform:translateY(1px); }
+.cookie-btn.tertiary { background:transparent; color:#006cff; font-weight:500; }
+.cookie-btn.tertiary:hover { background:rgba(0,108,255,0.05); text-decoration:underline; }
+.cookie-btn.tertiary:active { transform:translateY(1px); }
+
+/* ================================
+   Modal Overlay
+   ================================ */
+#cookie-modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:2100; }
+#cookie-modal.show { display:flex; }
+#cookie-modal .modal-content { background:#fff; border-radius:8px; padding:24px 32px; max-width:500px; width:90%; color:#333; box-shadow:0 4px 12px rgba(0,0,0,0.15); position:relative; }
+#cookie-modal h2 { margin-top:0; font-size:1.3rem; margin-bottom:12px; }
+#cookie-modal p { font-size:.95rem; margin-bottom:16px; color:#555; }
+.cookie-category { margin:14px 0; display:flex; align-items:center; justify-content:space-between; }
+.cookie-category label { font-size:.95rem; color:#333; }
+.cookie-category input[type="checkbox"] { width:20px; height:20px; }
+.modal-actions { display:flex; justify-content:flex-end; gap:12px; margin-top:20px; }
+.modal-actions button { background:#006cff; color:#fff; border:none; padding:10px 18px; border-radius:6px; cursor:pointer; font-size:.9rem; transition:background .2s,box-shadow .2s; }
+.modal-actions button:hover { background:#0051cc; box-shadow:0 3px 8px rgba(0,81,204,0.3); }
+.modal-actions button:active { transform:translateY(1px); }
+.close-modal { position:absolute; top:12px; right:16px; background:none; border:none; color:#333; font-size:1.4rem; cursor:pointer; transition:color .2s; }
+.close-modal:hover { color:#000; }
+
+/* ================================
+   Toggle Icon
+   ================================ */
+#cookie-toggle { position:fixed; bottom:20px; left:20px; background:transparent; border:none; cursor:pointer; z-index:1500; width:20px; height:20px; padding:0; transition:transform .2s; }
+#cookie-toggle img { width:100%; height:100%; filter:brightness(0) invert(1); }
+#cookie-toggle:hover img { transform:scale(1.15); }
+
+/* ================================
+   Mobile Styles
+   ================================ */
+@media (max-width:768px) {
+  #cookie-banner { bottom:0; left:0; right:0; transform:translateY(100%); border-radius:0; padding:16px; }
+  .cookie-banner-content { flex-direction:column; gap:12px; }
+  .cookie-text { font-size:.9rem; line-height:1.4; padding-bottom:8px; }
+  .cookie-actions { justify-content:center; gap:8px; width:100%; flex-wrap:wrap; }
+  .cookie-btn { flex:1 1 calc(50% - 8px); font-size:.85rem; padding:8px 12px; height:38px; }
+  #cookie-modal .modal-content { padding:20px 24px; max-width:90%; }
+  #cookie-modal h2 { font-size:1.2rem; }
+  #cookie-modal p { font-size:.9rem; }
+  .cookie-category label { font-size:.9rem; }
+  .cookie-category input[type="checkbox"] { width:18px; height:18px; }
+  .modal-actions button { flex:1 1 45%; font-size:.85rem; padding:8px 12px; margin-top:8px; }
+}
+
+/* Icona biscotto nel banner */
+.cookie-icon {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:768px) {
+  .cookie-icon {
+    margin: 0 auto 12px;
+  }
+}
+</style>
+
+<!-- 5. JavaScript Logic -->
+<script>
+  const cookieConfig = {
+    cookieName: 'cookieConsent',
+    expiryDays: 365,
+    consentData: { essential: true, analytics: false, marketing: false }
+  };
+
+  function setCookie(name, value, days) {
+    const expires = days ? '; expires=' + new Date(Date.now() + days * 864e5).toUTCString() : '';
+    document.cookie = name + '=' + encodeURIComponent(value)
+      + expires + '; path=/; Secure; SameSite=Lax';
+  }
+
+  function getCookie(name) {
+    return document.cookie.split('; ').reduce((r, v) => {
+      const [k, val] = v.split('=');
+      return k === name ? decodeURIComponent(val) : r;
+    }, null);
+  }
+
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=0; path=/';
+  }
+
+  const banner = document.getElementById('cookie-banner');
+  const modal  = document.getElementById('cookie-modal');
+  const toggle = document.getElementById('cookie-toggle');
+
+  function showBanner() {
+    banner.style.display = 'flex';
+    requestAnimationFrame(() => banner.classList.add('show'));
+  }
+
+  function hideBanner() {
+    banner.classList.remove('show');
+    banner.style.display = 'none';
+  }
+
+  function showModal() {
+    // sincronizza lo stato dei checkbox
+    document.getElementById('cookie-analytics').checked  = cookieConfig.consentData.analytics;
+    document.getElementById('cookie-marketing').checked  = cookieConfig.consentData.marketing;
+
+    modal.style.display = 'flex';
+    modal.classList.add('show');
+    trapFocus(modal);
+  }
+
+  function hideModal() {
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+  }
+
+  function showToggle() {
+    toggle.style.display = 'flex';
+  }
+
+  function trapFocus(dialog) {
+    const focusable = dialog.querySelectorAll('button, a, input:not([disabled])');
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    first.focus();
+    dialog.addEventListener('keydown', e => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+      if (e.key === 'Escape') hideModal();
+    });
+  }
+
+  function saveConsentToServer() {
+    const url  = '/api/consent';
+    const data = JSON.stringify({ consent: cookieConfig.consentData });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, data);
+    } else {
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: data
+      }).catch(console.error);
+    }
+  }
+
+  document.getElementById('accept-all').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = true;
+    cookieConfig.consentData.marketing = true;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    loadGoogleAnalytics();
+    loadFacebookPixel();
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  document.getElementById('reject-all').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = false;
+    cookieConfig.consentData.marketing = false;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    ['_ga','_gid','_fbp'].forEach(eraseCookie);
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  document.getElementById('cookie-settings').addEventListener('click', showModal);
+  document.getElementById('close-modal').addEventListener('click', hideModal);
+  document.getElementById('cancel-preferences').addEventListener('click', hideModal);
+
+  document.getElementById('save-preferences').addEventListener('click', () => {
+    cookieConfig.consentData.analytics = document.getElementById('cookie-analytics').checked;
+    cookieConfig.consentData.marketing = document.getElementById('cookie-marketing').checked;
+    setCookie(cookieConfig.cookieName, JSON.stringify(cookieConfig.consentData), cookieConfig.expiryDays);
+    saveConsentToServer();
+    if (cookieConfig.consentData.analytics) loadGoogleAnalytics();
+    if (cookieConfig.consentData.marketing) loadFacebookPixel();
+    hideBanner(); hideModal(); showToggle();
+  });
+
+  toggle.addEventListener('click', showModal);
+
+  window.addEventListener('load', () => {
+    const saved = getCookie(cookieConfig.cookieName);
+    if (!saved) {
+      showBanner();
+    } else {
+      cookieConfig.consentData = JSON.parse(saved);
+      if (cookieConfig.consentData.analytics) loadGoogleAnalytics();
+      if (cookieConfig.consentData.marketing) loadFacebookPixel();
+      showToggle();
+    }
+  });
+
+  function loadCategory(cat) {
+    document.querySelectorAll(`script[data-cookie="${cat}"]`).forEach(s => {
+      if (!s.loaded) {
+        s.loaded = true;
+        const ns = document.createElement('script');
+        ns.src   = s.src;
+        ns.async = s.hasAttribute('async');
+        document.head.appendChild(ns);
+      }
+    });
+  }
+
+  function loadGoogleAnalytics() {
+    loadCategory('analytics');
+    gtag('consent','update',{analytics_storage:'granted'});
+    gtag('js', new Date());
+    gtag('config','G-ABCDEFGH',{anonymize_ip:true});
+  }
+
+  function loadFacebookPixel() {
+    loadCategory('marketing');
+    gtag('consent','update',{ad_storage:'granted'});
+  }
+</script>
+
+<!-- 6. Third-Party Scripts Blocked Until Consent -->
+<script data-cookie="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFGH"></script>
+<script data-cookie="marketing" async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  // quando ottieni il consenso, fai:
+  fbq('init', 'TUO_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+
+
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+<!-- Banner di Consenso Cookie -->
+
+
+
+
+
+  <script src="js/fuse.js"></script> <!-- Assicurati che fuse.js sia nella stessa cartella -->
+  <script src="js/iam-assist-falcon.js" defer></script>
+  
+  <!-- Dentro <body>, da qualche parte (anche in fondo) javascript-obfuscator iam-assist-falcon.js --output iam-assist-falcon-obs.js -->
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+
+
+
+    </body>
+</html>
