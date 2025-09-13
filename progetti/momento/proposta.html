@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOMENTO • Creative Studio</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!-- SEO -->
+  <meta name="description" content="MOMENTO — Studio creativo. Foto e contenuti che lasciano il segno.">
+  <meta property="og:title" content="MOMENTO • Creative Studio">
+  <meta property="og:description" content="Non per tutti: per chi vuole guidare il cambiamento.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wearemomento.com"/>
+
+  <style>
+    /* ===============================
+       Design System
+    =============================== */
+    :root{
+      --bg:#0b0b0d;
+      --glass:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.12);
+      --white:#ffffff;
+      --brand:#eb5e28;
+      --brand-2:#ff9e57;
+      --radius:20px;
+      --pill:9999px;
+      --blur:18px;
+      --container:1200px;
+      --gap:clamp(14px,2vw,24px);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --marquee-duration: 28s; /* velocità ticker */
+      --cookie-blue:#2563eb;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--white);
+      font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      display:flex; flex-direction:column;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--white); text-decoration:none}
+    img,svg,video{max-width:100%; display:block}
+    :focus-visible{outline:2px solid var(--white); outline-offset:3px}
+    .container{width:min(100% - 2*var(--gap), var(--container)); margin-inline:auto}
+    .glass{background:var(--glass); border:1px solid var(--stroke); border-radius:var(--radius); backdrop-filter:blur(var(--blur)); -webkit-backdrop-filter:blur(var(--blur)); box-shadow:var(--shadow)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      padding:.9rem 1.2rem; border-radius:var(--pill);
+      background:linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 18%) 0%, var(--brand) 100%);
+      color:#fff; font-weight:800; letter-spacing:.02em;
+      border:1px solid color-mix(in oklab, var(--brand), #000 22%); box-shadow:0 10px 24px rgba(235,94,40,.35);
+      transition:transform .15s ease, filter .25s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.outline{background:transparent;border:1px solid var(--stroke);box-shadow:none}
+
+    /* ===============================
+       PRELOADER (originale ripristinato)
+    =============================== */
+    #preloader{position:fixed; inset:0; width:100vw; height:100vh; background:#000; z-index:9999; overflow:hidden}
+    #preload-image1,#preload-image2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:150px;opacity:0}
+    #logo-container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:150px;text-align:center}
+    #preload-loader{position:absolute;top:50%;left:50%;width:100%;opacity:0;transform:translate(-50%,-50%)}
+    .animateLoader{animation:simpleFadeIn 1.5s forwards}
+    @keyframes simpleFadeIn{from{opacity:0}to{opacity:1}}
+    #preload-loader::after{
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+      opacity:0; transform:translateX(-100%); animation:metallicShine 1.5s forwards; animation-delay:1.5s
+    }
+    @keyframes metallicShine{0%{transform:translateX(-100%);opacity:0}50%{transform:translateX(0);opacity:1}100%{transform:translateX(100%);opacity:0}}
+    @keyframes zoomRotate{0%{transform:translate(-50%,-50%) scale(0) rotate(0);opacity:0}100%{transform:translate(-50%,-50%) scale(1) rotate(360deg);opacity:1}}
+    @keyframes fadeInRotate{0%{transform:translate(-50%,-50%) rotate(0);opacity:0}100%{transform:translate(-50%,-50%) rotate(360deg);opacity:1}}
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes fadeOutEffect{0%{opacity:1}100%{opacity:0}}
+    .animate1{animation:zoomRotate 2s forwards}
+    .animate2{animation:fadeInRotate 1s forwards}
+    .animate3{animation:fadeIn 1s forwards}
+    .fadeOut{animation:fadeOutEffect 1s forwards}
+
+    /* ===============================
+       HEADER
+    =============================== */
+    header{position:fixed; inset:0 0 auto 0; height:84px; display:flex; align-items:center; z-index:1000}
+    .nav-wrap{width:min(100% - 2*var(--gap), var(--container)); margin-inline:auto; padding:8px}
+    .nav{display:flex; align-items:center; gap:12px; padding:.5rem; border-radius:var(--pill); border:1px solid var(--stroke); background:rgba(10,10,13,.45); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:var(--shadow)}
+    .brand{display:flex; align-items:center; gap:.7rem; padding:.2rem .6rem; border-radius:var(--pill)}
+    .brand img{width:44px; height:44px; object-fit:contain; border-radius:12px}
+    .brand strong{letter-spacing:.06em; font-weight:800}
+    .nav-scroller{
+      display:flex; align-items:center; gap:8px; flex:1; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; padding:.2rem;
+      mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+    }
+    .nav-scroller::-webkit-scrollbar{display:none}
+    .nav-scroller a{
+      color:#fff; padding:.55rem .9rem; border-radius:var(--pill); white-space:nowrap; border:1px solid transparent;
+      transition:background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .nav-scroller a:hover{background:rgba(255,255,255,.06); border-color:var(--stroke); color:#fff}
+    .nav-cta{display:flex; align-items:center; gap:8px}
+
+    /* ===============================
+       HERO
+    =============================== */
+    .hero{position:relative; min-height:100svh; display:grid; place-items:center; text-align:center; overflow:hidden}
+    .video-wrap{
+      position:absolute; inset:0; z-index:-1; overflow:hidden;
+      /* fallback visivo se l'iframe non parte */
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.7)),
+        url('icone/video-fallback.jpg') center/cover no-repeat;
+    }
+    .video-wrap iframe{
+      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:177.78vh; height:100vh; min-width:100vw; min-height:100vh; pointer-events:none;
+      filter:saturate(1.1) contrast(1.05)
+    }
+    .video-overlay{position:absolute; inset:0; background:transparent}
+    .hero .content{padding-block:clamp(120px,14vh,180px) clamp(40px,10vh,80px); padding-inline:var(--gap)}
+    .eyebrow{display:inline-flex; gap:.5rem; align-items:center; margin-bottom:1rem}
+    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--brand)}
+    .hero h1{font-weight:800; letter-spacing:.02em; line-height:1.02; font-size:clamp(2.4rem,6vw,4.8rem); margin:0 0 12px}
+    .hero p{font-size:clamp(1rem,2.2vw,1.2rem); margin:0 auto 24px; max-width:780px}
+    .cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+
+    /* ===============================
+       SECTIONS (resto invariato)
+    =============================== */
+    .section{padding-block: clamp(60px, 10vh, 120px)}
+    .section h2{font-size:clamp(1.8rem,3.6vw,2.4rem); margin:0 0 14px}
+
+    .about-grid{display:grid; gap:var(--gap); grid-template-columns: 1.1fr .9fr}
+    .about .card{padding:clamp(18px,2.2vw,28px)}
+    .about h2{margin:0 0 .6rem}
+    .about p{margin:.4rem 0}
+    .about-media img{border-radius:18px; aspect-ratio:4/3; object-fit:cover; width:100%}
+    @media (max-width:1024px){.about-grid{grid-template-columns:1fr}}
+
+    .cards{display:grid; gap:var(--gap); grid-template-columns:repeat(3,1fr)}
+    .card{padding:clamp(18px,2vw,26px)}
+    .card h3{margin:0 0 6px}
+    .card ul{margin:10px 0 0; padding-left:18px}
+    .card .kicker{opacity:.9; font-size:.95rem; margin-bottom:6px}
+    @media (max-width:980px){.cards{grid-template-columns:1fr}}
+
+    .portfolio .head{display:flex; align-items:end; justify-content:space-between; gap:var(--gap); margin-bottom:18px}
+    .filters{display:flex; gap:8px; flex-wrap:wrap}
+    .filter{padding:.6rem .9rem; border-radius:var(--pill); border:1px solid var(--stroke); background:rgba(255,255,255,.06); color:#fff; font-weight:700; cursor:pointer}
+    .filter.active{background:linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 18%), var(--brand)); color:#fff; border-color:transparent}
+    .grid{display:grid; gap:var(--gap); grid-template-columns:repeat(12,1fr)}
+    .item{grid-column:span 4; cursor:pointer}
+    .thumb{border-radius:18px; overflow:hidden; position:relative}
+    .thumb img{width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .35s ease}
+    .item:hover .thumb img{transform:scale(1.04)}
+    .badge{position:absolute; left:12px; bottom:12px; padding:.45rem .7rem; border-radius:12px; background:rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.25); font-weight:800; letter-spacing:.06em; text-transform:uppercase}
+    @media (max-width:1100px){.item{grid-column:span 6}}
+    @media (max-width:720px){.grid{grid-template-columns:repeat(6,1fr)} .item{grid-column:span 6}}
+
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.92); display:none; align-items:center; justify-content:center; z-index:1500; padding:20px}
+    .lightbox.show{display:flex}
+    .lightbox .inner{width:min(100%,980px)}
+    .lightbox .frame{aspect-ratio:16/10; background:#000; border-radius:16px; overflow:hidden}
+    .lightbox .frame img{width:100%; height:100%; object-fit:cover}
+    .lightbox .meta{display:flex; justify-content:space-between; align-items:center; margin-top:10px}
+    .icon-btn{background:transparent; border:1px solid var(--stroke); color:#fff; padding:.5rem .7rem; border-radius:12px}
+    .icon-btn:hover{border-color:#fff}
+
+    .workflow h2{margin:0 0 18px}
+    .timeline{position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:var(--gap)}
+    .step{position:relative; padding:18px; border-radius:16px; border:1px solid var(--stroke); background:rgba(255,255,255,.06)}
+    .step .head{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+    .step .num{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 18%), var(--brand)); color:#fff; font-weight:800}
+    .step .title{font-weight:800}
+    .rail{position:absolute; left:0; right:0; top:18px; height:2px; background:linear-gradient(90deg, rgba(255,255,255,.25), rgba(255,255,255,.1)); grid-column:1/-1; transform:translateY(-50%); z-index:-1}
+    @media (max-width:980px){.timeline{grid-template-columns:1fr} .rail{display:none}}
+
+    .marquee{position:relative; overflow:hidden; mask-image:linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%)}
+    .marquee .track{display:flex; gap:32px; width:max-content; animation:marquee var(--marquee-duration) linear infinite; will-change:transform}
+    .marquee.reverse .track{animation-direction:reverse}
+    .marquee:hover .track{animation-play-state:paused}
+    @keyframes marquee{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+    @media (prefers-reduced-motion: reduce){.marquee .track{animation:none}}
+
+    .logo{flex:0 0 auto; width:140px; height:70px; display:grid; place-items:center; border:1px solid var(--stroke); border-radius:14px; background:rgba(255,255,255,.06); filter:grayscale(1); opacity:.9; transition:filter .2s, opacity .2s}
+    .logo:hover{filter:none; opacity:1}
+
+    .t-cards{display:flex; gap:var(--gap)}
+    .tcard{min-width: clamp(280px, 48vw, 520px); border-radius:18px; border:1px solid var(--stroke); background:rgba(255,255,255,.06); padding:18px}
+    .t-head{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+    .avatar{width:42px; height:42px; border-radius:50%; background:#222; display:grid; place-items:center; font-weight:800}
+    .stars{display:flex; gap:2px}
+
+    .compare-wrap{display:grid; gap:var(--gap); grid-template-columns:1.1fr .9fr; align-items:center}
+    .compare{position:relative; border-radius:18px; overflow:hidden; aspect-ratio:16/9; background:#000}
+    .compare img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+    .compare .reveal{position:absolute; inset:0; width:var(--pos,50%); overflow:hidden}
+    .compare .handle{position:absolute; top:0; bottom:0; left:var(--pos,50%); width:2px; background:rgba(255,255,255,.7)}
+    .compare .knob{position:absolute; top:50%; left:calc(var(--pos,50%) - 10px); transform:translateY(-50%); width:20px; height:20px; border-radius:50%; background:#fff}
+    .range{width:100%}
+    @media (max-width:980px){.compare-wrap{grid-template-columns:1fr}}
+
+    .p-grid{display:grid; gap:var(--gap); grid-template-columns:repeat(3,1fr); align-items:stretch}
+    .p-card{position:relative; padding:22px; border-radius:18px; border:1px solid var(--stroke); background:rgba(255,255,255,.06); display:flex; flex-direction:column; height:100%}
+    .p-card .tag{position:absolute; top:14px; right:14px; padding:.35rem .6rem; border-radius:999px; font-size:.8rem; background:linear-gradient(180deg, color-mix(in oklab, var(--brand), #fff 18%), var(--brand))}
+    .price{font-size:2rem; font-weight:800; margin:6px 0 8px}
+    .feat{margin:10px 0 0; padding-left:18px}
+    .feat li{margin:.35rem 0}
+    .actions{margin-top:auto; display:flex; gap:10px}
+    @media (max-width:980px){.p-grid{grid-template-columns:1fr}}
+
+    .faq details{border:1px solid var(--stroke); border-radius:16px; background:rgba(255,255,255,.06); padding:14px 16px}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer; font-weight:800; list-style:none; position:relative; padding-left:24px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::before{content:""; position:absolute; left:0; top:.75rem; width:8px; height:8px; border-radius:50%; background:var(--brand)}
+    .faq p{margin:.5rem 0 0; opacity:.95}
+
+    .map-wrap{display:grid; gap:var(--gap); grid-template-columns:.9fr 1.1fr}
+    .map-card{padding:12px}
+    .map-embed{border:0; width:100%; aspect-ratio:4/3; border-radius:14px}
+    @media (max-width:980px){.map-wrap{grid-template-columns:1fr}}
+
+    .form-grid{display:grid; gap:var(--gap); grid-template-columns:.9fr 1.1fr}
+    form{display:grid; gap:12px}
+    .field{display:grid; gap:6px}
+    input,textarea{width:100%; border-radius:14px; border:1px solid var(--stroke); background:rgba(255,255,255,.06); color:#fff; padding:.9rem 1rem; resize:vertical}
+    textarea{min-height:140px}
+    .success,.error{display:none; margin-top:10px; font-weight:800}
+    .success{color:#67ffa0}.error{color:#ff7b7b}
+    @media (max-width:980px){.form-grid{grid-template-columns:1fr}}
+
+    footer{margin-top:auto; padding:28px 0; border-top:1px solid var(--stroke); background:rgba(255,255,255,.02)}
+    .foot{display:flex; align-items:center; justify-content:space-between; gap:var(--gap); flex-wrap:wrap}
+    .social{display:flex; gap:10px}
+    .social a{display:grid; place-items:center; width:40px; height:40px; border:1px solid var(--stroke); border-radius:14px; background:rgba(255,255,255,.06)}
+    .copy a{color:#fff; text-decoration:underline}
+
+    #cookie-banner{position:fixed; left:50%; bottom:20px; transform:translateX(-50%) translateY(10px); opacity:0; pointer-events:none; width:min(92%, 900px); z-index:1600}
+    #cookie-banner.show{opacity:1; transform:translateX(-50%); pointer-events:auto}
+    .cookie{display:grid; gap:12px; grid-template-columns:1fr auto; align-items:center; padding:12px 14px; border-radius:18px}
+    .cookie .btn{padding:.6rem .9rem}
+
+    .animate{opacity:0; transform:translateY(18px); transition:opacity .5s ease, transform .5s ease}
+    .animate.visible{opacity:1; transform:none}
+
+    .workflow .rail{ display:none !important; }
+
+    /* ===============================
+       COOKIE MODULE — nuova UI
+    =============================== */
+    #momento-cookie-banner{
+      position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:1600;
+      background:#fff;color:#111;border:1px solid rgba(0,0,0,.08);border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.14);width:min(900px,92vw);padding:14px 16px
+    }
+    #momento-cookie-banner[hidden]{display:none}
+    #momento-cookie-banner .mc-content{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    #momento-cookie-banner .mc-text{flex:1 1 320px;font-size:.95rem;line-height:1.45}
+    #momento-cookie-banner .mc-text a{color:#0a66ff;text-decoration:none}
+    #momento-cookie-banner .mc-actions{display:flex;gap:8px;flex:0 0 auto}
+    #momento-cookie-banner .mc-btn{height:40px;padding:0 14px;border-radius:999px;border:1px solid #e6e6e6;background:#fff;cursor:pointer}
+    #momento-cookie-banner .mc-btn.primary{background:#111;color:#fff;border-color:#111}
+    #momento-cookie-banner .mc-btn.ghost{background:transparent;border-color:transparent;text-decoration:underline}
+
+    /* Overlay + modal raffinati */
+    #momento-cookie-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1610;display:flex;align-items:center;justify-content:center;animation:fadeIn .2s}
+    #momento-cookie-modal[hidden]{display:none}
+    #momento-cookie-modal .mc-modal{
+      background:#fff;color:#111;border-radius:18px;border:1px solid #e6e6e6;box-shadow:0 20px 50px rgba(0,0,0,.22);
+      width:min(620px,92vw);padding:26px 22px;position:relative
+    }
+    #momento-cookie-modal h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:0 0 6px;font-weight:800}
+    #momento-cookie-modal p{margin:0 0 14px;color:#444}
+    #momento-cookie-modal .mc-close{position:absolute;top:12px;right:14px;background:transparent;border:0;font-size:1.6rem;cursor:pointer;line-height:1}
+    #momento-cookie-modal .mc-row{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;margin:.7rem 0;padding:12px 0;border-bottom:1px solid #f0f0f0
+    }
+    #momento-cookie-modal .mc-row:last-of-type{border-bottom:0}
+    /* checkbox ben visibili (blu) */
+    #momento-cookie-modal input[type="checkbox"]{
+      accent-color:var(--cookie-blue);
+      width:22px;height:22px; cursor:pointer;
+    }
+    #momento-cookie-modal input[disabled]{accent-color:#cfcfcf; cursor:not-allowed}
+    #momento-cookie-modal .mc-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+    #momento-cookie-modal .mc-btn{height:42px;padding:0 16px;border-radius:12px;border:1px solid #e6e6e6;background:#fff;cursor:pointer}
+    #momento-cookie-modal .mc-btn.primary{background:#111;color:#fff;border-color:#111}
+
+    /* Toggle sinistro minimal, fuori da tutto */
+    #momento-cookie-toggle{
+      position:fixed; left:20px; bottom:20px; z-index:3000;
+      width:20px; height:20px; padding:0; border:0; background:transparent; cursor:pointer;
+    }
+    #momento-cookie-toggle[hidden]{display:none}
+    #momento-cookie-toggle img{
+      width:100%; height:100%;
+      filter:brightness(0); /* icona nera di default */
+      transition:filter .2s ease, transform .2s ease;
+    }
+    #momento-cookie-toggle.inverted img{ filter:invert(1) brightness(1); }
+    #momento-cookie-toggle:hover img{ transform:scale(1.08); }
+
+    @media (max-width:768px){
+      #momento-cookie-banner{left:50%;right:auto;bottom:12px;transform:translateX(-50%);border-radius:14px}
+      #momento-cookie-banner .mc-actions{width:100%;justify-content:flex-end}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================== PRELOADER (originale) =============================== -->
+  <div id="preloader">
+    <img id="preload-image1" src="icone/mmmmm.png" alt="Preload 1">
+    <img id="preload-image2" src="icone/contorno.png" alt="Preload 2">
+    <div id="logo-container">
+      <img id="preload-loader" src="icone/loader.png" alt="Loader">
+    </div>
+  </div>
+
+  <!-- =============================== HEADER =============================== -->
+  <header>
+    <div class="nav-wrap">
+      <div class="nav">
+        <a href="#hero" class="brand">
+          <img src="icone/loader.png" alt="Logo MOMENTO" loading="eager">
+          <strong>MOMENTO</strong>
+        </a>
+
+        <nav class="nav-scroller" aria-label="Navigazione principale">
+          <a href="#about">Studio</a>
+          <a href="#services">Servizi</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#reviews">Recensioni</a>
+          <a href="#before-after">Prima/Dopo</a>
+          <a href="#pricing">Prezzi</a>
+          <a href="#faq">FAQ</a>
+          <a href="#location">Dove siamo</a>
+          <a href="#contact">Contatti</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn outline" href="#contact">Prenota</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================== MAIN =============================== -->
+  <main id="main" style="display:none">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Intro">
+      <div class="video-wrap" aria-hidden="true">
+        <iframe
+          id="bgVideo"
+          title="Background video"
+          src=""
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="content container">
+        <div class="eyebrow"><span class="dot"></span><span>Creative Studio</span></div>
+        <h1>La tua visione, la nostra missione.</h1>
+        <p>Foto, video e contenuti che non cercano l’ordinario. Lavoriamo con chi vuole lasciare il segno — non con tutti.</p>
+        <div class="cta-row">
+          <a class="btn" href="#portfolio">Esplora Portfolio</a>
+          <a class="btn outline" href="#contact">Parliamo del tuo progetto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about animate" id="about">
+      <div class="container about-grid">
+        <article class="card glass">
+          <h2>Chi siamo</h2>
+          <p>Nati nel digitale, cresciuti tra fotocamere e pixel. Da oltre 5 anni trasformiamo idee in immagini che funzionano.</p>
+          <p>Ogni scatto, video e storia è progettata per distinguerti. Non ci allineiamo agli algoritmi: costruiamo format che parlano al tuo pubblico.</p>
+        </article>
+        <div class="about-media"><img src="icone/chisiamo.png" alt="Backstage MOMENTO" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section class="section animate" id="services">
+      <div class="container">
+        <h2>Servizi & Pacchetti</h2>
+        <div class="cards">
+          <article class="card glass">
+            <div class="kicker">Per brand e aziende</div>
+            <h3>Eventi</h3>
+            <ul>
+              <li>Reportage fotografico</li>
+              <li>Clip verticali social</li>
+              <li>Consegna express</li>
+            </ul>
+          </article>
+          <article class="card glass">
+            <div class="kicker">Per persone & fashion</div>
+            <h3>Moda & Portrait</h3>
+            <ul>
+              <li>Studio o on-location</li>
+              <li>Styling & moodboard</li>
+              <li>Beauty retouch</li>
+            </ul>
+          </article>
+          <article class="card glass">
+            <div class="kicker">Per e-commerce e ADV</div>
+            <h3>Brand & Prodotti</h3>
+            <ul>
+              <li>Still life / lifestyle</li>
+              <li>Video snackable</li>
+              <li>Linee guida social</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="section workflow animate" id="workflow">
+      <div class="container">
+        <h2>Workflow</h2>
+        <div class="timeline">
+          <div class="rail" aria-hidden="true"></div>
+          <article class="step">
+            <div class="head"><div class="num">1</div><div class="title">Discovery</div></div>
+            <p>Call di 20′ per allineare obiettivi, mood e timing. Ricevi un mini-brief condiviso.</p>
+          </article>
+          <article class="step">
+            <div class="head"><div class="num">2</div><div class="title">Pre-Produzione</div></div>
+            <p>Location, casting, styling, shot-list. Tutto confermato su un board condiviso.</p>
+          </article>
+          <article class="step">
+            <div class="head"><div class="num">3</div><div class="title">Shooting</div></div>
+            <p>Set ottimizzato per rapidità e qualità. Anteprime live per approvazioni immediate.</p>
+          </article>
+          <article class="step">
+            <div class="head"><div class="num">4</div><div class="title">Post & Delivery</div></div>
+            <p>Selezione, color grading, export multi-formato. Consegna in galleria privata.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section portfolio animate" id="portfolio">
+      <div class="container">
+        <div class="head">
+          <h2>Portfolio</h2>
+          <div class="filters" role="tablist" aria-label="Filtri portfolio">
+            <button class="filter active" data-filter="all" role="tab" aria-selected="true">Tutti</button>
+            <button class="filter" data-filter="Eventi" role="tab">Eventi</button>
+            <button class="filter" data-filter="Moda" role="tab">Moda</button>
+            <button class="filter" data-filter="Automotive" role="tab">Automotive</button>
+            <button class="filter" data-filter="Food" role="tab">Food</button>
+            <button class="filter" data-filter="Interni" role="tab">Interni</button>
+            <button class="filter" data-filter="Musica" role="tab">Musica</button>
+          </div>
+        </div>
+
+        <div class="grid" id="portfolioGrid" aria-live="polite">
+          <figure class="item" data-cat="Eventi" data-img="icone/eventi.png" data-desc="Altri scatti: <a class='link-qui' href='https://momentomedia.myportfolio.com/aziendale' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/eventi.png" alt="Eventi" loading="lazy"><span class="badge">Eventi</span></div>
+          </figure>
+          <figure class="item" data-cat="Moda" data-img="icone/moda.png" data-desc="Moda: <a class='link-qui' href='https://momentomedia.myportfolio.com/moda' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/moda.png" alt="Moda" loading="lazy"><span class="badge">Moda</span></div>
+          </figure>
+          <figure class="item" data-cat="Automotive" data-img="icone/automotive.png" data-desc="Automotive: <a class='link-qui' href='https://momentomedia.myportfolio.com/automotive' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/automotive.png" alt="Automotive" loading="lazy"><span class="badge">Automotive</span></div>
+          </figure>
+          <figure class="item" data-cat="Food" data-img="icone/cibo.png" data-desc="Food & product: <a class='link-qui' href='https://momentomedia.myportfolio.com/product' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/cibo.png" alt="Food" loading="lazy"><span class="badge">Food</span></div>
+          </figure>
+          <figure class="item" data-cat="Interni" data-img="icone/interni.png" data-desc="Interni: <a class='link-qui' href='https://momentomedia.myportfolio.com/ambiente' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/interni.png" alt="Interni" loading="lazy"><span class="badge">Interni</span></div>
+          </figure>
+          <figure class="item" data-cat="Musica" data-img="icone/musica.png" data-desc="Musica: <a class='link-qui' href='https://momentomedia.myportfolio.com/music' target='_blank' rel='noopener'>qui</a>.">
+            <div class="thumb glass"><img src="icone/musica.png" alt="Musica" loading="lazy"><span class="badge">Musica</span></div>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Anteprima immagine">
+        <div class="inner">
+          <div class="frame"><img id="lbImg" alt=""></div>
+          <div class="meta">
+            <h3 id="lbTitle">Titolo</h3>
+            <div style="display:flex; gap:8px; align-items:center">
+              <button class="icon-btn" id="lbMore" type="button">Apri link</button>
+              <button class="icon-btn" id="lbClose" type="button" aria-label="Chiudi">Chiudi</button>
+            </div>
+          </div>
+          <div id="lbDesc"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTI & TESTIMONIANZE -->
+    <section class="section animate" id="reviews">
+      <div class="container">
+        <h2>Clienti & Testimonianze</h2>
+        <div class="marquee" aria-label="Alcuni clienti">
+          <div class="track">
+            <div class="logo glass">Brand A</div>
+            <div class="logo glass">Brand B</div>
+            <div class="logo glass">Brand C</div>
+            <div class="logo glass">Brand D</div>
+            <div class="logo glass">Brand E</div>
+            <div class="logo glass">Brand F</div>
+            <div class="logo glass">Brand G</div>
+            <div class="logo glass">Brand A</div>
+            <div class="logo glass">Brand B</div>
+            <div class="logo glass">Brand C</div>
+            <div class="logo glass">Brand D</div>
+            <div class="logo glass">Brand E</div>
+            <div class="logo glass">Brand F</div>
+            <div class="logo glass">Brand G</div>
+          </div>
+        </div>
+
+        <div class="marquee reverse" style="margin-top:18px">
+          <div class="track">
+            <div class="t-cards">
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">A</div><div><strong>Alessia R.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Professionali e veloci. Le foto dell’evento hanno alzato la qualità dei nostri canali social.</p>
+              </article>
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">M</div><div><strong>Marco D.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Shooting moda impeccabile. Moodboard chiara e resa finale oltre le aspettative.</p>
+              </article>
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">S</div><div><strong>Sara P.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Consegna puntuale, color grading elegante. Ritorneremo sicuramente.</p>
+              </article>
+            </div>
+            <div class="t-cards" aria-hidden="true">
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">A</div><div><strong>Alessia R.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Professionali e veloci. Le foto dell’evento hanno alzato la qualità dei nostri canali social.</p>
+              </article>
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">M</div><div><strong>Marco D.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Shooting moda impeccabile. Moodboard chiara e resa finale oltre le aspettative.</p>
+              </article>
+              <article class="tcard">
+                <div class="t-head"><div class="avatar">S</div><div><strong>Sara P.</strong><div class="stars">★★★★★</div></div></div>
+                <p>Consegna puntuale, color grading elegante. Ritorneremo sicuramente.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRIMA/DOPO -->
+    <section class="section animate" id="before-after">
+      <div class="container">
+        <h2>Prima / Dopo</h2>
+        <div class="compare-wrap">
+          <div>
+            <div class="compare glass" data-pos="50">
+              <img src="icone/before.jpg" alt="Immagine prima" loading="lazy">
+              <div class="reveal"><img src="icone/after.jpg" alt="Immagine dopo" loading="lazy"></div>
+              <div class="handle" aria-hidden="true"></div>
+              <div class="knob" aria-hidden="true"></div>
+            </div>
+            <input class="range" type="range" min="0" max="100" value="50" aria-label="Slider Prima/Dopo">
+          </div>
+          <article class="card glass">
+            <h3>Color Grading & Retouch</h3>
+            <p>Ogni immagine è curata con attenzione a pelle, texture e luce. Manteniamo un look naturale, con contrasti e cromie coerenti al brand.</p>
+            <p style="opacity:.9">Consegniamo file ottimizzati per web/print e preset per mantenere continuità su future produzioni.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREZZI -->
+    <section class="section animate" id="pricing">
+      <div class="container">
+        <h2>Prezzi trasparenti</h2>
+        <div class="p-grid">
+          <article class="p-card glass">
+            <h3>Starter</h3>
+            <div class="price">da €390</div>
+            <ul class="feat">
+              <li>2 ore di shooting</li>
+              <li>Selezione e basic edit</li>
+              <li>Consegna 25 scatti</li>
+            </ul>
+            <div class="actions">
+              <a class="btn" href="#contact">Prenota</a>
+            </div>
+          </article>
+
+          <article class="p-card glass" style="border:1px solid color-mix(in oklab, var(--brand), #000 22%)">
+            <span class="tag">Più scelto</span>
+            <h3>Pro</h3>
+            <div class="price">da €690</div>
+            <ul class="feat">
+              <li>4 ore di shooting</li>
+              <li>Color grading avanzato</li>
+              <li>Consegna 60 scatti</li>
+              <li>Reel verticale 30s</li>
+            </ul>
+            <div class="actions">
+              <a class="btn" href="#contact">Prenota</a>
+            </div>
+          </article>
+
+          <article class="p-card glass">
+            <h3>Editorial</h3>
+            <div class="price">su richiesta</div>
+            <ul class="feat">
+              <li>Team esteso (MUA, styling)</li>
+              <li>Location scouting</li>
+              <li>Direzione creativa</li>
+            </ul>
+            <div class="actions">
+              <a class="btn outline" href="#contact">Richiedi preventivo</a>
+            </div>
+          </article>
+        </div>
+        <p style="opacity:.85; margin-top:26px">I prezzi indicano soglie di partenza e possono variare per durata, location e licenze d’uso.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section animate faq" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>In quanto tempo consegnate?</summary>
+          <p>Anteprima entro 48h; consegna finale 5–10 giorni lavorativi in base a volume e complessità.</p>
+        </details>
+
+        <details>
+          <summary>Quando conviene prenotare lo shooting?</summary>
+          <p>Consigliamo 2–3 settimane di anticipo per garantire disponibilità di location e team.</p>
+        </details>
+
+        <details>
+          <summary>Quante foto riceverò?</summary>
+          <p>Dipende dal pacchetto: <em>Starter</em> ~25, <em>Pro</em> ~60, <em>Editorial</em> su brief. Consegniamo extra se tecnicamente validi.</p>
+        </details>
+
+        <details>
+          <summary>Come avviene la consegna?</summary>
+          <p>Galleria privata online (download in alta e web), con selezione preferiti e link condivisibile.</p>
+        </details>
+
+        <details>
+          <summary>Licenza d’uso e ADV</summary>
+          <p>L’uso web/organico è incluso. Usi ADV, out-of-home, stampa o editoriali richiedono estensioni dedicate.</p>
+        </details>
+
+        <details>
+          <summary>Pagamenti e fatturazione</summary>
+          <p>Acconto del 30% alla conferma, saldo alla consegna. Fattura elettronica e metodi: bonifico, carta, PayPal.</p>
+        </details>
+
+        <details>
+          <summary>Policy meteo / spostamenti</summary>
+          <p>Una data di backup meteo è inclusa se definita in booking. Trasferte e permessi location su preventivo.</p>
+        </details>
+
+        <details>
+          <summary>Posso avere i RAW?</summary>
+          <p>I file RAW non sono inclusi. Consegniamo JPEG/TIFF finali; i RAW possono essere valutati con licenza extra.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section animate" id="location">
+      <div class="container">
+        <h2>Dove siamo</h2>
+        <div class="map-wrap">
+          <div class="map-card glass">
+            <iframe class="map-embed" src="https://www.google.com/maps?q=Piazza%20E.%20de%20Filippo,%2012,%2050051%20Castelfiorentino%20FI&output=embed" loading="lazy" title="Sede MOMENTO"></iframe>
+          </div>
+          <div class="glass card" style="padding:18px">
+            <h3>Studio</h3>
+            <p>Piazza E. de Filippo, 12<br>50051 Castelfiorentino (FI)</p>
+            <a class="btn outline" href="https://www.google.com/maps?q=Piazza+E.+de+Filippo,+12,+50051+Castelfiorentino+FI" target="_blank" rel="noopener">Apri Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section animate" id="contact">
+      <div class="container form-grid">
+        <div class="glass card" style="padding:18px">
+          <h2 style="margin:0 0 10px; font-size:clamp(1.6rem,3.4vw,2.2rem)">Parliamo del tuo progetto</h2>
+          <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="subject" value="Nuova richiesta contatto MOMENTO">
+            <p style="display:none"><label>Non compilare: <input name="bot-field"></label></p>
+
+            <div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" required /></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+            <div class="field"><label for="phone">Telefono (opz.)</label><input id="phone" name="phone" inputmode="tel" pattern="^[0-9+()\\s-]{6,}$" placeholder="+39 ..." /></div>
+            <div class="field"><label for="message">Messaggio</label><textarea id="message" name="message" rows="6" required></textarea></div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+              <button type="submit" class="btn">Invia</button>
+              <a href="#" id="fusionExploreLink" class="btn outline">Apri Fusion</a>
+            </div>
+            <div class="success" id="formSuccess">Messaggio inviato con successo!</div>
+            <div class="error" id="formError">Si è verificato un errore. Riprova più tardi.</div>
+          </form>
+        </div>
+
+        <aside class="glass card" style="padding:18px">
+          <h3>Info</h3>
+          <p>Per collaborazioni e stampa: <a href="mailto:hello@wearemomento.com">hello@wearemomento.com</a></p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+            <span class="btn outline" style="padding:.5rem .8rem">Shooting</span>
+            <span class="btn outline" style="padding:.5rem .8rem">Content Strategy</span>
+            <span class="btn outline" style="padding:.5rem .8rem">Editing & Delivery</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================== FOOTER =============================== -->
+  <footer role="contentinfo" id="site-footer" style="visibility:hidden">
+    <div class="container foot">
+      <div class="brand" style="gap:.6rem">
+        <img src="icone/loader.png" alt="" aria-hidden="true" width="36" height="36">
+        <strong>MOMENTO</strong>
+      </div>
+      <div class="social" aria-label="Social">
+        <a href="mailto:hello@wearemomento.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m4 6 8 7 8-7" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <div class="copy">© 2025 MOMENTO • Made by <a href="https://www.overeye.net" target="_blank" rel="noopener">Overeye</a> • <a href="./privacy.html">Privacy</a> • <a href="./cookie-policy.html">Cookie</a></div>
+    </div>
+  </footer>
+
+  <!-- =============================== CONSENT MODE + SCRIPTS BLOCCATI =============================== -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied'});
+  </script>
+  <script data-cookie="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFGH"></script>
+  <script data-cookie="marketing" async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+
+  <!-- =============================== COOKIE CONSENT (ISOLATED MODULE) =============================== -->
+  <div id="momento-cookie-banner" role="region" aria-label="Cookie consent" hidden>
+    <div class="mc-content">
+      <div class="mc-text">
+        <p>Usiamo cookie essenziali, analitici e marketing per migliorare la tua esperienza.
+          <a href="./cookie-policy.html" target="_blank" rel="noopener">Scopri di più</a>.
+        </p>
+      </div>
+      <div class="mc-actions">
+        <button class="mc-btn primary"  id="mc-accept">Accetta tutto</button>
+        <button class="mc-btn"          id="mc-reject">Rifiuta</button>
+        <button class="mc-btn ghost"    id="mc-prefs">Preferenze</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="momento-cookie-modal" role="dialog" aria-modal="true" aria-labelledby="mc-title" hidden>
+    <div class="mc-modal">
+      <button class="mc-close" id="mc-close" aria-label="Chiudi">×</button>
+      <h2 id="mc-title">Preferenze cookie</h2>
+      <p>Scegli cosa abilitare:</p>
+      <label class="mc-row"><span>Essenziali</span> <input type="checkbox" checked disabled></label>
+      <label class="mc-row"><span>Analitici</span>  <input type="checkbox" id="mc-analytics"></label>
+      <label class="mc-row"><span>Marketing</span>  <input type="checkbox" id="mc-marketing"></label>
+      <div class="mc-modal-actions">
+        <button class="mc-btn primary" id="mc-save">Salva</button>
+        <button class="mc-btn"        id="mc-cancel">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toggle SINISTRO (fuori da tutto: figlio diretto di body) -->
+  <button id="momento-cookie-toggle" type="button" title="Impostazioni cookie" aria-label="Impostazioni cookie" hidden>
+    <img src="./cookie.png" alt="" aria-hidden="true">
+  </button>
+
+  <script>
+  (function(){
+    const B = document.getElementById('momento-cookie-banner');
+    const M = document.getElementById('momento-cookie-modal');
+    const T = document.getElementById('momento-cookie-toggle');
+
+    const btnAccept = document.getElementById('mc-accept');
+    const btnReject = document.getElementById('mc-reject');
+    const btnPrefs  = document.getElementById('mc-prefs');
+    const btnSave   = document.getElementById('mc-save');
+    const btnCancel = document.getElementById('mc-cancel');
+    const btnClose  = document.getElementById('mc-close');
+    const ckA = document.getElementById('mc-analytics');
+    const ckM = document.getElementById('mc-marketing');
+
+    const CNAME='cookieConsent';
+    const readC = n => document.cookie.split('; ').reduce((r,v)=>{const [k,val]=v.split('='); return k===n?decodeURIComponent(val):r}, null);
+    const writeC=(n,val,d=365)=>{document.cookie=n+'='+encodeURIComponent(val)+'; expires='+new Date(Date.now()+d*864e5).toUTCString()+'; path=/; Secure; SameSite=Lax'};
+
+    function loadCat(cat){
+      document.querySelectorAll('script[data-cookie="'+cat+'"]').forEach(s=>{
+        if(s._l) return; s._l=true;
+        const ns=document.createElement('script'); ns.src=s.src; ns.async=s.async; document.head.appendChild(ns);
+      });
+    }
+    function allowAnalytics(){ loadCat('analytics'); if(window.gtag){ gtag('consent','update',{analytics_storage:'granted'}); gtag('js', new Date()); gtag('config','G-ABCDEFGH',{anonymize_ip:true}); } }
+    function allowMarketing(){ loadCat('marketing'); if(window.gtag){ gtag('consent','update',{ad_storage:'granted'}); } }
+
+    function showBanner(){ B.hidden=false; }
+    function hideBanner(){ B.hidden=true; }
+    function openModal(){ M.hidden=false; document.documentElement.style.overflow='hidden'; }
+    function closeModal(){ M.hidden=true; document.documentElement.style.overflow=''; }
+    function showToggle(inverted){
+      T.hidden=false;
+      T.classList.toggle('inverted', !!inverted); // se true -> icona bianca
+    }
+    function hideToggle(){ T.hidden=true; T.classList.remove('inverted'); }
+
+    btnAccept.addEventListener('click', ()=>{
+      const consent={essential:true,analytics:true,marketing:true};
+      writeC(CNAME, JSON.stringify(consent));
+      allowAnalytics(); allowMarketing();
+      hideBanner(); closeModal();
+      showToggle(true);
+    });
+    btnReject.addEventListener('click', ()=>{
+      const consent={essential:true,analytics:false,marketing:false};
+      writeC(CNAME, JSON.stringify(consent));
+      hideBanner(); closeModal();
+      hideToggle();
+    });
+    btnPrefs.addEventListener('click', ()=>{
+      const saved=readC(CNAME);
+      if(saved){ try{ const c=JSON.parse(saved); ckA.checked=!!c.analytics; ckM.checked=!!c.marketing; }catch(_){}} 
+      openModal();
+    });
+    btnSave.addEventListener('click', ()=>{
+      const consent={essential:true,analytics:ckA.checked,marketing:ckM.checked};
+      writeC(CNAME, JSON.stringify(consent));
+      if(consent.analytics) allowAnalytics();
+      if(consent.marketing) allowMarketing();
+      hideBanner(); closeModal();
+      if(consent.analytics || consent.marketing){ showToggle(true); } else { hideToggle(); }
+    });
+    btnCancel.addEventListener('click', closeModal);
+    btnClose.addEventListener('click', closeModal);
+    T.addEventListener('click', ()=>{
+      const saved=readC(CNAME);
+      if(saved){ try{ const c=JSON.parse(saved); ckA.checked=!!c.analytics; ckM.checked=!!c.marketing; }catch(_){} }
+      openModal();
+    });
+
+    window.addEventListener('load', ()=>{
+      const saved = readC(CNAME);
+      if(!saved){ showBanner(); hideToggle(); }
+      else{
+        try{
+          const c=JSON.parse(saved);
+          if(c.analytics) allowAnalytics();
+          if(c.marketing) allowMarketing();
+          if(c.analytics || c.marketing){ showToggle(true); } else { hideToggle(); }
+        }catch(_){ showBanner(); hideToggle(); }
+      }
+    });
+
+    document.addEventListener('keydown', e=>{ if(!M.hidden && e.key==='Escape') closeModal(); });
+  })();
+  </script>
+  <!-- =============================== /COOKIE CONSENT =============================== -->
+
+  <!-- =============================== SCRIPTS DEL SITO =============================== -->
+  <script>
+  (function(){
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+
+    /* ===== Preloader + reveal main ===== */
+    const img1 = $('#preload-image1'), img2 = $('#preload-image2'), loader = $('#preload-loader');
+    const preloader = $('#preloader'), main = $('#main');
+    img1.classList.add('animate1');
+    setTimeout(()=>{ img2.classList.add('animate2'); }, 2000);
+    setTimeout(()=>{ img1.style.animationPlayState='paused'; img2.style.animationPlayState='paused'; }, 3000);
+    setTimeout(()=>{ loader.classList.add('animateLoader'); }, 3500);
+    setTimeout(()=>{
+      preloader.classList.add('fadeOut');
+      setTimeout(()=>{
+        preloader.style.display='none';
+        main.style.display='block';
+        document.getElementById('site-footer').style.visibility='visible';
+      }, 1000);
+    }, 5000);
+
+    /* ===== Smooth scroll ===== */
+    document.addEventListener('click', e=>{
+      const a = e.target.closest('a[href^="#"]');
+      if(!a) return;
+      const el = document.querySelector(a.getAttribute('href'));
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+    });
+
+    /* ===== In-view animation ===== */
+    const io=new IntersectionObserver((en,obs)=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.12});
+    $$('.animate').forEach(s=>io.observe(s));
+
+    /* ===== Hero video (robust) ===== */
+    const video = $('#bgVideo');
+    const id = '0t7r49I4pJ4';
+    const base = `https://www.youtube-nocookie.com/embed/${id}`;
+    const params = new URLSearchParams({
+      autoplay:'1', mute:'1', controls:'0', rel:'0',
+      loop:'1', playlist:id, modestbranding:'1',
+      showinfo:'0', fs:'0', iv_load_policy:'3',
+      playsinline:'1', disablekb:'1', start:'2'
+      // origin aggiunto solo se è http(s) per evitare errori in locale
+    });
+    if(/^https?:/i.test(location.protocol)){ params.set('origin', location.origin); }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      params.set('autoplay','0'); params.set('mute','1');
+    }
+    video.src = `${base}?${params.toString()}`;
+
+    /* ===== Portfolio: filtri + lightbox ===== */
+    const filters = $$('.filter'), items = $$('#portfolioGrid .item');
+    filters.forEach(btn => btn.addEventListener('click', ()=>{
+      filters.forEach(b=>b.classList.toggle('active', b===btn));
+      const val = btn.dataset.filter;
+      items.forEach(it => it.style.display = (val==='all'||it.dataset.cat===val)?'':'none');
+    }));
+    const lb = $('#lightbox'), lbImg = $('#lbImg'), lbTitle = $('#lbTitle'), lbDesc = $('#lbDesc'), lbMore = $('#lbMore'), lbClose = $('#lbClose');
+    let currentLink = null;
+    items.forEach(it => it.addEventListener('click', ()=>{
+      lbImg.src = it.dataset.img; lbImg.alt = it.dataset.cat || '';
+      lbTitle.textContent = it.dataset.cat || 'Shot';
+      lbDesc.innerHTML = it.dataset.desc || '';
+      const a = lbDesc.querySelector('a'); currentLink = a ? a.href : null;
+      lb.classList.add('show');
+    }));
+    lbClose.addEventListener('click', ()=> lb.classList.remove('show'));
+    lb.addEventListener('click', e => { if(e.target===lb) lb.classList.remove('show'); });
+    document.addEventListener('keydown', e => { if(e.key==='Escape') lb.classList.remove('show'); });
+    lbMore.addEventListener('click', ()=>{ if(currentLink) window.open(currentLink,'_blank'); });
+
+    /* ===== Prima/Dopo slider ===== */
+    const compareSection = $('#before-after');
+    if(compareSection){
+      const compare = compareSection.querySelector('.compare');
+      const range = compareSection.querySelector('.range');
+      const setPos = v => { compare.style.setProperty('--pos', v+'%'); };
+      setPos(range.value);
+      range.addEventListener('input', e => setPos(e.target.value));
+      let dragging=false;
+      compare.addEventListener('pointerdown', e=>{ dragging=true; compare.setPointerCapture(e.pointerId); });
+      compare.addEventListener('pointerup',   e=>{ dragging=false; compare.releasePointerCapture(e.pointerId); });
+      compare.addEventListener('pointermove', e=>{
+        if(!dragging) return;
+        const r = compare.getBoundingClientRect();
+        const v = Math.max(0, Math.min(100, ((e.clientX - r.left)/r.width)*100));
+        range.value = v; setPos(v);
+      });
+    }
+
+    /* ===== Contact form (Netlify AJAX) ===== */
+    const form = $('#contact-form'), ok = $('#formSuccess'), err = $('#formError');
+    form?.addEventListener('submit', e=>{
+      e.preventDefault();
+      const fd=new FormData(form);
+      const body=new URLSearchParams(fd).toString();
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body})
+        .then(r=>{ if(!r.ok) throw new Error('net'); form.reset(); ok.style.display='block'; err.style.display='none'; setTimeout(()=>ok.style.display='none',3000); })
+        .catch(()=>{ err.style.display='block'; ok.style.display='none'; });
+    });
+
+    /* ===== (facoltativo) Toggle Fusion demo ===== */
+    document.getElementById('fusionExploreLink')?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const chatBox = document.getElementById('iam-chatbot-box');
+      const chatBtn  = document.getElementById('iam-chatbot-button');
+      if(chatBox && chatBtn){
+        const visible = getComputedStyle(chatBox).display !== 'none';
+        chatBox.style.display = visible ? 'none' : 'flex';
+        if(!visible) chatBtn.scrollIntoView({behavior:'smooth'});
+      }
+    });
+  })();
+  </script>
+
+  <!-- (Facoltativi) Script tuoi -->
+  <script src="js/fuse.js"></script>
+  <script src="js/iam-assist-falcon.js" defer></script>
+
+  <!-- JSON-LD Local Business (minimo) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"MOMENTO • Creative Studio",
+    "image":"https://www.wearemomento.com/icone/loader.png",
+    "address":{"@type":"PostalAddress","streetAddress":"Piazza E. de Filippo, 12","addressLocality":"Castelfiorentino","postalCode":"50051","addressRegion":"FI","addressCountry":"IT"},
+    "email":"hello@wearemomento.com",
+    "url":"https://www.wearemomento.com/"
+  }
+  </script>
+</body>
+</html>
