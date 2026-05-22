@@ -1,0 +1,43 @@
+{
+  "id": "velar_1779462862570_264ca5007a754",
+  "cloudPath": "progetti/admin/velar/2026/nome-cliente/nuovo-documento-velar_velar-1779462862570-264ca5007a754.json",
+  "title": "Nuovo documento Velar",
+  "status": "Bozza",
+  "category": "Documento",
+  "client": "Nome cliente",
+  "tags": "",
+  "template": "minimal",
+  "accent": "#111111",
+  "bodyFont": "Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",
+  "titleFont": "Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",
+  "bodySize": 16,
+  "titleSize": 44,
+  "lineHeight": 1.65,
+  "pageNumbers": true,
+  "pages": [
+    [
+      {
+        "id": "velar_1779462862571_084a465cb68f08",
+        "type": "h1",
+        "html": "Titolo del documento"
+      },
+      {
+        "id": "velar_1779462862571_e7df3e153c6828",
+        "type": "p",
+        "html": "Inizia a scrivere il tuo documento. Puoi modificare blocchi, aggiungere immagini, creare più pagine, spostare contenuti ed esportare in PDF o DOCX."
+      },
+      {
+        "id": "velar_1779462862571_e58c9e1390b4b",
+        "type": "h2",
+        "html": "Sezione principale"
+      },
+      {
+        "id": "velar_1779462862571_c10d93954b97",
+        "type": "p",
+        "html": "Velar salva i documenti nell’archivio cloud GitHub separato da XEYE, sotto la cartella velar del cliente."
+      }
+    ]
+  ],
+  "createdAt": "2026-05-22T15:14:22.571Z",
+  "updatedAt": "2026-05-22T15:14:46.418Z"
+}
