@@ -1,7 +1,7 @@
 {
   "id": "velar_1779462862570_264ca5007a754",
   "cloudPath": "progetti/admin/velar/2026/nome-cliente/nuovo-documento-velar_velar-1779462862570-264ca5007a754.json",
-  "title": "Nuovo documento Velar",
+  "title": "yes",
   "status": "Bozza",
   "category": "Documento",
   "client": "Nome cliente",
@@ -39,5 +39,5 @@
     ]
   ],
   "createdAt": "2026-05-22T15:14:22.571Z",
-  "updatedAt": "2026-05-22T15:14:46.418Z"
+  "updatedAt": "2026-05-22T15:21:30.037Z"
 }
