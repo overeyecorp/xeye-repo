@@ -1,0 +1,79 @@
+{
+  "version": "6.0",
+  "clients": [
+    {
+      "id": "client_1779826647485_7d8545a10e75a",
+      "contacts": [],
+      "createdAt": "2026-05-26T20:17:27.485Z",
+      "updatedAt": "2026-05-26T20:17:27.485Z",
+      "name": "Overeye",
+      "email": "info@overeye.net",
+      "phone": "3337663583",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "via piave 37",
+      "notes": ""
+    }
+  ],
+  "deals": [],
+  "tickets": [],
+  "tasks": [],
+  "appointments": [
+    {
+      "id": "appointment_1779826670902_e2ff6d86a174d8",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": true,
+      "reminderSentAt": "2026-05-26T23:09:04.488Z",
+      "createdAt": "2026-05-26T20:17:50.902Z",
+      "updatedAt": "2026-05-26T20:17:50.902Z",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "title": "Appuntamento",
+      "date": "2026-06-08",
+      "time": "22:00",
+      "type": "Visita / consulenza",
+      "status": "Programmato",
+      "email": "info@overeye.net",
+      "notes": ""
+    }
+  ],
+  "notes": [],
+  "timeline": [
+    {
+      "id": "timeline_1779836944488_f7070a285495b",
+      "type": "email",
+      "title": "Promemoria inviato per “Appuntamento”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "appointmentId": "appointment_1779826670902_e2ff6d86a174d8",
+        "to": "info@overeye.net"
+      },
+      "createdAt": "2026-05-26T23:09:04.488Z"
+    },
+    {
+      "id": "timeline_1779826670903_bc40f1930aa29",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "appointmentId": "appointment_1779826670902_e2ff6d86a174d8"
+      },
+      "createdAt": "2026-05-26T20:17:50.903Z"
+    },
+    {
+      "id": "timeline_1779826647485_2139abd7ba62c",
+      "type": "client",
+      "title": "Creato cliente “Overeye”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {},
+      "createdAt": "2026-05-26T20:17:27.485Z"
+    }
+  ],
+  "settings": {
+    "appointmentConfirmationEnabled": true,
+    "reminderEmailEnabled": true,
+    "defaultReminderHours": 24,
+    "companyName": "Overeye"
+  },
+  "updatedAt": "2026-05-26T23:09:04.488Z"
+}
