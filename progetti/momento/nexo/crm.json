@@ -34,11 +34,24 @@
       "type": "Visita / consulenza",
       "status": "Programmato",
       "email": "info@overeye.net",
-      "notes": ""
+      "notes": "",
+      "cancellationSent": true,
+      "cancellationSentAt": "2026-05-27T00:19:43.887Z"
     }
   ],
   "notes": [],
   "timeline": [
+    {
+      "id": "timeline_1779841183887_f7da398953b278",
+      "type": "email",
+      "title": "Email cancellazione inviata per “Appuntamento”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "appointmentId": "appointment_1779826670902_e2ff6d86a174d8",
+        "to": "info@overeye.net"
+      },
+      "createdAt": "2026-05-27T00:19:43.887Z"
+    },
     {
       "id": "timeline_1779836944488_f7070a285495b",
       "type": "email",
@@ -75,5 +88,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-26T23:09:04.488Z"
+  "updatedAt": "2026-05-27T00:19:43.888Z"
 }
