@@ -59,8 +59,8 @@
     },
     {
       "id": "appointment_1779896668373_864cb3609f3b3",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
+      "confirmationSent": true,
+      "confirmationSentAt": "2026-05-27T15:44:32.100Z",
       "reminderSent": false,
       "reminderSentAt": null,
       "cancellationSent": false,
@@ -85,6 +85,17 @@
   ],
   "notes": [],
   "timeline": [
+    {
+      "id": "timeline_1779896672100_e390aab63eba98",
+      "type": "email",
+      "title": "Email conferma inviata per “Appuntamento”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "appointmentId": "appointment_1779896668373_864cb3609f3b3",
+        "to": "dietista.elisabruscoli@gmail.com"
+      },
+      "createdAt": "2026-05-27T15:44:32.100Z"
+    },
     {
       "id": "timeline_1779896668373_16fe47277e2e5",
       "type": "appointment",
@@ -234,5 +245,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-27T15:44:28.374Z"
+  "updatedAt": "2026-05-27T15:44:32.100Z"
 }
