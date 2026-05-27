@@ -18,35 +18,19 @@
   "deals": [],
   "tickets": [],
   "tasks": [],
-  "appointments": [
-    {
-      "id": "appointment_1779883453535_10fea95f835cb",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
-      "reminderSent": true,
-      "reminderSentAt": "2026-05-27T12:04:39.864Z",
-      "cancellationSent": false,
-      "cancellationSentAt": null,
-      "createdAt": "2026-05-27T12:04:13.536Z",
-      "updatedAt": "2026-05-27T12:04:13.536Z",
-      "clientId": "client_1779883371235_4d087b080d402",
-      "title": "Appuntamento",
-      "date": "2026-06-08",
-      "time": "22:00",
-      "type": "Visita / consulenza",
-      "withPerson": "Overeye",
-      "locationMode": "In sede",
-      "onlinePlatform": "Altro",
-      "meetingLink": "",
-      "location": "Piazza Edoardo de Filippo 12c",
-      "phone": "",
-      "status": "Programmato",
-      "email": "momento@overeye.net",
-      "notes": "Abbonamento Overeye + presentazione prodotti"
-    }
-  ],
+  "appointments": [],
   "notes": [],
   "timeline": [
+    {
+      "id": "timeline_1779884449255_c6c095bbc106c8",
+      "type": "delete",
+      "title": "Eliminato appuntamento “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779883453535_10fea95f835cb"
+      },
+      "createdAt": "2026-05-27T12:20:49.255Z"
+    },
     {
       "id": "timeline_1779883479864_e94b3314c187e",
       "type": "email",
@@ -83,5 +67,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-27T12:04:39.864Z"
+  "updatedAt": "2026-05-27T12:20:49.259Z"
 }
