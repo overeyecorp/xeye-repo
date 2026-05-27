@@ -21,8 +21,8 @@
   "appointments": [
     {
       "id": "appointment_1779886180781_00838ac0ab7c28",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
+      "confirmationSent": true,
+      "confirmationSentAt": "2026-05-27T12:49:45.726Z",
       "reminderSent": false,
       "reminderSentAt": null,
       "cancellationSent": false,
@@ -47,6 +47,17 @@
   ],
   "notes": [],
   "timeline": [
+    {
+      "id": "timeline_1779886185726_2ea43db65a10a",
+      "type": "email",
+      "title": "Email conferma inviata per “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28",
+        "to": "momento@overeye.net"
+      },
+      "createdAt": "2026-05-27T12:49:45.726Z"
+    },
     {
       "id": "timeline_1779886180782_fa9ab63a5c89d",
       "type": "appointment",
@@ -156,5 +167,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-27T12:49:40.782Z"
+  "updatedAt": "2026-05-27T12:49:45.727Z"
 }
