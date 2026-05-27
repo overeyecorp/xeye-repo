@@ -1,0 +1,87 @@
+{
+  "version": "11.0",
+  "clients": [
+    {
+      "id": "client_1779883371235_4d087b080d402",
+      "contacts": [],
+      "createdAt": "2026-05-27T12:02:51.235Z",
+      "updatedAt": "2026-05-27T12:02:51.235Z",
+      "name": "Momento Media Agency",
+      "email": "momento@overeye.net",
+      "phone": "393534170049",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "Piazza Edoardo de Filippo 12c",
+      "notes": "Fotografo"
+    }
+  ],
+  "deals": [],
+  "tickets": [],
+  "tasks": [],
+  "appointments": [
+    {
+      "id": "appointment_1779883453535_10fea95f835cb",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": true,
+      "reminderSentAt": "2026-05-27T12:04:39.864Z",
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-27T12:04:13.536Z",
+      "updatedAt": "2026-05-27T12:04:13.536Z",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "title": "Appuntamento",
+      "date": "2026-06-08",
+      "time": "22:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Altro",
+      "meetingLink": "",
+      "location": "Piazza Edoardo de Filippo 12c",
+      "phone": "",
+      "status": "Programmato",
+      "email": "momento@overeye.net",
+      "notes": "Abbonamento Overeye + presentazione prodotti"
+    }
+  ],
+  "notes": [],
+  "timeline": [
+    {
+      "id": "timeline_1779883479864_e94b3314c187e",
+      "type": "email",
+      "title": "Promemoria inviato per “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779883453535_10fea95f835cb",
+        "to": "momento@overeye.net"
+      },
+      "createdAt": "2026-05-27T12:04:39.864Z"
+    },
+    {
+      "id": "timeline_1779883453536_7f68bf469022e8",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779883453535_10fea95f835cb"
+      },
+      "createdAt": "2026-05-27T12:04:13.536Z"
+    },
+    {
+      "id": "timeline_1779883371236_ae4da72b2eec1",
+      "type": "client",
+      "title": "Creato cliente “Momento Media Agency”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {},
+      "createdAt": "2026-05-27T12:02:51.236Z"
+    }
+  ],
+  "settings": {
+    "appointmentConfirmationEnabled": true,
+    "reminderEmailEnabled": true,
+    "defaultReminderHours": 24,
+    "companyName": "Overeye"
+  },
+  "updatedAt": "2026-05-27T12:04:39.864Z"
+}
