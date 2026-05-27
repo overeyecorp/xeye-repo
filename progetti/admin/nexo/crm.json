@@ -2,6 +2,19 @@
   "version": "11.0",
   "clients": [
     {
+      "id": "client_1779896598006_04900db1cf0cc8",
+      "contacts": [],
+      "createdAt": "2026-05-27T15:43:18.006Z",
+      "updatedAt": "2026-05-27T15:43:18.006Z",
+      "name": "Elisa Bruscoli",
+      "email": "dietista.elisabruscoli@gmail.com",
+      "phone": "3534647099",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "Via luigi cherubini 53, Empoli",
+      "notes": "Dietista"
+    },
+    {
       "id": "client_1779883371235_4d087b080d402",
       "contacts": [],
       "createdAt": "2026-05-27T12:02:51.235Z",
@@ -43,10 +56,53 @@
       "status": "Programmato",
       "email": "momento@overeye.net",
       "notes": "Rinn. abbonamento Overeye + presentazione prodotti"
+    },
+    {
+      "id": "appointment_1779896668373_864cb3609f3b3",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-27T15:44:28.373Z",
+      "updatedAt": "2026-05-27T15:44:28.373Z",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "title": "Appuntamento",
+      "date": "2026-06-10",
+      "time": "18:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Altro",
+      "meetingLink": "",
+      "location": "Via Luigi Cherubini 53, Empoli",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "dietista.elisabruscoli@gmail.com",
+      "notes": "Presentazione prodotti Overeye"
     }
   ],
   "notes": [],
   "timeline": [
+    {
+      "id": "timeline_1779896668373_16fe47277e2e5",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "appointmentId": "appointment_1779896668373_864cb3609f3b3"
+      },
+      "createdAt": "2026-05-27T15:44:28.373Z"
+    },
+    {
+      "id": "timeline_1779896598007_bb0cbf29bd18d",
+      "type": "client",
+      "title": "Creato cliente “Elisa Bruscoli”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {},
+      "createdAt": "2026-05-27T15:43:18.008Z"
+    },
     {
       "id": "timeline_1779886206863_288071449999b8",
       "type": "email",
@@ -178,5 +234,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-27T12:50:06.864Z"
+  "updatedAt": "2026-05-27T15:44:28.374Z"
 }
