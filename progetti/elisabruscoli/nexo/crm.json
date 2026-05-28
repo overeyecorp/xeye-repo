@@ -46,8 +46,56 @@
     }
   ],
   "notes": [],
-  "quotes": [],
+  "quotes": [
+    {
+      "id": "quote_1779986289981_5dfb3548205428",
+      "quoteNumber": "OVQ-2026-001",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "title": "Preventivo test",
+      "description": "",
+      "items": [
+        {
+          "id": "quote_item_1779986278580_45a778ebe39f9",
+          "description": "Servizio / prodotto",
+          "quantity": 1,
+          "unitPrice": 100,
+          "vat": 22
+        }
+      ],
+      "subtotal": 100,
+      "vatTotal": 22,
+      "total": 122,
+      "currency": "€",
+      "status": "draft",
+      "publicToken": "748ba3fd1cb334c8d885d8b35f20353dfbd5046343cc19e274a6ccf43e0c609f",
+      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779986289981_5dfb3548205428&token=748ba3fd1cb334c8d885d8b35f20353dfbd5046343cc19e274a6ccf43e0c609f",
+      "creatorEmail": "elisabruscoli@overeye.net",
+      "brandLogoUrl": "https://www.overeye.net/logo/elisabruscoli.png?v=1779986116837",
+      "expiresAt": "2026-05-29",
+      "email": "info@overeye.net",
+      "sentAt": null,
+      "viewedAt": null,
+      "acceptedAt": null,
+      "rejectedAt": null,
+      "acceptedByName": "",
+      "acceptedByEmail": "",
+      "acceptanceMessage": "",
+      "rejectionMessage": "",
+      "createdAt": "2026-05-28T16:38:09.981Z",
+      "updatedAt": "2026-05-28T16:38:09.981Z"
+    }
+  ],
   "timeline": [
+    {
+      "id": "timeline_1779986289983_f9ed05c4dc3c58",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "meta": {
+        "quoteId": "quote_1779986289981_5dfb3548205428"
+      },
+      "createdAt": "2026-05-28T16:38:09.983Z"
+    },
     {
       "id": "timeline_1779986228370_abbcc0afa952b",
       "type": "email",
@@ -84,5 +132,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:37:08.373Z"
+  "updatedAt": "2026-05-28T16:38:09.986Z"
 }
