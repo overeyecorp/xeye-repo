@@ -149,13 +149,13 @@
       "vatTotal": 28.6,
       "total": 158.6,
       "currency": "€",
-      "status": "sent",
+      "status": "viewed",
       "publicToken": "7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779984981613_768c1bd83af1d8&token=7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
       "expiresAt": "2026-05-30",
       "email": "williamfirenze@gmail.com",
       "sentAt": "2026-05-28T16:16:25.394Z",
-      "viewedAt": null,
+      "viewedAt": "2026-05-28T16:16:46.640Z",
       "acceptedAt": null,
       "rejectedAt": null,
       "acceptedByName": "",
@@ -163,10 +163,20 @@
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-05-28T16:16:21.612Z",
-      "updatedAt": "2026-05-28T16:16:25.394Z"
+      "updatedAt": "2026-05-28T16:16:46.640Z"
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779985006641_372656cc0fcef",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 visualizzato dal cliente",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1779984981613_768c1bd83af1d8"
+      },
+      "createdAt": "2026-05-28T16:16:46.641Z"
+    },
     {
       "id": "timeline_1779984985394_755887417ea6b",
       "type": "quote",
