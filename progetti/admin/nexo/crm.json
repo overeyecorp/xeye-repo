@@ -296,6 +296,14 @@
   ],
   "timeline": [
     {
+      "id": "timeline_1779993150699_b0c3455fe99ea",
+      "type": "portal",
+      "title": "Accesso portale cliente “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-28T18:32:30.699Z"
+    },
+    {
       "id": "timeline_1779993048718_f115fe582e4378",
       "type": "document",
       "title": "Eliminato documento “Contratto / documento”",
