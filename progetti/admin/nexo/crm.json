@@ -128,7 +128,7 @@
       "vatTotal": 22,
       "total": 122,
       "currency": "€",
-      "status": "sent",
+      "status": "viewed",
       "publicToken": "a2c7ba6c070bfaaf9a74a2a03b93e2def6e05080caf025910a7af39494898f17",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779989093266_57de9f6fe040a&token=a2c7ba6c070bfaaf9a74a2a03b93e2def6e05080caf025910a7af39494898f17",
       "creatorEmail": "admin@overeye.net",
@@ -136,7 +136,7 @@
       "expiresAt": "",
       "email": "williamfirenze@gmail.com",
       "sentAt": "2026-05-28T17:24:56.923Z",
-      "viewedAt": null,
+      "viewedAt": "2026-05-28T17:25:14.469Z",
       "acceptedAt": null,
       "rejectedAt": null,
       "acceptedByName": "",
@@ -144,22 +144,20 @@
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-05-28T17:24:53.266Z",
-      "updatedAt": "2026-05-28T17:24:56.923Z"
-    }
-  ],
-  "automations": [
-    {
-      "id": "automation_1779989096924_e00c7e1e3ed028",
-      "key": "quote-sent-followup-quote_1779989093266_57de9f6fe040a",
-      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "meta": {
-        "taskTitle": "Follow-up preventivo OVQ-2026-001"
-      },
-      "createdAt": "2026-05-28T17:24:56.924Z"
+      "updatedAt": "2026-05-28T17:25:14.469Z"
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779989114469_ca2822e29cdda",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 visualizzato dal cliente",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1779989093266_57de9f6fe040a"
+      },
+      "createdAt": "2026-05-28T17:25:14.470Z"
+    },
     {
       "id": "timeline_1779989096924_12410945256868",
       "type": "automation",
