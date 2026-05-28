@@ -128,10 +128,11 @@
       "type": "Contratto",
       "content": "firma dai",
       "requiresSignature": true,
-      "status": "sent",
-      "updatedAt": "2026-05-28T18:16:42.365Z",
+      "status": "viewed",
+      "updatedAt": "2026-05-28T18:17:16.436Z",
       "publicUrl": "https://www.overeye.net/document.html?id=document_1779992200371_0451cd53a9c628&token=f2315eb97dfcded327b034faa6b97346f0dae483ec1e90eb189fa2c61257218e",
-      "sentAt": "2026-05-28T18:16:42.365Z"
+      "sentAt": "2026-05-28T18:16:42.365Z",
+      "viewedAt": "2026-05-28T18:17:16.436Z"
     }
   ],
   "emailTemplates": [
@@ -261,6 +262,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779992236436_1374cbf31aa7a",
+      "type": "document",
+      "title": "Documento Contratto / documento visualizzato dal cliente",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "documentId": "document_1779992200371_0451cd53a9c628"
+      },
+      "createdAt": "2026-05-28T18:17:16.436Z"
+    },
     {
       "id": "timeline_1779992202365_5a0e7cf268b33",
       "type": "document",
