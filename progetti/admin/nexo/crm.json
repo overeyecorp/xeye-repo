@@ -2,6 +2,19 @@
   "version": "11.0",
   "clients": [
     {
+      "id": "client_1779984880646_cfbf7b9af20f78",
+      "contacts": [],
+      "createdAt": "2026-05-28T16:14:40.646Z",
+      "updatedAt": "2026-05-28T16:14:40.646Z",
+      "name": "William Firenze",
+      "email": "williamfirenze@gmail.com",
+      "phone": "3337663583",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "Via Piave 37",
+      "notes": "proprietario"
+    },
+    {
       "id": "client_1779896598006_04900db1cf0cc8",
       "contacts": [],
       "createdAt": "2026-05-27T15:43:18.006Z",
@@ -81,10 +94,54 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
+    },
+    {
+      "id": "appointment_1779984918928_1ef671b003821",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-28T16:15:18.928Z",
+      "updatedAt": "2026-05-28T16:15:18.928Z",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Appuntamento",
+      "date": "2026-06-08",
+      "time": "09:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Altro",
+      "meetingLink": "",
+      "location": "Via Piave 37",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "williamfirenze@gmail.com",
+      "notes": "booo"
     }
   ],
   "notes": [],
+  "quotes": [],
   "timeline": [
+    {
+      "id": "timeline_1779984918928_d7d8c7a0c6aac8",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779984918928_1ef671b003821"
+      },
+      "createdAt": "2026-05-28T16:15:18.928Z"
+    },
+    {
+      "id": "timeline_1779984880646_36b667d02e5c48",
+      "type": "client",
+      "title": "Creato cliente “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-28T16:14:40.646Z"
+    },
     {
       "id": "timeline_1779896672100_e390aab63eba98",
       "type": "email",
@@ -245,5 +302,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-27T15:44:32.100Z"
+  "updatedAt": "2026-05-28T16:15:18.928Z"
 }
