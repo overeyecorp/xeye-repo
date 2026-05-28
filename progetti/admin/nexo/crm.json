@@ -97,8 +97,8 @@
     },
     {
       "id": "appointment_1779984918928_1ef671b003821",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
+      "confirmationSent": true,
+      "confirmationSentAt": "2026-05-28T16:15:22.827Z",
       "reminderSent": false,
       "reminderSentAt": null,
       "cancellationSent": false,
@@ -124,6 +124,17 @@
   "notes": [],
   "quotes": [],
   "timeline": [
+    {
+      "id": "timeline_1779984922827_629fd56d99b9b",
+      "type": "email",
+      "title": "Email conferma inviata per “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779984918928_1ef671b003821",
+        "to": "williamfirenze@gmail.com"
+      },
+      "createdAt": "2026-05-28T16:15:22.827Z"
+    },
     {
       "id": "timeline_1779984918928_d7d8c7a0c6aac8",
       "type": "appointment",
@@ -302,5 +313,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:15:18.928Z"
+  "updatedAt": "2026-05-28T16:15:22.827Z"
 }
