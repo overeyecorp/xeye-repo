@@ -268,6 +268,14 @@
   ],
   "timeline": [
     {
+      "id": "timeline_1779992288531_20be20094485",
+      "type": "portal",
+      "title": "Accesso portale cliente “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-28T18:18:08.531Z"
+    },
+    {
       "id": "timeline_1779992252394_2e0b597bcf62c",
       "type": "document",
       "title": "Documento Contratto / documento firmato dal cliente",
