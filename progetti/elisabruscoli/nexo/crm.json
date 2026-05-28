@@ -46,46 +46,18 @@
     }
   ],
   "notes": [],
-  "quotes": [
-    {
-      "id": "quote_1779986289981_5dfb3548205428",
-      "quoteNumber": "OVQ-2026-001",
-      "clientId": "client_1779986163245_6a962c0e731f5",
-      "title": "Preventivo test",
-      "description": "",
-      "items": [
-        {
-          "id": "quote_item_1779986278580_45a778ebe39f9",
-          "description": "Servizio / prodotto",
-          "quantity": 1,
-          "unitPrice": 100,
-          "vat": 22
-        }
-      ],
-      "subtotal": 100,
-      "vatTotal": 22,
-      "total": 122,
-      "currency": "€",
-      "status": "accepted",
-      "publicToken": "748ba3fd1cb334c8d885d8b35f20353dfbd5046343cc19e274a6ccf43e0c609f",
-      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779986289981_5dfb3548205428&token=748ba3fd1cb334c8d885d8b35f20353dfbd5046343cc19e274a6ccf43e0c609f",
-      "creatorEmail": "elisabruscoli@overeye.net",
-      "brandLogoUrl": "https://www.overeye.net/logo/elisabruscoli.png?v=1779986116837",
-      "expiresAt": "2026-05-29",
-      "email": "info@overeye.net",
-      "sentAt": "2026-05-28T16:38:15.339Z",
-      "viewedAt": "2026-05-28T16:38:47.701Z",
-      "acceptedAt": "2026-05-28T16:39:22.097Z",
-      "rejectedAt": null,
-      "acceptedByName": "William",
-      "acceptedByEmail": "williamfirenze@gmail.com",
-      "acceptanceMessage": "Yess",
-      "rejectionMessage": "",
-      "createdAt": "2026-05-28T16:38:09.981Z",
-      "updatedAt": "2026-05-28T16:39:22.097Z"
-    }
-  ],
+  "quotes": [],
   "timeline": [
+    {
+      "id": "timeline_1779986393583_7296b394baa5b",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 eliminato",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "meta": {
+        "quoteId": "quote_1779986289981_5dfb3548205428"
+      },
+      "createdAt": "2026-05-28T16:39:53.583Z"
+    },
     {
       "id": "timeline_1779986362097_b54dc31e30831",
       "type": "quote",
@@ -163,5 +135,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:38:15.343Z"
+  "updatedAt": "2026-05-28T16:39:53.587Z"
 }
