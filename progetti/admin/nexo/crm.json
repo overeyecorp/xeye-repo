@@ -149,7 +149,7 @@
       "meta": {
         "documentId": "document_1779990925246_fb2e2ea4295698"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-28T18:14:34.009Z"
     },
     {
@@ -588,5 +588,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-28T18:14:34.011Z"
+  "updatedAt": "2026-05-28T18:15:29.106Z"
 }
