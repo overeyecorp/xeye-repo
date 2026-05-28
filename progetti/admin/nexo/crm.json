@@ -94,31 +94,6 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
-    },
-    {
-      "id": "appointment_1779984918928_1ef671b003821",
-      "confirmationSent": true,
-      "confirmationSentAt": "2026-05-28T16:15:22.827Z",
-      "reminderSent": false,
-      "reminderSentAt": null,
-      "cancellationSent": false,
-      "cancellationSentAt": null,
-      "createdAt": "2026-05-28T16:15:18.928Z",
-      "updatedAt": "2026-05-28T16:15:18.928Z",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Appuntamento",
-      "date": "2026-06-08",
-      "time": "09:00",
-      "type": "Visita / consulenza",
-      "withPerson": "Overeye",
-      "locationMode": "In sede",
-      "onlinePlatform": "Altro",
-      "meetingLink": "",
-      "location": "Via Piave 37",
-      "phone": "3337663583",
-      "status": "Programmato",
-      "email": "williamfirenze@gmail.com",
-      "notes": "booo"
     }
   ],
   "notes": [],
@@ -167,6 +142,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779985081982_61bce63cdc4f38",
+      "type": "delete",
+      "title": "Eliminato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779984918928_1ef671b003821"
+      },
+      "createdAt": "2026-05-28T16:18:01.982Z"
+    },
     {
       "id": "timeline_1779985068714_728345f3a988f",
       "type": "quote",
@@ -407,5 +392,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:17:48.714Z"
+  "updatedAt": "2026-05-28T16:18:01.984Z"
 }
