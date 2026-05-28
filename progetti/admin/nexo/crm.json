@@ -97,51 +97,18 @@
     }
   ],
   "notes": [],
-  "quotes": [
-    {
-      "id": "quote_1779984981613_768c1bd83af1d8",
-      "quoteNumber": "OVQ-2026-001",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Preventivo",
-      "description": "eh già",
-      "items": [
-        {
-          "id": "quote_item_1779984953445_4bb19d822b4bb",
-          "description": "Servizio / prodotto",
-          "quantity": 1,
-          "unitPrice": 100,
-          "vat": 22
-        },
-        {
-          "id": "quote_item_1779984971862_b6166d963233c8",
-          "description": "sito",
-          "quantity": 1,
-          "unitPrice": 30,
-          "vat": 22
-        }
-      ],
-      "subtotal": 130,
-      "vatTotal": 28.6,
-      "total": 158.6,
-      "currency": "€",
-      "status": "cancelled",
-      "publicToken": "7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
-      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779984981613_768c1bd83af1d8&token=7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
-      "expiresAt": "2026-05-30",
-      "email": "williamfirenze@gmail.com",
-      "sentAt": "2026-05-28T16:16:25.394Z",
-      "viewedAt": "2026-05-28T16:16:46.640Z",
-      "acceptedAt": "2026-05-28T16:17:17.720Z",
-      "rejectedAt": null,
-      "acceptedByName": "Franco",
-      "acceptedByEmail": "williamfirenze@gmail.com",
-      "acceptanceMessage": "Accetto",
-      "rejectionMessage": "",
-      "createdAt": "2026-05-28T16:16:21.612Z",
-      "updatedAt": "2026-05-28T16:17:48.714Z"
-    }
-  ],
+  "quotes": [],
   "timeline": [
+    {
+      "id": "timeline_1779986060896_effdd1db940ce",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 eliminato",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1779984981613_768c1bd83af1d8"
+      },
+      "createdAt": "2026-05-28T16:34:20.896Z"
+    },
     {
       "id": "timeline_1779985081982_61bce63cdc4f38",
       "type": "delete",
@@ -392,5 +359,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:18:01.984Z"
+  "updatedAt": "2026-05-28T16:34:20.897Z"
 }
