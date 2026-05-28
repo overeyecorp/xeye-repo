@@ -97,8 +97,57 @@
     }
   ],
   "notes": [],
-  "quotes": [],
+  "quotes": [
+    {
+      "id": "quote_1779989093266_57de9f6fe040a",
+      "quoteNumber": "OVQ-2026-001",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Preventivo",
+      "description": "yes",
+      "items": [
+        {
+          "id": "quote_item_1779989085683_ebd218f5703b58",
+          "description": "Servizio / prodotto",
+          "quantity": 1,
+          "unitPrice": 100,
+          "vat": 22
+        }
+      ],
+      "subtotal": 100,
+      "vatTotal": 22,
+      "total": 122,
+      "currency": "€",
+      "status": "draft",
+      "publicToken": "a2c7ba6c070bfaaf9a74a2a03b93e2def6e05080caf025910a7af39494898f17",
+      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779989093266_57de9f6fe040a&token=a2c7ba6c070bfaaf9a74a2a03b93e2def6e05080caf025910a7af39494898f17",
+      "creatorEmail": "admin@overeye.net",
+      "brandLogoUrl": "https://www.overeye.net/logo/admin.png?v=1779989032102",
+      "expiresAt": "",
+      "email": "williamfirenze@gmail.com",
+      "sentAt": null,
+      "viewedAt": null,
+      "acceptedAt": null,
+      "rejectedAt": null,
+      "acceptedByName": "",
+      "acceptedByEmail": "",
+      "acceptanceMessage": "",
+      "rejectionMessage": "",
+      "createdAt": "2026-05-28T17:24:53.266Z",
+      "updatedAt": "2026-05-28T17:24:53.266Z"
+    }
+  ],
+  "automations": [],
   "timeline": [
+    {
+      "id": "timeline_1779989093269_6a41f6021a0cb",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1779989093266_57de9f6fe040a"
+      },
+      "createdAt": "2026-05-28T17:24:53.269Z"
+    },
     {
       "id": "timeline_1779986060896_effdd1db940ce",
       "type": "quote",
@@ -357,7 +406,14 @@
     "appointmentConfirmationEnabled": true,
     "reminderEmailEnabled": true,
     "defaultReminderHours": 24,
-    "companyName": "Overeye"
+    "companyName": "Overeye",
+    "automations": {
+      "quoteAcceptedCreatesDeal": true,
+      "quoteAcceptedCreatesTask": true,
+      "quoteRejectedCreatesTask": true,
+      "appointmentCompletedFollowup": true,
+      "quoteSentFollowup": true
+    }
   },
-  "updatedAt": "2026-05-28T16:34:20.897Z"
+  "updatedAt": "2026-05-28T17:24:53.270Z"
 }
