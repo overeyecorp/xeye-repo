@@ -114,6 +114,31 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
+    },
+    {
+      "id": "appointment_1779992923424_35bd83348ff938",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-28T18:28:43.424Z",
+      "updatedAt": "2026-05-28T18:28:43.424Z",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Appuntamento",
+      "date": "2026-06-11",
+      "time": "09:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Google Meet / Teams",
+      "meetingLink": "",
+      "location": "Via Piave 37",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "williamfirenze@gmail.com",
+      "notes": "oyeee"
     }
   ],
   "notes": [],
@@ -162,6 +187,18 @@
   ],
   "notifications": [
     {
+      "id": "notification_1779992923424_293e61d1a7d838",
+      "title": "Creato appuntamento “Appuntamento”",
+      "body": "William Firenze",
+      "type": "appointment",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779992923424_35bd83348ff938"
+      },
+      "read": false,
+      "createdAt": "2026-05-28T18:28:43.424Z"
+    },
+    {
       "id": "notification_1779992202365_521e506b59e278",
       "title": "Documento “Contratto / documento” inviato al cliente",
       "body": "William Firenze",
@@ -171,7 +208,7 @@
         "documentId": "document_1779992200371_0451cd53a9c628",
         "to": "williamfirenze@gmail.com"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-28T18:16:42.365Z"
     },
     {
@@ -183,7 +220,7 @@
       "meta": {
         "documentId": "document_1779992200371_0451cd53a9c628"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-28T18:16:40.372Z"
     },
     {
@@ -267,6 +304,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779992923424_982fc6602108c8",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779992923424_35bd83348ff938"
+      },
+      "createdAt": "2026-05-28T18:28:43.424Z"
+    },
     {
       "id": "timeline_1779992350427_bbe41780e660b",
       "type": "portal",
@@ -710,5 +757,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-28T18:16:42.366Z"
+  "updatedAt": "2026-05-28T18:28:43.426Z"
 }
