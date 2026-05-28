@@ -1,0 +1,77 @@
+{
+  "version": "11.0",
+  "clients": [
+    {
+      "id": "client_1779986163245_6a962c0e731f5",
+      "contacts": [],
+      "createdAt": "2026-05-28T16:36:03.245Z",
+      "updatedAt": "2026-05-28T16:36:03.245Z",
+      "name": "Overeye",
+      "email": "info@overeye.net",
+      "phone": "3337663583",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "Via Piave 37",
+      "notes": "Owner Overeye"
+    }
+  ],
+  "deals": [],
+  "tickets": [],
+  "tasks": [],
+  "appointments": [
+    {
+      "id": "appointment_1779986224865_ac2b10a4f1ddb8",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-28T16:37:04.865Z",
+      "updatedAt": "2026-05-28T16:37:04.865Z",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "title": "Appuntamento",
+      "date": "2026-06-10",
+      "time": "18:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Altro",
+      "meetingLink": "",
+      "location": "Via Cherubini 53",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "info@overeye.net",
+      "notes": "Presentazione prodotti"
+    }
+  ],
+  "notes": [],
+  "quotes": [],
+  "timeline": [
+    {
+      "id": "timeline_1779986224865_f00b95f65b4478",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "meta": {
+        "appointmentId": "appointment_1779986224865_ac2b10a4f1ddb8"
+      },
+      "createdAt": "2026-05-28T16:37:04.865Z"
+    },
+    {
+      "id": "timeline_1779986163245_b855f27d9bba78",
+      "type": "client",
+      "title": "Creato cliente “Overeye”",
+      "clientId": "client_1779986163245_6a962c0e731f5",
+      "meta": {},
+      "createdAt": "2026-05-28T16:36:03.246Z"
+    }
+  ],
+  "settings": {
+    "appointmentConfirmationEnabled": true,
+    "reminderEmailEnabled": true,
+    "defaultReminderHours": 24,
+    "companyName": "Overeye"
+  },
+  "updatedAt": "2026-05-28T16:37:04.869Z"
+}
