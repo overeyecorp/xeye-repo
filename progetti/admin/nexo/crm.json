@@ -149,7 +149,7 @@
       "vatTotal": 28.6,
       "total": 158.6,
       "currency": "€",
-      "status": "accepted",
+      "status": "cancelled",
       "publicToken": "7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1779984981613_768c1bd83af1d8&token=7a0e19e9543401dd277d1be9a37985006995e3ab40bc9aa84b54309c6b648e09",
       "expiresAt": "2026-05-30",
@@ -163,10 +163,20 @@
       "acceptanceMessage": "Accetto",
       "rejectionMessage": "",
       "createdAt": "2026-05-28T16:16:21.612Z",
-      "updatedAt": "2026-05-28T16:17:17.720Z"
+      "updatedAt": "2026-05-28T16:17:48.714Z"
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779985068714_728345f3a988f",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 annullato",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1779984981613_768c1bd83af1d8"
+      },
+      "createdAt": "2026-05-28T16:17:48.714Z"
+    },
     {
       "id": "timeline_1779985037720_f02cba525c36c",
       "type": "quote",
@@ -397,5 +407,5 @@
     "defaultReminderHours": 24,
     "companyName": "Overeye"
   },
-  "updatedAt": "2026-05-28T16:16:25.395Z"
+  "updatedAt": "2026-05-28T16:17:48.714Z"
 }
