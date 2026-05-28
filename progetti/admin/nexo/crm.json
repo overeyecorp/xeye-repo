@@ -117,8 +117,8 @@
     },
     {
       "id": "appointment_1779992923424_35bd83348ff938",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
+      "confirmationSent": true,
+      "confirmationSentAt": "2026-05-28T18:28:46.929Z",
       "reminderSent": false,
       "reminderSentAt": null,
       "cancellationSent": false,
@@ -304,6 +304,17 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779992926929_3ac2fce3996948",
+      "type": "email",
+      "title": "Email conferma inviata per “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779992923424_35bd83348ff938",
+        "to": "williamfirenze@gmail.com"
+      },
+      "createdAt": "2026-05-28T18:28:46.929Z"
+    },
     {
       "id": "timeline_1779992923424_982fc6602108c8",
       "type": "appointment",
@@ -757,5 +768,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-28T18:28:43.426Z"
+  "updatedAt": "2026-05-28T18:28:46.930Z"
 }
