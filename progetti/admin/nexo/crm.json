@@ -5,14 +5,17 @@
       "id": "client_1779984880646_cfbf7b9af20f78",
       "contacts": [],
       "createdAt": "2026-05-28T16:14:40.646Z",
-      "updatedAt": "2026-05-28T16:14:40.646Z",
+      "updatedAt": "2026-05-28T17:53:00.911Z",
       "name": "William Firenze",
       "email": "williamfirenze@gmail.com",
       "phone": "3337663583",
       "status": "Cliente attivo",
       "vat": "",
       "address": "Via Piave 37",
-      "notes": "proprietario"
+      "notes": "proprietario",
+      "portalToken": "654ade4b3fff800a677f415e88f322491192a6ff0f09c7b631ed344e4473ab1c",
+      "portalPassword": "3JYSDHUDKM",
+      "portalEnabled": true
     },
     {
       "id": "client_1779896598006_04900db1cf0cc8",
@@ -25,7 +28,10 @@
       "status": "Cliente attivo",
       "vat": "",
       "address": "Via luigi cherubini 53, Empoli",
-      "notes": "Dietista"
+      "notes": "Dietista",
+      "portalToken": "983e10abb49233f90e16e1e8b33686f59009164afa87d6d03367e2b52a63f73e",
+      "portalPassword": "3QPXW4Z5BX",
+      "portalEnabled": true
     },
     {
       "id": "client_1779883371235_4d087b080d402",
@@ -38,7 +44,10 @@
       "status": "Cliente attivo",
       "vat": "",
       "address": "Piazza Edoardo de Filippo 12c",
-      "notes": "Fotografo"
+      "notes": "Fotografo",
+      "portalToken": "72247bc7fb53a401153234445eaec567c18f22214818e43b52fbf337cd28d6db",
+      "portalPassword": "BL5TPESD4V",
+      "portalEnabled": true
     }
   ],
   "deals": [],
@@ -109,6 +118,49 @@
   ],
   "notes": [],
   "quotes": [],
+  "documents": [],
+  "emailTemplates": [
+    {
+      "id": "tpl_quote_followup",
+      "name": "Follow-up preventivo",
+      "subject": "Hai avuto modo di valutare il preventivo {{quoteNumber}}?",
+      "body": "Ciao {{clientName}},\n\nvolevo capire se hai avuto modo di vedere il preventivo {{quoteNumber}}.\nSe vuoi posso aiutarti a chiarire dettagli, tempi o eventuali modifiche.\n\nA presto,\n{{userEmail}}"
+    },
+    {
+      "id": "tpl_post_meeting",
+      "name": "Dopo appuntamento",
+      "subject": "Riepilogo appuntamento con {{clientName}}",
+      "body": "Ciao {{clientName}},\n\ngrazie per il tempo dedicato. Ti mando un riepilogo operativo e resto disponibile per il prossimo step.\n\nNEXO by Overeye"
+    },
+    {
+      "id": "tpl_ticket_update",
+      "name": "Aggiornamento ticket",
+      "subject": "Aggiornamento richiesta {{clientName}}",
+      "body": "Ciao {{clientName}},\n\nabbiamo aggiornato la tua richiesta. Ti terremo informato sui prossimi passaggi.\n\nGrazie,\n{{userEmail}}"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notification_1779990780911_c18b344c701e08",
+      "title": "Rigenerato accesso portale per “William Firenze”",
+      "body": "William Firenze",
+      "type": "portal",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "read": false,
+      "createdAt": "2026-05-28T17:53:00.911Z"
+    },
+    {
+      "id": "notification_1779990748315_288d7f1f7f5dc8",
+      "title": "Accesso portale copiato per “William Firenze”",
+      "body": "William Firenze",
+      "type": "portal",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "read": false,
+      "createdAt": "2026-05-28T17:52:28.315Z"
+    }
+  ],
   "automations": [
     {
       "id": "automation_1779989096924_e00c7e1e3ed028",
@@ -122,6 +174,22 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1779990780911_f070f03fcb7218",
+      "type": "portal",
+      "title": "Rigenerato accesso portale per “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-28T17:53:00.911Z"
+    },
+    {
+      "id": "timeline_1779990748315_58024dde91e068",
+      "type": "portal",
+      "title": "Accesso portale copiato per “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-28T17:52:28.315Z"
+    },
     {
       "id": "timeline_1779989149936_c4f284997c00d8",
       "type": "quote",
@@ -422,6 +490,7 @@
     "reminderEmailEnabled": true,
     "defaultReminderHours": 24,
     "companyName": "Overeye",
+    "portalEnabled": true,
     "automations": {
       "quoteAcceptedCreatesDeal": true,
       "quoteAcceptedCreatesTask": true,
@@ -430,5 +499,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-28T17:25:49.936Z"
+  "updatedAt": "2026-05-28T17:53:00.912Z"
 }
