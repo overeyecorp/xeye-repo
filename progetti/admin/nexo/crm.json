@@ -146,6 +146,31 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
+    },
+    {
+      "id": "appointment_1780022887681_2e95117e47c6c8",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-29T02:48:07.681Z",
+      "updatedAt": "2026-05-29T02:48:07.681Z",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Appuntamento",
+      "date": "2026-06-11",
+      "time": "09:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "In sede",
+      "onlinePlatform": "Google Meet / Teams",
+      "meetingLink": "",
+      "location": "Via Piave 37",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "williamfirenze@gmail.com",
+      "notes": ""
     }
   ],
   "notes": [],
@@ -172,6 +197,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780022887681_78c1b2ea35d838",
+      "title": "Creato appuntamento “Appuntamento”",
+      "body": "William Firenze",
+      "type": "appointment",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780022887681_2e95117e47c6c8"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T02:48:07.681Z"
+    },
     {
       "id": "notification_1780022823099_6a96ca10117998",
       "title": "Preventivo OVQ-2026-001 eliminato",
@@ -381,6 +418,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780022887681_2c59d72bd12f3",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780022887681_2e95117e47c6c8"
+      },
+      "createdAt": "2026-05-29T02:48:07.681Z"
+    },
     {
       "id": "timeline_1780022874566_580ff9febc0ff",
       "type": "delete",
@@ -977,5 +1024,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T02:47:54.569Z"
+  "updatedAt": "2026-05-29T02:48:07.682Z"
 }
