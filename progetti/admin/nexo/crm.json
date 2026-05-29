@@ -21,7 +21,7 @@
       "id": "client_1779896598006_04900db1cf0cc8",
       "contacts": [],
       "createdAt": "2026-05-27T15:43:18.006Z",
-      "updatedAt": "2026-05-27T15:43:18.006Z",
+      "updatedAt": "2026-05-29T03:26:42.431Z",
       "name": "Elisa Bruscoli",
       "email": "dietista.elisabruscoli@gmail.com",
       "phone": "3534647099",
@@ -29,8 +29,8 @@
       "vat": "",
       "address": "Via luigi cherubini 53, Empoli",
       "notes": "Dietista",
-      "portalToken": "983e10abb49233f90e16e1e8b33686f59009164afa87d6d03367e2b52a63f73e",
-      "portalPassword": "3QPXW4Z5BX",
+      "portalToken": "3b2e0a704ba25425f05b7c04598c43db116883f3317ce189461f9ac576da50bf",
+      "portalPassword": "RYXSZNYQXQ",
       "portalEnabled": true
     },
     {
@@ -173,6 +173,16 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780025202431_b139642821395",
+      "title": "Rigenerato accesso portale per “Elisa Bruscoli”",
+      "body": "Elisa Bruscoli",
+      "type": "portal",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {},
+      "read": false,
+      "createdAt": "2026-05-29T03:26:42.431Z"
+    },
+    {
       "id": "notification_1780022887681_78c1b2ea35d838",
       "title": "Creato appuntamento “Appuntamento”",
       "body": "William Firenze",
@@ -181,7 +191,7 @@
       "meta": {
         "appointmentId": "appointment_1780022887681_2e95117e47c6c8"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-29T02:48:07.681Z"
     },
     {
@@ -393,6 +403,14 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780025202431_cbf175f3b699e",
+      "type": "portal",
+      "title": "Rigenerato accesso portale per “Elisa Bruscoli”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {},
+      "createdAt": "2026-05-29T03:26:42.431Z"
+    },
     {
       "id": "timeline_1780022969602_9829a2f36a235",
       "type": "portal",
@@ -1039,5 +1057,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T02:48:37.802Z"
+  "updatedAt": "2026-05-29T03:26:42.434Z"
 }
