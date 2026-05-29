@@ -394,6 +394,14 @@
   ],
   "timeline": [
     {
+      "id": "timeline_1780022969602_9829a2f36a235",
+      "type": "portal",
+      "title": "Accesso portale cliente “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-05-29T02:49:29.603Z"
+    },
+    {
       "id": "timeline_1780022917800_866791bee47268",
       "type": "delete",
       "title": "Eliminato appuntamento “Appuntamento” e avvisato il cliente",
