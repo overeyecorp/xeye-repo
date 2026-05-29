@@ -142,7 +142,45 @@
     }
   ],
   "notes": [],
-  "quotes": [],
+  "quotes": [
+    {
+      "id": "quote_1780022705712_e43f5480d9ed8",
+      "quoteNumber": "OVQ-2026-001",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Preventivo",
+      "description": "yes",
+      "items": [
+        {
+          "id": "quote_item_1780022695978_98372111641478",
+          "description": "Servizio / prodotto",
+          "quantity": 1,
+          "unitPrice": 100,
+          "vat": 22
+        }
+      ],
+      "subtotal": 100,
+      "vatTotal": 22,
+      "total": 122,
+      "currency": "€",
+      "status": "draft",
+      "publicToken": "ba6e8125157d0b518dc2ad40626189665a73ab4e59d54f19906230ceebe461fe",
+      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780022705712_e43f5480d9ed8&token=ba6e8125157d0b518dc2ad40626189665a73ab4e59d54f19906230ceebe461fe",
+      "creatorEmail": "admin@overeye.net",
+      "brandLogoUrl": "https://www.overeye.net/logo/admin.png?v=1780022675855",
+      "expiresAt": "2026-05-30",
+      "email": "williamfirenze@gmail.com",
+      "sentAt": null,
+      "viewedAt": null,
+      "acceptedAt": null,
+      "rejectedAt": null,
+      "acceptedByName": "",
+      "acceptedByEmail": "",
+      "acceptanceMessage": "",
+      "rejectionMessage": "",
+      "createdAt": "2026-05-29T02:45:05.712Z",
+      "updatedAt": "2026-05-29T02:45:05.712Z"
+    }
+  ],
   "documents": [],
   "emailTemplates": [
     {
@@ -166,6 +204,18 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780022705713_8dc9fa85ef47f",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "body": "William Firenze",
+      "type": "quote",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1780022705712_e43f5480d9ed8"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T02:45:05.713Z"
+    },
+    {
       "id": "notification_1779993048718_f4b016492b6bd",
       "title": "Eliminato documento “Contratto / documento”",
       "body": "William Firenze",
@@ -174,7 +224,7 @@
       "meta": {
         "documentId": "document_1779992200371_0451cd53a9c628"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-28T18:30:48.718Z"
     },
     {
@@ -295,6 +345,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780022705713_27014bf509a2a",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1780022705712_e43f5480d9ed8"
+      },
+      "createdAt": "2026-05-29T02:45:05.713Z"
+    },
     {
       "id": "timeline_1779993150699_b0c3455fe99ea",
       "type": "portal",
@@ -799,5 +859,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-28T18:30:48.719Z"
+  "updatedAt": "2026-05-29T02:45:05.715Z"
 }
