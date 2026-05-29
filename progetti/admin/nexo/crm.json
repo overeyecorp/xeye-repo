@@ -2,6 +2,22 @@
   "version": "11.0",
   "clients": [
     {
+      "id": "client_1780066143263_919858a966a9b",
+      "contacts": [],
+      "createdAt": "2026-05-29T14:49:03.263Z",
+      "updatedAt": "2026-05-29T14:49:03.263Z",
+      "name": "Diletta Buresta",
+      "email": "diletta.buresta@gmail.com",
+      "phone": "3773352746",
+      "status": "Cliente attivo",
+      "vat": "",
+      "address": "CRAL Dip. Del comune di Firenze, via del Filarete 11, Firenze",
+      "portalPassword": "QYMDFHRSPC",
+      "portalToken": "10acb153045dbc31915cdfc5c31afc409fcf12388a07ee159eb0d1e49c18af31",
+      "portalEnabled": true,
+      "notes": "Nutrizionista"
+    },
+    {
       "id": "client_1779984880646_cfbf7b9af20f78",
       "contacts": [],
       "createdAt": "2026-05-28T16:14:40.646Z",
@@ -52,38 +68,7 @@
   ],
   "deals": [],
   "tickets": [],
-  "tasks": [
-    {
-      "id": "task_1780022790450_406d27cdab881",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Preparare avvio lavori per OVQ-2026-001",
-      "due": "2026-05-29",
-      "priority": "Alta",
-      "status": "Da fare",
-      "createdAt": "2026-05-29T02:46:30.450Z",
-      "automated": true
-    },
-    {
-      "id": "task_1780022708988_362012b7d76158",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Follow-up preventivo OVQ-2026-001",
-      "due": "2026-05-30",
-      "priority": "Media",
-      "status": "Da fare",
-      "createdAt": "2026-05-29T02:45:08.988Z",
-      "automated": true
-    },
-    {
-      "id": "task_1779989096924_6c56737c6155",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Follow-up preventivo OVQ-2026-001",
-      "due": "2026-05-28",
-      "priority": "Media",
-      "status": "Da fare",
-      "createdAt": "2026-05-28T17:24:56.924Z",
-      "automated": true
-    }
-  ],
+  "tasks": [],
   "appointments": [
     {
       "id": "appointment_1779886180781_00838ac0ab7c28",
@@ -134,6 +119,31 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
+    },
+    {
+      "id": "appointment_1780066447035_4339a33ad61518",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-05-29T14:54:07.035Z",
+      "updatedAt": "2026-05-29T14:54:07.035Z",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "title": "Appuntamento",
+      "date": "2026-06-03",
+      "time": "18:30",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "Online",
+      "onlinePlatform": "Google Meet / Teams",
+      "meetingLink": "https://meet.google.com/wox-pdto-wym",
+      "location": "Online",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "diletta.buresta@gmail.com",
+      "notes": "Presentazioni prodotti Overeye"
     }
   ],
   "notes": [],
@@ -160,6 +170,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780066447035_9bbce415fb91d",
+      "title": "Creato appuntamento “Appuntamento”",
+      "body": "Diletta Buresta",
+      "type": "appointment",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "appointmentId": "appointment_1780066447035_4339a33ad61518"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T14:54:07.035Z"
+    },
     {
       "id": "notification_1780047065896_108b38cf20e51",
       "title": "Credenziali portale inviate a “William Firenze”",
@@ -403,7 +425,26 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
+  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780066447035_a9f487c9fc1db8",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "appointmentId": "appointment_1780066447035_4339a33ad61518"
+      },
+      "createdAt": "2026-05-29T14:54:07.035Z"
+    },
+    {
+      "id": "timeline_1780066143263_b64703d061d2d8",
+      "type": "client",
+      "title": "Creato cliente “Diletta Buresta”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {},
+      "createdAt": "2026-05-29T14:49:03.263Z"
+    },
     {
       "id": "timeline_1780047065896_d62d324cbc98f",
       "type": "portal",
@@ -1060,7 +1101,21 @@
     "reminderEmailEnabled": true,
     "defaultReminderHours": 24,
     "companyName": "Overeye",
+    "companyWebsite": "",
+    "defaultCurrency": "€",
+    "emailSignature": "",
     "portalEnabled": true,
+    "smtp": {
+      "mode": "env",
+      "host": "",
+      "port": 587,
+      "secure": false,
+      "user": "",
+      "pass": "",
+      "fromName": "",
+      "fromEmail": "",
+      "replyTo": ""
+    },
     "automations": {
       "quoteAcceptedCreatesDeal": true,
       "quoteAcceptedCreatesTask": true,
@@ -1069,5 +1124,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T09:31:05.897Z"
+  "updatedAt": "2026-05-29T14:54:07.035Z"
 }
