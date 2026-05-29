@@ -146,31 +146,6 @@
       "status": "Programmato",
       "email": "dietista.elisabruscoli@gmail.com",
       "notes": "Presentazione prodotti Overeye"
-    },
-    {
-      "id": "appointment_1779992923424_35bd83348ff938",
-      "confirmationSent": true,
-      "confirmationSentAt": "2026-05-28T18:29:51.605Z",
-      "reminderSent": true,
-      "reminderSentAt": "2026-05-28T18:29:15.192Z",
-      "cancellationSent": false,
-      "cancellationSentAt": null,
-      "createdAt": "2026-05-28T18:28:43.424Z",
-      "updatedAt": "2026-05-28T18:28:43.424Z",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Appuntamento",
-      "date": "2026-06-11",
-      "time": "09:00",
-      "type": "Visita / consulenza",
-      "withPerson": "Overeye",
-      "locationMode": "In sede",
-      "onlinePlatform": "Google Meet / Teams",
-      "meetingLink": "",
-      "location": "Via Piave 37",
-      "phone": "3337663583",
-      "status": "Programmato",
-      "email": "williamfirenze@gmail.com",
-      "notes": "oyeee"
     }
   ],
   "notes": [],
@@ -206,7 +181,7 @@
       "meta": {
         "quoteId": "quote_1780022705712_e43f5480d9ed8"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-29T02:47:03.099Z"
     },
     {
@@ -218,7 +193,7 @@
       "meta": {
         "taskTitle": "Follow-up preventivo OVQ-2026-001"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-29T02:45:08.989Z"
     },
     {
@@ -231,7 +206,7 @@
         "quoteId": "quote_1780022705712_e43f5480d9ed8",
         "to": "williamfirenze@gmail.com"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-29T02:45:08.988Z"
     },
     {
@@ -243,7 +218,7 @@
       "meta": {
         "quoteId": "quote_1780022705712_e43f5480d9ed8"
       },
-      "read": false,
+      "read": true,
       "createdAt": "2026-05-29T02:45:05.713Z"
     },
     {
@@ -406,6 +381,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780022874566_580ff9febc0ff",
+      "type": "delete",
+      "title": "Eliminato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1779992923424_35bd83348ff938"
+      },
+      "createdAt": "2026-05-29T02:47:54.566Z"
+    },
     {
       "id": "timeline_1780022823098_15e90d313ead78",
       "type": "quote",
@@ -992,5 +977,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T02:47:03.099Z"
+  "updatedAt": "2026-05-29T02:47:54.569Z"
 }
