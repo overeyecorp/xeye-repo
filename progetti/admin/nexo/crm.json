@@ -5,7 +5,7 @@
       "id": "client_1779984880646_cfbf7b9af20f78",
       "contacts": [],
       "createdAt": "2026-05-28T16:14:40.646Z",
-      "updatedAt": "2026-05-28T17:53:00.911Z",
+      "updatedAt": "2026-05-29T09:31:02.898Z",
       "name": "William Firenze",
       "email": "williamfirenze@gmail.com",
       "phone": "3337663583",
@@ -50,19 +50,7 @@
       "portalEnabled": true
     }
   ],
-  "deals": [
-    {
-      "id": "deal_1780022790450_1db5eb458067f",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Preventivo accettato OVQ-2026-001",
-      "value": 122,
-      "stage": "Vinto",
-      "createdAt": "2026-05-29T02:46:30.450Z",
-      "updatedAt": "2026-05-29T02:46:30.450Z",
-      "quoteId": "quote_1780022705712_e43f5480d9ed8",
-      "automated": true
-    }
-  ],
+  "deals": [],
   "tickets": [],
   "tasks": [
     {
@@ -1057,5 +1045,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T03:26:42.434Z"
+  "updatedAt": "2026-05-29T09:31:02.898Z"
 }
