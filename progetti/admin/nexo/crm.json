@@ -54,6 +54,16 @@
   "tickets": [],
   "tasks": [
     {
+      "id": "task_1780022708988_362012b7d76158",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Follow-up preventivo OVQ-2026-001",
+      "due": "2026-05-30",
+      "priority": "Media",
+      "status": "Da fare",
+      "createdAt": "2026-05-29T02:45:08.988Z",
+      "automated": true
+    },
+    {
       "id": "task_1779989096924_6c56737c6155",
       "clientId": "client_1779984880646_cfbf7b9af20f78",
       "title": "Follow-up preventivo OVQ-2026-001",
@@ -162,14 +172,14 @@
       "vatTotal": 22,
       "total": 122,
       "currency": "€",
-      "status": "draft",
+      "status": "sent",
       "publicToken": "ba6e8125157d0b518dc2ad40626189665a73ab4e59d54f19906230ceebe461fe",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780022705712_e43f5480d9ed8&token=ba6e8125157d0b518dc2ad40626189665a73ab4e59d54f19906230ceebe461fe",
       "creatorEmail": "admin@overeye.net",
       "brandLogoUrl": "https://www.overeye.net/logo/admin.png?v=1780022675855",
       "expiresAt": "2026-05-30",
       "email": "williamfirenze@gmail.com",
-      "sentAt": null,
+      "sentAt": "2026-05-29T02:45:08.988Z",
       "viewedAt": null,
       "acceptedAt": null,
       "rejectedAt": null,
@@ -178,7 +188,7 @@
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-05-29T02:45:05.712Z",
-      "updatedAt": "2026-05-29T02:45:05.712Z"
+      "updatedAt": "2026-05-29T02:45:08.988Z"
     }
   ],
   "documents": [],
@@ -203,6 +213,31 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780022708989_11e364e6ea584",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "body": "William Firenze",
+      "type": "automation",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T02:45:08.989Z"
+    },
+    {
+      "id": "notification_1780022708988_0add3753a3f7d",
+      "title": "Preventivo OVQ-2026-001 inviato al cliente",
+      "body": "William Firenze",
+      "type": "quote",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1780022705712_e43f5480d9ed8",
+        "to": "williamfirenze@gmail.com"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T02:45:08.988Z"
+    },
     {
       "id": "notification_1780022705713_8dc9fa85ef47f",
       "title": "Preventivo OVQ-2026-001 creato",
@@ -334,6 +369,16 @@
   ],
   "automations": [
     {
+      "id": "automation_1780022708989_f60f7a2266eee",
+      "key": "quote-sent-followup-quote_1780022705712_e43f5480d9ed8",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001"
+      },
+      "createdAt": "2026-05-29T02:45:08.989Z"
+    },
+    {
       "id": "automation_1779989096924_e00c7e1e3ed028",
       "key": "quote-sent-followup-quote_1779989093266_57de9f6fe040a",
       "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
@@ -345,6 +390,27 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780022708989_7d28267e51a1f8",
+      "type": "automation",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001"
+      },
+      "createdAt": "2026-05-29T02:45:08.989Z"
+    },
+    {
+      "id": "timeline_1780022708988_40a8ce343fe05",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 inviato al cliente",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "quoteId": "quote_1780022705712_e43f5480d9ed8",
+        "to": "williamfirenze@gmail.com"
+      },
+      "createdAt": "2026-05-29T02:45:08.988Z"
+    },
     {
       "id": "timeline_1780022705713_27014bf509a2a",
       "type": "quote",
@@ -859,5 +925,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T02:45:05.715Z"
+  "updatedAt": "2026-05-29T02:45:08.989Z"
 }
