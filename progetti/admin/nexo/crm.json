@@ -161,6 +161,19 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780047065896_108b38cf20e51",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "body": "William Firenze",
+      "type": "portal",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "read": false,
+      "createdAt": "2026-05-29T09:31:05.896Z"
+    },
+    {
       "id": "notification_1780025202431_b139642821395",
       "title": "Rigenerato accesso portale per “Elisa Bruscoli”",
       "body": "Elisa Bruscoli",
@@ -391,6 +404,17 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780047065896_d62d324cbc98f",
+      "type": "portal",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "createdAt": "2026-05-29T09:31:05.896Z"
+    },
     {
       "id": "timeline_1780025202431_cbf175f3b699e",
       "type": "portal",
@@ -1045,5 +1069,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T09:31:02.898Z"
+  "updatedAt": "2026-05-29T09:31:05.897Z"
 }
