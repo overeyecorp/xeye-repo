@@ -153,8 +153,8 @@
       "confirmationSentAt": "2026-05-29T02:48:10.505Z",
       "reminderSent": false,
       "reminderSentAt": null,
-      "cancellationSent": false,
-      "cancellationSentAt": null,
+      "cancellationSent": true,
+      "cancellationSentAt": "2026-05-29T02:48:36.453Z",
       "createdAt": "2026-05-29T02:48:07.681Z",
       "updatedAt": "2026-05-29T02:48:07.681Z",
       "clientId": "client_1779984880646_cfbf7b9af20f78",
@@ -418,6 +418,17 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780022916453_55076bca889bf",
+      "type": "email",
+      "title": "Email cancellazione inviata per “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780022887681_2e95117e47c6c8",
+        "to": "williamfirenze@gmail.com"
+      },
+      "createdAt": "2026-05-29T02:48:36.453Z"
+    },
     {
       "id": "timeline_1780022890505_f10d84b7ad624",
       "type": "email",
@@ -1035,5 +1046,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-05-29T02:48:10.506Z"
+  "updatedAt": "2026-05-29T02:48:36.454Z"
 }
