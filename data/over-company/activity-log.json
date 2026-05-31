@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpt6vkvh_c98bf0a37ef072b9",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "room",
+    "message": "Created room \"weekly manager\"",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-05-31T02:57:18.701Z",
+    "updatedAt": "2026-05-31T02:57:18.701Z"
+  },
+  {
     "id": "activity_mpt6vjzp_f0e075e7fdee5396",
     "tenantId": "overeye",
     "domain": "overeye.net",
