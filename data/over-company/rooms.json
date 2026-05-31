@@ -1,0 +1,20 @@
+[
+  {
+    "title": "weekly manager",
+    "date": "2026-05-31",
+    "time": "04:59",
+    "status": "scheduled",
+    "participants": [
+      "admin@overeye.net"
+    ],
+    "description": "yess",
+    "meetingUrl": "https://meet.jit.si/over-company-overeye-weekly-manager-5831f1b8",
+    "sendInvite": true,
+    "createdBy": "admin@overeye.net",
+    "id": "room_mpt6vf5s_94e6113426b41757",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-05-31T02:57:11.296Z",
+    "updatedAt": "2026-05-31T02:57:11.296Z"
+  }
+]
