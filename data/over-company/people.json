@@ -1,0 +1,31 @@
+[
+  {
+    "firebaseUid": "CwkGS3TO51gzKNgTU7rDywGgMmq2",
+    "source": "manual",
+    "name": "admin",
+    "email": "admin@overeye.net",
+    "jobTitle": "CEO",
+    "role": "Firebase user",
+    "phone": "3337663583",
+    "location": "Firenze",
+    "department": "",
+    "managerEmail": "",
+    "status": "busy",
+    "employmentType": "",
+    "seniority": "Owner",
+    "workMode": "Remote",
+    "hireDate": "2026-06-01",
+    "skills": "",
+    "softSkills": "",
+    "languages": "",
+    "emergencyContact": "",
+    "notes": "Imported from Firebase Authentication.",
+    "emailVerified": false,
+    "disabled": false,
+    "id": "people_mptyvduj_52e82004e8f7dbd4",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-05-31T16:00:58.840Z",
+    "updatedAt": "2026-05-31T16:00:58.840Z"
+  }
+]
