@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpt73878_76435ebebbe2da22",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "delete",
+    "message": "Deleted record from rooms",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-05-31T03:03:15.524Z",
+    "updatedAt": "2026-05-31T03:03:15.524Z"
+  },
+  {
     "id": "activity_mpt6x34p_0db4ed8d4833ff1f",
     "tenantId": "overeye",
     "domain": "overeye.net",
