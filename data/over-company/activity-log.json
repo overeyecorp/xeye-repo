@@ -1,0 +1,12 @@
+[
+  {
+    "id": "activity_mpt6vjzp_f0e075e7fdee5396",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "room-email",
+    "message": "Sent room invitation for \"weekly manager\"",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-05-31T02:57:17.557Z",
+    "updatedAt": "2026-05-31T02:57:17.557Z"
+  }
+]
