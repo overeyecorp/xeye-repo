@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpumaabi_e57e3697556f98b5",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "delete",
+    "message": "Deleted record from leaves",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-06-01T02:56:25.278Z",
+    "updatedAt": "2026-06-01T02:56:25.278Z"
+  },
+  {
     "id": "activity_mpum99kv_27de952e09e2ffb7",
     "tenantId": "overeye",
     "domain": "overeye.net",
