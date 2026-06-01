@@ -2,7 +2,7 @@
   {
     "firebaseUid": "CwkGS3TO51gzKNgTU7rDywGgMmq2",
     "source": "manual",
-    "name": "admin",
+    "name": "Admin",
     "email": "admin@overeye.net",
     "jobTitle": "CEO",
     "role": "Firebase user",
@@ -26,6 +26,7 @@
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-05-31T16:00:58.840Z",
-    "updatedAt": "2026-05-31T16:00:58.840Z"
+    "updatedAt": "2026-06-01T02:10:55.281Z",
+    "authStatus": "active"
   }
 ]
