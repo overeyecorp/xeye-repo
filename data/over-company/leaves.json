@@ -3,10 +3,10 @@
     "requesterName": "William Firenze",
     "requesterEmail": "whatsapp@overeye.net",
     "type": "holiday",
-    "status": "pending",
+    "status": "approved",
     "startDate": "2026-06-19",
     "endDate": "2026-06-26",
-    "approverEmail": "admin@overeye.net",
+    "approverEmail": "whatsapp@overeye.net",
     "reason": "",
     "managerNote": "",
     "createdBy": "whatsapp@overeye.net",
@@ -14,6 +14,8 @@
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-06-01T02:37:19.622Z",
-    "updatedAt": "2026-06-01T02:37:19.622Z"
+    "updatedAt": "2026-06-01T02:37:43.119Z",
+    "approvedAt": "2026-06-01T02:37:43.119Z",
+    "rejectedAt": ""
   }
 ]
