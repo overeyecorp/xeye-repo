@@ -3,7 +3,7 @@
     "name": "William Firenze",
     "email": "whatsapp@overeye.net",
     "jobTitle": "whatsapp@overeye.net",
-    "role": "Manager",
+    "role": "Firebase user",
     "phone": "3337663583",
     "location": "Firenze",
     "department": "",
@@ -24,7 +24,8 @@
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-06-01T02:17:30.795Z",
-    "updatedAt": "2026-06-01T02:17:30.795Z"
+    "updatedAt": "2026-06-01T02:18:15.911Z",
+    "source": "manual"
   },
   {
     "firebaseUid": "CwkGS3TO51gzKNgTU7rDywGgMmq2",
