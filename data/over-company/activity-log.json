@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpuknstr_e25870b30ff9530c",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "person",
+    "message": "Updated person \"Admin\"",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-06-01T02:10:56.559Z",
+    "updatedAt": "2026-06-01T02:10:56.559Z"
+  },
+  {
     "id": "activity_mptyvf23_0cee07865433b931",
     "tenantId": "overeye",
     "domain": "overeye.net",
