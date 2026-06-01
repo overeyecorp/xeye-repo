@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpukwam1_3cbcb1ea72aee832",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "person",
+    "message": "Created person \"William Firenze\"",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-06-01T02:17:32.857Z",
+    "updatedAt": "2026-06-01T02:17:32.857Z"
+  },
+  {
     "id": "activity_mpuknstr_e25870b30ff9530c",
     "tenantId": "overeye",
     "domain": "overeye.net",
