@@ -7,12 +7,14 @@
     "endDate": "2026-06-20",
     "approverEmail": "admin@overeye.net",
     "reason": "voglio andare in ferie puppamelo",
-    "status": "pending",
+    "status": "approved",
     "createdBy": "whatsapp@overeye.net",
     "id": "leave_mpx9q94u_279efa202712bf93",
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-06-02T23:28:13.757Z",
-    "updatedAt": "2026-06-02T23:28:13.757Z"
+    "updatedAt": "2026-06-02T23:28:55.521Z",
+    "approvedAt": "2026-06-02T23:28:55.521Z",
+    "rejectedAt": ""
   }
 ]
