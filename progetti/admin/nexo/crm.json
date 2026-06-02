@@ -148,7 +148,22 @@
   ],
   "notes": [],
   "quotes": [],
-  "documents": [],
+  "documents": [
+    {
+      "id": "document_1780442061417_414688eb9f6e28",
+      "createdAt": "2026-06-02T23:14:21.417Z",
+      "publicToken": "8ab24a1dcbaefe9ef9427a462f9c7074792da170108bb4170ee863e7c5b3602a",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Contratto di lavoro",
+      "type": "Contratto",
+      "content": "firma per avere l'indeterminato",
+      "requiresSignature": true,
+      "status": "sent",
+      "updatedAt": "2026-06-02T23:14:23.357Z",
+      "publicUrl": "https://www.overeye.net/document.html?id=document_1780442061417_414688eb9f6e28&token=8ab24a1dcbaefe9ef9427a462f9c7074792da170108bb4170ee863e7c5b3602a",
+      "sentAt": "2026-06-02T23:14:23.357Z"
+    }
+  ],
   "emailTemplates": [
     {
       "id": "tpl_quote_followup",
@@ -170,6 +185,31 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780442063357_cd8973a80013f8",
+      "title": "Documento “Contratto di lavoro” inviato al cliente",
+      "body": "William Firenze",
+      "type": "document",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "documentId": "document_1780442061417_414688eb9f6e28",
+        "to": "williamfirenze@gmail.com"
+      },
+      "read": false,
+      "createdAt": "2026-06-02T23:14:23.357Z"
+    },
+    {
+      "id": "notification_1780442061418_6c631bbe21ac8",
+      "title": "Creato documento “Contratto di lavoro”",
+      "body": "William Firenze",
+      "type": "document",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "documentId": "document_1780442061417_414688eb9f6e28"
+      },
+      "read": false,
+      "createdAt": "2026-06-02T23:14:21.418Z"
+    },
     {
       "id": "notification_1780310219337_ccba65ae48a518",
       "title": "Creato appuntamento “Appuntamento”",
@@ -439,6 +479,27 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780442063357_2dec46a3f97d88",
+      "type": "document",
+      "title": "Documento “Contratto di lavoro” inviato al cliente",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "documentId": "document_1780442061417_414688eb9f6e28",
+        "to": "williamfirenze@gmail.com"
+      },
+      "createdAt": "2026-06-02T23:14:23.357Z"
+    },
+    {
+      "id": "timeline_1780442061418_ccba23c190643",
+      "type": "document",
+      "title": "Creato documento “Contratto di lavoro”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "documentId": "document_1780442061417_414688eb9f6e28"
+      },
+      "createdAt": "2026-06-02T23:14:21.418Z"
+    },
     {
       "id": "timeline_1780310309567_4da2d04eac2c38",
       "type": "delete",
@@ -1178,5 +1239,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-01T10:38:29.572Z"
+  "updatedAt": "2026-06-02T23:14:23.358Z"
 }
