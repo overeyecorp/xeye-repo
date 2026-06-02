@@ -496,8 +496,15 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780442262173_968ef9f5f065d",
+      "type": "portal",
+      "title": "Accesso portale cliente “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {},
+      "createdAt": "2026-06-02T23:17:42.173Z"
+    },
     {
       "id": "timeline_1780442226774_6ce9540bb249e8",
       "type": "portal",
