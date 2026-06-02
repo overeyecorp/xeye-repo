@@ -192,6 +192,19 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780442226774_50555f5fdcfd38",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "body": "William Firenze",
+      "type": "portal",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "read": false,
+      "createdAt": "2026-06-02T23:17:06.774Z"
+    },
+    {
       "id": "notification_1780442063357_cd8973a80013f8",
       "title": "Documento “Contratto di lavoro” inviato al cliente",
       "body": "William Firenze",
@@ -485,6 +498,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780442226774_6ce9540bb249e8",
+      "type": "portal",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "createdAt": "2026-06-02T23:17:06.774Z"
+    },
     {
       "id": "timeline_1780442139513_bc080f3d3d76a",
       "type": "document",
@@ -1266,5 +1290,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-02T23:17:04.035Z"
+  "updatedAt": "2026-06-02T23:17:06.774Z"
 }
