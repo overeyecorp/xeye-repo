@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "requesterName": "William Firenze",
+    "requesterEmail": "whatsapp@overeye.net",
+    "type": "holiday",
+    "startDate": "2026-06-18",
+    "endDate": "2026-06-20",
+    "approverEmail": "admin@overeye.net",
+    "reason": "voglio andare in ferie puppamelo",
+    "status": "pending",
+    "createdBy": "whatsapp@overeye.net",
+    "id": "leave_mpx9q94u_279efa202712bf93",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-02T23:28:13.757Z",
+    "updatedAt": "2026-06-02T23:28:13.757Z"
+  }
+]
