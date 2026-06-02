@@ -21,7 +21,7 @@
       "id": "client_1779984880646_cfbf7b9af20f78",
       "contacts": [],
       "createdAt": "2026-05-28T16:14:40.646Z",
-      "updatedAt": "2026-05-29T09:31:02.898Z",
+      "updatedAt": "2026-06-02T23:17:04.035Z",
       "name": "William Firenze",
       "email": "williamfirenze@gmail.com",
       "phone": "3337663583",
@@ -483,6 +483,7 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
+  "agentDismissals": [],
   "timeline": [
     {
       "id": "timeline_1780442139513_bc080f3d3d76a",
@@ -1265,5 +1266,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-02T23:14:23.358Z"
+  "updatedAt": "2026-06-02T23:17:04.035Z"
 }
