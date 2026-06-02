@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpx9r67a_ec5b8386d86b8615",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "leave",
+    "message": "Approved time off request for whatsapp@overeye.net",
+    "actorEmail": "admin@overeye.net",
+    "createdAt": "2026-06-02T23:28:56.614Z",
+    "updatedAt": "2026-06-02T23:28:56.614Z"
+  },
+  {
     "id": "activity_mpx9qf3i_8d2be74643c6cd30",
     "tenantId": "overeye",
     "domain": "overeye.net",
