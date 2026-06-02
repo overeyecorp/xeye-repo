@@ -1,5 +1,15 @@
 [
   {
+    "id": "activity_mpx9qf3i_8d2be74643c6cd30",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "type": "leave",
+    "message": "Created leave \"undefined\"",
+    "actorEmail": "whatsapp@overeye.net",
+    "createdAt": "2026-06-02T23:28:21.486Z",
+    "updatedAt": "2026-06-02T23:28:21.486Z"
+  },
+  {
     "id": "activity_mpx9qe0i_679a234f73763da6",
     "tenantId": "overeye",
     "domain": "overeye.net",
