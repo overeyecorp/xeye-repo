@@ -182,7 +182,7 @@
       "vatTotal": 0.44,
       "total": 2.44,
       "currency": "€",
-      "status": "sent",
+      "status": "viewed",
       "publicToken": "937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780498603744_dd44445674eb58&token=937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "creatorEmail": "admin@overeye.net",
@@ -190,7 +190,7 @@
       "expiresAt": "2026-06-05",
       "email": "diletta.buresta@gmail.com",
       "sentAt": "2026-06-03T14:56:50.490Z",
-      "viewedAt": null,
+      "viewedAt": "2026-06-03T14:57:26.470Z",
       "acceptedAt": null,
       "rejectedAt": null,
       "acceptedByName": "",
@@ -198,7 +198,7 @@
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-06-03T14:56:43.744Z",
-      "updatedAt": "2026-06-03T14:56:50.490Z"
+      "updatedAt": "2026-06-03T14:57:26.470Z"
     }
   ],
   "documents": [
@@ -648,8 +648,17 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498646470_38ede082f202d",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 visualizzato dal cliente",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58"
+      },
+      "createdAt": "2026-06-03T14:57:26.470Z"
+    },
     {
       "id": "timeline_1780498610490_60135bccdba4f",
       "type": "automation",
