@@ -129,7 +129,7 @@
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-29T14:54:07.035Z",
-      "updatedAt": "2026-05-29T14:54:07.035Z",
+      "updatedAt": "2026-06-03T14:17:03.727Z",
       "clientId": "client_1780066143263_919858a966a9b",
       "title": "Appuntamento",
       "date": "2026-06-03",
@@ -138,12 +138,13 @@
       "withPerson": "Overeye",
       "locationMode": "Online",
       "onlinePlatform": "Google Meet / Teams",
-      "meetingLink": "https://meet.google.com/wox-pdto-wym",
+      "meetingLink": "https://meet.jit.si/nexo-overeye-net-appuntamento-3528a7bb",
       "location": "Online",
       "phone": "3337663583",
       "status": "Programmato",
       "email": "diletta.buresta@gmail.com",
-      "notes": "Presentazioni prodotti Overeye"
+      "notes": "Presentazioni prodotti Overeye",
+      "durationMinutes": 60
     }
   ],
   "notes": [],
@@ -191,6 +192,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780496223728_12ebb3571f1648",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "body": "Diletta Buresta",
+      "type": "appointment",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "appointmentId": "appointment_1780066447035_4339a33ad61518"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T14:17:03.728Z"
+    },
     {
       "id": "notification_1780442226774_50555f5fdcfd38",
       "title": "Credenziali portale inviate a “William Firenze”",
@@ -496,7 +509,18 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
+  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780496223727_cccc7a1f247608",
+      "type": "appointment",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "appointmentId": "appointment_1780066447035_4339a33ad61518"
+      },
+      "createdAt": "2026-06-03T14:17:03.727Z"
+    },
     {
       "id": "timeline_1780442262173_968ef9f5f065d",
       "type": "portal",
@@ -1297,5 +1321,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-02T23:17:06.774Z"
+  "updatedAt": "2026-06-03T14:17:03.729Z"
 }
