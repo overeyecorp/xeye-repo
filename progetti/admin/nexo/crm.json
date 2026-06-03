@@ -735,8 +735,15 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780499005504_c236409a79f1f",
+      "type": "portal",
+      "title": "Accesso portale cliente “Diletta Buresta”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {},
+      "createdAt": "2026-06-03T15:03:25.504Z"
+    },
     {
       "id": "timeline_1780498984514_fb518e8a2f8658",
       "type": "portal",
