@@ -202,13 +202,13 @@
       "sentAt": "2026-06-03T14:56:50.490Z",
       "viewedAt": "2026-06-03T14:57:26.470Z",
       "acceptedAt": null,
-      "rejectedAt": "2026-06-03T14:58:33.894Z",
+      "rejectedAt": "2026-06-03T14:58:40.049Z",
       "acceptedByName": "",
       "acceptedByEmail": "",
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-06-03T14:56:43.744Z",
-      "updatedAt": "2026-06-03T14:58:33.894Z",
+      "updatedAt": "2026-06-03T14:58:40.049Z",
       "rejectedByName": "Diletta Buresta",
       "rejectedByEmail": "diletta.buresta@gmail.com"
     }
@@ -671,6 +671,16 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780498720049_e829d1dfa76d",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 rifiutato dal cliente",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58"
+      },
+      "createdAt": "2026-06-03T14:58:40.049Z"
+    },
     {
       "id": "timeline_1780498713895_4bf418b245cbb",
       "type": "automation",
