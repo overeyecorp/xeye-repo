@@ -1,0 +1,17 @@
+[
+  {
+    "id": "edition_1780530186239_b30686b7035cd8",
+    "name": "TOCA 2026",
+    "year": "2026",
+    "format": "round_robin",
+    "status": "active",
+    "pointsWin": 3,
+    "pointsDraw": 1,
+    "pointsLoss": 0,
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-03T23:43:06.975Z",
+    "updatedAt": "2026-06-03T23:43:06.975Z"
+  }
+]
