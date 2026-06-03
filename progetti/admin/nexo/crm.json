@@ -271,6 +271,19 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780498967281_0a2b66364a3218",
+      "title": "Credenziali portale inviate a “Diletta Buresta”",
+      "body": "Diletta Buresta",
+      "type": "portal",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "to": "diletta.buresta@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T15:02:47.281Z"
+    },
+    {
       "id": "notification_1780498879028_d231d8459602e",
       "title": "Documento “Gestione privacy” inviato al cliente",
       "body": "Diletta Buresta",
@@ -711,6 +724,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498967281_d18220e7c6b0c8",
+      "type": "portal",
+      "title": "Credenziali portale inviate a “Diletta Buresta”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "to": "diletta.buresta@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "createdAt": "2026-06-03T15:02:47.281Z"
+    },
     {
       "id": "timeline_1780498879028_74d040a463221",
       "type": "document",
@@ -1688,5 +1712,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T15:02:43.850Z"
+  "updatedAt": "2026-06-03T15:02:47.282Z"
 }
