@@ -70,6 +70,16 @@
   "tickets": [],
   "tasks": [
     {
+      "id": "task_1780498713894_2ef91c2de028d",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "title": "Richiamare cliente per OVQ-2026-001 rifiutato",
+      "due": "2026-06-03",
+      "priority": "Alta",
+      "status": "Da fare",
+      "createdAt": "2026-06-03T14:58:33.894Z",
+      "automated": true
+    },
+    {
       "id": "task_1780498610490_3097ada86e6ed8",
       "clientId": "client_1780066143263_919858a966a9b",
       "title": "Follow-up preventivo OVQ-2026-001",
@@ -182,7 +192,7 @@
       "vatTotal": 0.44,
       "total": 2.44,
       "currency": "€",
-      "status": "viewed",
+      "status": "rejected",
       "publicToken": "937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780498603744_dd44445674eb58&token=937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "creatorEmail": "admin@overeye.net",
@@ -192,13 +202,15 @@
       "sentAt": "2026-06-03T14:56:50.490Z",
       "viewedAt": "2026-06-03T14:57:26.470Z",
       "acceptedAt": null,
-      "rejectedAt": null,
+      "rejectedAt": "2026-06-03T14:58:33.894Z",
       "acceptedByName": "",
       "acceptedByEmail": "",
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-06-03T14:56:43.744Z",
-      "updatedAt": "2026-06-03T14:57:26.470Z"
+      "updatedAt": "2026-06-03T14:58:33.894Z",
+      "rejectedByName": "Diletta Buresta",
+      "rejectedByEmail": "diletta.buresta@gmail.com"
     }
   ],
   "documents": [
@@ -596,6 +608,16 @@
   ],
   "automations": [
     {
+      "id": "automation_1780498713895_3c2fe824642f9",
+      "key": "quote-rejected-task-quote_1780498603744_dd44445674eb58",
+      "title": "Automazione: creato task \"Richiamare cliente per OVQ-2026-001 rifiutato\"",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "taskTitle": "Richiamare cliente per OVQ-2026-001 rifiutato"
+      },
+      "createdAt": "2026-06-03T14:58:33.895Z"
+    },
+    {
       "id": "automation_1780498610490_891d54c9494e28",
       "key": "quote-sent-followup-quote_1780498603744_dd44445674eb58",
       "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
@@ -649,6 +671,26 @@
     }
   ],
   "timeline": [
+    {
+      "id": "timeline_1780498713895_4bf418b245cbb",
+      "type": "automation",
+      "title": "Automazione: creato task \"Richiamare cliente per OVQ-2026-001 rifiutato\"",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "taskTitle": "Richiamare cliente per OVQ-2026-001 rifiutato"
+      },
+      "createdAt": "2026-06-03T14:58:33.895Z"
+    },
+    {
+      "id": "timeline_1780498713894_00e4f4c0ac344",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 rifiutato dal cliente",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58"
+      },
+      "createdAt": "2026-06-03T14:58:33.894Z"
+    },
     {
       "id": "timeline_1780498646470_38ede082f202d",
       "type": "quote",
