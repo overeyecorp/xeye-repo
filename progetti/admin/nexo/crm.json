@@ -271,6 +271,19 @@
   ],
   "notifications": [
     {
+      "id": "notification_1780498984514_e1cc6220cbc308",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "body": "William Firenze",
+      "type": "portal",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T15:03:04.514Z"
+    },
+    {
       "id": "notification_1780498967281_0a2b66364a3218",
       "title": "Credenziali portale inviate a “Diletta Buresta”",
       "body": "Diletta Buresta",
@@ -724,6 +737,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498984514_fb518e8a2f8658",
+      "type": "portal",
+      "title": "Credenziali portale inviate a “William Firenze”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "to": "williamfirenze@gmail.com",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "createdAt": "2026-06-03T15:03:04.514Z"
+    },
     {
       "id": "timeline_1780498967281_d18220e7c6b0c8",
       "type": "portal",
@@ -1712,5 +1736,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T15:03:00.350Z"
+  "updatedAt": "2026-06-03T15:03:04.515Z"
 }
