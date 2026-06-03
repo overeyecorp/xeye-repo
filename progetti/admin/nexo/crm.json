@@ -125,7 +125,7 @@
       "confirmationSent": true,
       "confirmationSentAt": "2026-05-29T14:54:11.940Z",
       "reminderSent": true,
-      "reminderSentAt": "2026-06-03T14:17:48.070Z",
+      "reminderSentAt": "2026-06-03T14:35:56.067Z",
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-29T14:54:07.035Z",
@@ -535,6 +535,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780497356067_1a4f9c7d056708",
+      "type": "email",
+      "title": "Promemoria inviato per “Appuntamento”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "appointmentId": "appointment_1780066447035_4339a33ad61518",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "createdAt": "2026-06-03T14:35:56.067Z"
+    },
     {
       "id": "timeline_1780497334832_c6435e40a2153",
       "type": "appointment",
@@ -1376,5 +1387,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T14:35:34.834Z"
+  "updatedAt": "2026-06-03T14:35:56.068Z"
 }
