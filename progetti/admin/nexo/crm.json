@@ -68,7 +68,21 @@
   ],
   "deals": [],
   "tickets": [],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "task_1780498610490_3097ada86e6ed8",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "title": "Follow-up preventivo OVQ-2026-001",
+      "due": "2026-06-05",
+      "priority": "Media",
+      "status": "Da fare",
+      "createdAt": "2026-06-03T14:56:50.490Z",
+      "automated": true,
+      "automationKey": "quote-sent-followup-quote_1780498603744_dd44445674eb58",
+      "quoteId": "quote_1780498603744_dd44445674eb58",
+      "quoteNumber": "OVQ-2026-001"
+    }
+  ],
   "appointments": [
     {
       "id": "appointment_1779886180781_00838ac0ab7c28",
@@ -168,14 +182,14 @@
       "vatTotal": 0.44,
       "total": 2.44,
       "currency": "€",
-      "status": "draft",
+      "status": "sent",
       "publicToken": "937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780498603744_dd44445674eb58&token=937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
       "creatorEmail": "admin@overeye.net",
       "brandLogoUrl": "https://www.overeye.net/logo/admin.png?v=1780498221677",
       "expiresAt": "2026-06-05",
       "email": "diletta.buresta@gmail.com",
-      "sentAt": null,
+      "sentAt": "2026-06-03T14:56:50.490Z",
       "viewedAt": null,
       "acceptedAt": null,
       "rejectedAt": null,
@@ -184,7 +198,7 @@
       "acceptanceMessage": "",
       "rejectionMessage": "",
       "createdAt": "2026-06-03T14:56:43.744Z",
-      "updatedAt": "2026-06-03T14:56:43.744Z"
+      "updatedAt": "2026-06-03T14:56:50.490Z"
     }
   ],
   "documents": [
@@ -230,6 +244,33 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780498610490_cf992c0ec630e8",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "body": "Diletta Buresta",
+      "type": "automation",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001",
+        "quoteId": "quote_1780498603744_dd44445674eb58",
+        "quoteNumber": "OVQ-2026-001"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T14:56:50.490Z"
+    },
+    {
+      "id": "notification_1780498610490_4245c898748438",
+      "title": "Preventivo OVQ-2026-001 inviato al cliente",
+      "body": "Diletta Buresta",
+      "type": "quote",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T14:56:50.490Z"
+    },
     {
       "id": "notification_1780498603746_27daf0486e84c8",
       "title": "Preventivo OVQ-2026-001 creato",
@@ -555,6 +596,18 @@
   ],
   "automations": [
     {
+      "id": "automation_1780498610490_891d54c9494e28",
+      "key": "quote-sent-followup-quote_1780498603744_dd44445674eb58",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001",
+        "quoteId": "quote_1780498603744_dd44445674eb58",
+        "quoteNumber": "OVQ-2026-001"
+      },
+      "createdAt": "2026-06-03T14:56:50.490Z"
+    },
+    {
       "id": "automation_1780022790450_94209c858636b",
       "key": "quote-accepted-task-quote_1780022705712_e43f5480d9ed8",
       "title": "Automazione: creato task \"Preparare avvio lavori per OVQ-2026-001\"",
@@ -597,6 +650,29 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498610490_60135bccdba4f",
+      "type": "automation",
+      "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "taskTitle": "Follow-up preventivo OVQ-2026-001",
+        "quoteId": "quote_1780498603744_dd44445674eb58",
+        "quoteNumber": "OVQ-2026-001"
+      },
+      "createdAt": "2026-06-03T14:56:50.490Z"
+    },
+    {
+      "id": "timeline_1780498610490_e5ead7f17d12",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 inviato al cliente",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "createdAt": "2026-06-03T14:56:50.490Z"
+    },
     {
       "id": "timeline_1780498603746_38a9c9c69cb598",
       "type": "quote",
@@ -1490,5 +1566,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T14:56:43.747Z"
+  "updatedAt": "2026-06-03T14:56:50.491Z"
 }
