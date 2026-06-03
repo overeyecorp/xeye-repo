@@ -215,6 +215,20 @@
   ],
   "documents": [
     {
+      "id": "document_1780498866664_3e1747752d0aa",
+      "createdAt": "2026-06-03T15:01:06.664Z",
+      "publicToken": "0ae6b0b886c511f5107daf268688b4cf9152224420b76a0f0b0613e03853c32a",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "title": "Gestione privacy",
+      "type": "Informativa",
+      "content": "Ciao,\n\nvuoi aderire alla privacy,\n\nSaluti.",
+      "requiresSignature": true,
+      "status": "sent",
+      "updatedAt": "2026-06-03T15:01:19.027Z",
+      "publicUrl": "https://www.overeye.net/document.html?id=document_1780498866664_3e1747752d0aa&token=0ae6b0b886c511f5107daf268688b4cf9152224420b76a0f0b0613e03853c32a",
+      "sentAt": "2026-06-03T15:01:19.027Z"
+    },
+    {
       "id": "document_1780442061417_414688eb9f6e28",
       "createdAt": "2026-06-02T23:14:21.417Z",
       "publicToken": "8ab24a1dcbaefe9ef9427a462f9c7074792da170108bb4170ee863e7c5b3602a",
@@ -256,6 +270,31 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780498879028_d231d8459602e",
+      "title": "Documento “Gestione privacy” inviato al cliente",
+      "body": "Diletta Buresta",
+      "type": "document",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "documentId": "document_1780498866664_3e1747752d0aa",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T15:01:19.028Z"
+    },
+    {
+      "id": "notification_1780498866665_85795ffb6d71c",
+      "title": "Creato documento “Gestione privacy”",
+      "body": "Diletta Buresta",
+      "type": "document",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "documentId": "document_1780498866664_3e1747752d0aa"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T15:01:06.665Z"
+    },
     {
       "id": "notification_1780498610490_cf992c0ec630e8",
       "title": "Automazione: creato task \"Follow-up preventivo OVQ-2026-001\"",
@@ -670,7 +709,29 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
+  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498879028_74d040a463221",
+      "type": "document",
+      "title": "Documento “Gestione privacy” inviato al cliente",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "documentId": "document_1780498866664_3e1747752d0aa",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "createdAt": "2026-06-03T15:01:19.028Z"
+    },
+    {
+      "id": "timeline_1780498866664_c25a900e422c7",
+      "type": "document",
+      "title": "Creato documento “Gestione privacy”",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "documentId": "document_1780498866664_3e1747752d0aa"
+      },
+      "createdAt": "2026-06-03T15:01:06.664Z"
+    },
     {
       "id": "timeline_1780498720049_e829d1dfa76d",
       "type": "quote",
@@ -1627,5 +1688,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T14:56:50.491Z"
+  "updatedAt": "2026-06-03T15:01:19.028Z"
 }
