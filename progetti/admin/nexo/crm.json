@@ -145,32 +145,6 @@
       "email": "diletta.buresta@gmail.com",
       "notes": "Presentazioni prodotti Overeye",
       "durationMinutes": 55
-    },
-    {
-      "id": "appointment_1780498421802_dec18669a151e",
-      "confirmationSent": true,
-      "confirmationSentAt": "2026-06-03T14:53:48.700Z",
-      "reminderSent": false,
-      "reminderSentAt": null,
-      "cancellationSent": false,
-      "cancellationSentAt": null,
-      "createdAt": "2026-06-03T14:53:41.802Z",
-      "updatedAt": "2026-06-03T14:53:41.802Z",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Appuntamento",
-      "date": "2026-06-05",
-      "time": "09:00",
-      "type": "Visita / consulenza",
-      "withPerson": "Overeye",
-      "locationMode": "Online",
-      "onlinePlatform": "Google Meet / Teams",
-      "meetingLink": "https://meet.jit.si/nexo-overeye-net-appuntamento-be7201e8",
-      "durationMinutes": 60,
-      "location": "",
-      "phone": "",
-      "status": "Programmato",
-      "email": "williamfirenze@gmail.com",
-      "notes": ""
     }
   ],
   "notes": [],
@@ -573,6 +547,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498550094_01b5e754f48288",
+      "type": "delete",
+      "title": "Eliminato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780498421802_dec18669a151e"
+      },
+      "createdAt": "2026-06-03T14:55:50.094Z"
+    },
     {
       "id": "timeline_1780498428700_b3bc3eb0679428",
       "type": "email",
@@ -1446,5 +1430,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T14:53:48.701Z"
+  "updatedAt": "2026-06-03T14:55:50.097Z"
 }
