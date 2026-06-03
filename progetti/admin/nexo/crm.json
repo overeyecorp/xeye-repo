@@ -148,7 +148,45 @@
     }
   ],
   "notes": [],
-  "quotes": [],
+  "quotes": [
+    {
+      "id": "quote_1780498603744_dd44445674eb58",
+      "quoteNumber": "OVQ-2026-001",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "title": "Preventivo",
+      "description": "Nexo",
+      "items": [
+        {
+          "id": "quote_item_1780498573977_ebd440cb7521f8",
+          "description": "Servizio / prodotto",
+          "quantity": 1,
+          "unitPrice": 2,
+          "vat": 22
+        }
+      ],
+      "subtotal": 2,
+      "vatTotal": 0.44,
+      "total": 2.44,
+      "currency": "€",
+      "status": "draft",
+      "publicToken": "937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
+      "publicUrl": "https://www.overeye.net/quote.html?id=quote_1780498603744_dd44445674eb58&token=937979898549301dc354cd8294a4789b501d02ede925e68dc1313eb1c3a947d8",
+      "creatorEmail": "admin@overeye.net",
+      "brandLogoUrl": "https://www.overeye.net/logo/admin.png?v=1780498221677",
+      "expiresAt": "2026-06-05",
+      "email": "diletta.buresta@gmail.com",
+      "sentAt": null,
+      "viewedAt": null,
+      "acceptedAt": null,
+      "rejectedAt": null,
+      "acceptedByName": "",
+      "acceptedByEmail": "",
+      "acceptanceMessage": "",
+      "rejectionMessage": "",
+      "createdAt": "2026-06-03T14:56:43.744Z",
+      "updatedAt": "2026-06-03T14:56:43.744Z"
+    }
+  ],
   "documents": [
     {
       "id": "document_1780442061417_414688eb9f6e28",
@@ -192,6 +230,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780498603746_27daf0486e84c8",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "body": "Diletta Buresta",
+      "type": "quote",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58"
+      },
+      "read": false,
+      "createdAt": "2026-06-03T14:56:43.746Z"
+    },
     {
       "id": "notification_1780498421802_4c8c4e926c622",
       "title": "Creato appuntamento “Appuntamento”",
@@ -547,6 +597,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780498603746_38a9c9c69cb598",
+      "type": "quote",
+      "title": "Preventivo OVQ-2026-001 creato",
+      "clientId": "client_1780066143263_919858a966a9b",
+      "meta": {
+        "quoteId": "quote_1780498603744_dd44445674eb58"
+      },
+      "createdAt": "2026-06-03T14:56:43.746Z"
+    },
     {
       "id": "timeline_1780498550094_01b5e754f48288",
       "type": "delete",
@@ -1430,5 +1490,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T14:55:50.097Z"
+  "updatedAt": "2026-06-03T14:56:43.747Z"
 }
