@@ -169,32 +169,6 @@
       "email": "diletta.buresta@gmail.com",
       "notes": "Presentazioni prodotti Overeye",
       "durationMinutes": 55
-    },
-    {
-      "id": "appointment_1780556599746_8d1a36bab6168",
-      "confirmationSent": true,
-      "confirmationSentAt": "2026-06-04T07:03:26.160Z",
-      "reminderSent": false,
-      "reminderSentAt": null,
-      "cancellationSent": false,
-      "cancellationSentAt": null,
-      "createdAt": "2026-06-04T07:03:19.746Z",
-      "updatedAt": "2026-06-04T07:03:19.746Z",
-      "clientId": "client_1779984880646_cfbf7b9af20f78",
-      "title": "Appuntamento",
-      "date": "2026-06-04",
-      "time": "09:00",
-      "type": "Visita / consulenza",
-      "withPerson": "Overeye",
-      "locationMode": "Online",
-      "onlinePlatform": "Google Meet / Teams",
-      "meetingLink": "https://meet.jit.si/nexo-overeye-net-appuntamento-09943ed6",
-      "durationMinutes": 60,
-      "location": "Via Piave 37",
-      "phone": "3337663583",
-      "status": "Programmato",
-      "email": "diletta.buresta@gmail.com",
-      "notes": ""
     }
   ],
   "notes": [],
@@ -775,6 +749,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780559820865_2fedbdfa50585",
+      "type": "delete",
+      "title": "Eliminato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780556599746_8d1a36bab6168"
+      },
+      "createdAt": "2026-06-04T07:57:00.865Z"
+    },
     {
       "id": "timeline_1780556606160_7cdfb949707b7",
       "type": "email",
@@ -1790,6 +1774,7 @@
     "appointmentConfirmationEnabled": true,
     "reminderEmailEnabled": true,
     "defaultReminderHours": 24,
+    "meetingProviderUrl": "https://meet.jit.si",
     "companyName": "Overeye",
     "companyWebsite": "",
     "defaultCurrency": "€",
@@ -1814,5 +1799,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-04T07:03:26.161Z"
+  "updatedAt": "2026-06-04T07:57:00.867Z"
 }
