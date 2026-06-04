@@ -36,5 +36,24 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T01:01:41.779Z",
     "updatedAt": "2026-06-04T01:01:55.110Z"
+  },
+  {
+    "id": "team_1780556912796_4e0eb2e7d2f008",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "name": "William Firenze",
+    "presidentName": "Zizze",
+    "coachName": "Andrea Razzanelli",
+    "mentalCoachName": "Zizze",
+    "directorName": "Zizze",
+    "email": "info@overeye.net",
+    "phone": "3337663583",
+    "groupName": "",
+    "logoUrl": "",
+    "notes": "",
+    "status": "active",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T07:08:34.397Z",
+    "updatedAt": "2026-06-04T07:08:34.397Z"
   }
 ]
