@@ -13,5 +13,20 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-03T23:43:06.975Z",
     "updatedAt": "2026-06-03T23:43:06.975Z"
+  },
+  {
+    "id": "edition_1780603590973_d2862028b5a0d8",
+    "name": "TOCA 2027",
+    "year": "2027",
+    "format": "round_robin",
+    "status": "active",
+    "pointsWin": 3,
+    "pointsDraw": 1,
+    "pointsLoss": 0,
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T20:06:32.090Z",
+    "updatedAt": "2026-06-04T20:06:32.090Z"
   }
 ]
