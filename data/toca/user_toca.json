@@ -10,5 +10,17 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:39.592Z",
     "updatedAt": "2026-06-04T00:32:39.592Z"
+  },
+  {
+    "id": "user_toca_team_1780534900094_426f8827cf4e7",
+    "teamId": "team_1780534900094_426f8827cf4e7",
+    "email": "0571@overeye.net",
+    "passwordHash": "pbkdf2_sha256$120000$b596ae05f9d355028dc300e78f904a90$ff481525e9d44ea657d69df94d58d219709065e595b3415a8c3cd3d1f9a41df5",
+    "status": "active",
+    "lastPasswordSetAt": "2026-06-04T01:01:58.144Z",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T01:01:58.229Z",
+    "updatedAt": "2026-06-04T01:01:58.229Z"
   }
 ]
