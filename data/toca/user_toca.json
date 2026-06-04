@@ -1,0 +1,14 @@
+[
+  {
+    "id": "user_toca_team_1780533139685_e0cf6f1f30125",
+    "teamId": "team_1780533139685_e0cf6f1f30125",
+    "email": "toroloco-global@overeye.net",
+    "passwordHash": "pbkdf2_sha256$120000$86f0e0ec02714d441ce70cfc2796d835$43fd1927e7f1eb09c844b56bfbcccdf31ab50fc0e6a5e67100befa25b88370de",
+    "status": "active",
+    "lastPasswordSetAt": "2026-06-04T00:32:39.520Z",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:32:39.592Z",
+    "updatedAt": "2026-06-04T00:32:39.592Z"
+  }
+]
