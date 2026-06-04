@@ -1,0 +1,16 @@
+[
+  {
+    "id": "event_1780535057713_568e937307533",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "matchId": "match_1780534958792_3711ef3e05fcb",
+    "teamId": "team_1780534900094_426f8827cf4e7",
+    "playerId": "player_1780534916252_91e8345593a6a",
+    "type": "goal",
+    "minute": 3,
+    "note": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T01:04:18.580Z",
+    "updatedAt": "2026-06-04T01:04:18.580Z"
+  }
+]
