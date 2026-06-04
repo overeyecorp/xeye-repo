@@ -63,5 +63,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:31:23.183Z",
     "updatedAt": "2026-06-04T00:31:23.183Z"
+  },
+  {
+    "id": "player_1780533083946_1812e1cdc81aa",
+    "teamId": "team_1780533078844_96bde74a68c9b8",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Lapo Bianchi",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:31:24.422Z",
+    "updatedAt": "2026-06-04T00:31:24.422Z"
   }
 ]
