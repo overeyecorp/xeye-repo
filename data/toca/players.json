@@ -102,5 +102,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:31:26.917Z",
     "updatedAt": "2026-06-04T00:31:26.917Z"
+  },
+  {
+    "id": "player_1780533087601_1169f2f26cab9",
+    "teamId": "team_1780533078844_96bde74a68c9b8",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Tommaso chiti",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:31:28.057Z",
+    "updatedAt": "2026-06-04T00:31:28.057Z"
   }
 ]
