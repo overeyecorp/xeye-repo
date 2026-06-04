@@ -323,5 +323,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:30.776Z",
     "updatedAt": "2026-06-04T00:32:30.776Z"
+  },
+  {
+    "id": "player_1780533151525_f1441f7b8cbc38",
+    "teamId": "team_1780533139685_e0cf6f1f30125",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Tommaso Pertici",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:32:31.988Z",
+    "updatedAt": "2026-06-04T00:32:31.988Z"
   }
 ]
