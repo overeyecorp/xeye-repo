@@ -258,5 +258,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:24.213Z",
     "updatedAt": "2026-06-04T00:32:24.213Z"
+  },
+  {
+    "id": "player_1780533145174_c343270013e788",
+    "teamId": "team_1780533139685_e0cf6f1f30125",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Imad El Bhit",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:32:25.620Z",
+    "updatedAt": "2026-06-04T00:32:25.620Z"
   }
 ]
