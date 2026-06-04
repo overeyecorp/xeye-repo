@@ -169,6 +169,32 @@
       "email": "diletta.buresta@gmail.com",
       "notes": "Presentazioni prodotti Overeye",
       "durationMinutes": 55
+    },
+    {
+      "id": "appointment_1780556599746_8d1a36bab6168",
+      "confirmationSent": false,
+      "confirmationSentAt": null,
+      "reminderSent": false,
+      "reminderSentAt": null,
+      "cancellationSent": false,
+      "cancellationSentAt": null,
+      "createdAt": "2026-06-04T07:03:19.746Z",
+      "updatedAt": "2026-06-04T07:03:19.746Z",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "title": "Appuntamento",
+      "date": "2026-06-04",
+      "time": "09:00",
+      "type": "Visita / consulenza",
+      "withPerson": "Overeye",
+      "locationMode": "Online",
+      "onlinePlatform": "Google Meet / Teams",
+      "meetingLink": "https://meet.jit.si/nexo-overeye-net-appuntamento-09943ed6",
+      "durationMinutes": 60,
+      "location": "Via Piave 37",
+      "phone": "3337663583",
+      "status": "Programmato",
+      "email": "diletta.buresta@gmail.com",
+      "notes": ""
     }
   ],
   "notes": [],
@@ -270,6 +296,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780556599746_8e0789617d7ad",
+      "title": "Creato appuntamento “Appuntamento”",
+      "body": "William Firenze",
+      "type": "appointment",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780556599746_8d1a36bab6168"
+      },
+      "read": false,
+      "createdAt": "2026-06-04T07:03:19.746Z"
+    },
     {
       "id": "notification_1780498984514_e1cc6220cbc308",
       "title": "Credenziali portale inviate a “William Firenze”",
@@ -737,6 +775,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780556599746_6c5f1d0217f808",
+      "type": "appointment",
+      "title": "Creato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780556599746_8d1a36bab6168"
+      },
+      "createdAt": "2026-06-04T07:03:19.746Z"
+    },
     {
       "id": "timeline_1780513651398_ea79cbf5db688",
       "type": "email",
@@ -1755,5 +1803,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-03T19:07:31.399Z"
+  "updatedAt": "2026-06-04T07:03:19.747Z"
 }
