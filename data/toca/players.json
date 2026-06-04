@@ -388,5 +388,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:36.879Z",
     "updatedAt": "2026-06-04T00:32:36.879Z"
+  },
+  {
+    "id": "player_1780533157665_90cc19e063caf",
+    "teamId": "team_1780533139685_e0cf6f1f30125",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Stefano Bruchi",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:32:38.132Z",
+    "updatedAt": "2026-06-04T00:32:38.132Z"
   }
 ]
