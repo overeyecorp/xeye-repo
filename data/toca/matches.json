@@ -15,5 +15,22 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T01:02:39.822Z",
     "updatedAt": "2026-06-04T02:18:31.445Z"
+  },
+  {
+    "id": "match_1780539711425_520946ee2b4108",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "round": 1,
+    "homeTeamId": "team_1780533139685_e0cf6f1f30125",
+    "awayTeamId": "team_1780539601506_64c83c4ff9673",
+    "date": "2026-06-04",
+    "time": "05:21",
+    "venue": "",
+    "status": "scheduled",
+    "homeScore": 0,
+    "awayScore": 0,
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T02:21:52.135Z",
+    "updatedAt": "2026-06-04T02:21:52.135Z"
   }
 ]
