@@ -128,5 +128,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:31:29.270Z",
     "updatedAt": "2026-06-04T00:31:29.270Z"
+  },
+  {
+    "id": "player_1780533089954_e332e103d0e4a",
+    "teamId": "team_1780533078844_96bde74a68c9b8",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Francesco Posarelli",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:31:30.423Z",
+    "updatedAt": "2026-06-04T00:31:30.423Z"
   }
 ]
