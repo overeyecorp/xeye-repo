@@ -25,12 +25,12 @@
     "date": "2026-06-04",
     "time": "05:21",
     "venue": "",
-    "status": "scheduled",
+    "status": "live",
     "homeScore": 0,
-    "awayScore": 0,
+    "awayScore": 1,
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-06-04T02:21:52.135Z",
-    "updatedAt": "2026-06-04T02:21:52.135Z"
+    "updatedAt": "2026-06-04T02:22:21.577Z"
   }
 ]
