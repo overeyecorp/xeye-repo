@@ -1,24 +1,5 @@
 [
   {
-    "id": "team_1780533078844_96bde74a68c9b8",
-    "editionId": "edition_1780530186239_b30686b7035cd8",
-    "name": "Toro Loco Global",
-    "presidentName": "Ilias boumarouan",
-    "coachName": "Vieri Gaglioti",
-    "mentalCoachName": "Emanuele Mazzoni",
-    "directorName": "Jacopo El Bhit",
-    "email": "toroloco-global@overeye.net",
-    "phone": "3337663583",
-    "groupName": "",
-    "logoUrl": "",
-    "notes": "Toroloco-notes",
-    "status": "active",
-    "tenantId": "overeye",
-    "domain": "overeye.net",
-    "createdAt": "2026-06-04T00:31:20.551Z",
-    "updatedAt": "2026-06-04T00:31:20.551Z"
-  },
-  {
     "id": "team_1780533139685_e0cf6f1f30125",
     "editionId": "edition_1780530186239_b30686b7035cd8",
     "name": "Toro Loco Global",
