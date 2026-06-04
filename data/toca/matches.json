@@ -9,11 +9,11 @@
     "time": "",
     "venue": "",
     "status": "live",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 0,
     "source": "toca-agent",
     "createdAt": "2026-06-04T20:10:19.215Z",
-    "updatedAt": "2026-06-04T20:11:41.269Z",
+    "updatedAt": "2026-06-04T20:12:21.912Z",
     "tenantId": "overeye",
     "domain": "overeye.net"
   },
