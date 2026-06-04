@@ -17,5 +17,24 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:20.509Z",
     "updatedAt": "2026-06-04T00:32:20.509Z"
+  },
+  {
+    "id": "team_1780534900094_426f8827cf4e7",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "name": "0571",
+    "presidentName": "Zizze",
+    "coachName": "Andrea Razzanelli",
+    "mentalCoachName": "Zizze",
+    "directorName": "Zizze",
+    "email": "0571@overeye.net",
+    "phone": "",
+    "groupName": "",
+    "logoUrl": "",
+    "notes": "0571-notes",
+    "status": "active",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T01:01:41.779Z",
+    "updatedAt": "2026-06-04T01:01:41.779Z"
   }
 ]
