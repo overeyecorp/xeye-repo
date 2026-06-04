@@ -8,12 +8,12 @@
     "date": "2026-06-05",
     "time": "06:02",
     "venue": "",
-    "status": "completed",
+    "status": "live",
     "homeScore": 1,
     "awayScore": 0,
     "tenantId": "overeye",
     "domain": "overeye.net",
     "createdAt": "2026-06-04T01:02:39.822Z",
-    "updatedAt": "2026-06-04T01:07:52.486Z"
+    "updatedAt": "2026-06-04T01:09:25.159Z"
   }
 ]
