@@ -172,8 +172,8 @@
     },
     {
       "id": "appointment_1780556599746_8d1a36bab6168",
-      "confirmationSent": false,
-      "confirmationSentAt": null,
+      "confirmationSent": true,
+      "confirmationSentAt": "2026-06-04T07:03:26.160Z",
       "reminderSent": false,
       "reminderSentAt": null,
       "cancellationSent": false,
@@ -775,6 +775,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780556606160_7cdfb949707b7",
+      "type": "email",
+      "title": "Email conferma inviata per “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780556599746_8d1a36bab6168",
+        "to": "diletta.buresta@gmail.com"
+      },
+      "createdAt": "2026-06-04T07:03:26.160Z"
+    },
     {
       "id": "timeline_1780556599746_6c5f1d0217f808",
       "type": "appointment",
@@ -1803,5 +1814,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-04T07:03:19.747Z"
+  "updatedAt": "2026-06-04T07:03:26.161Z"
 }
