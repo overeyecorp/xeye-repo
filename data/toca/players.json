@@ -297,5 +297,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:32:28.228Z",
     "updatedAt": "2026-06-04T00:32:28.228Z"
+  },
+  {
+    "id": "player_1780533148951_272ea76481bd4",
+    "teamId": "team_1780533139685_e0cf6f1f30125",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Edorado Perillo",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:32:29.420Z",
+    "updatedAt": "2026-06-04T00:32:29.420Z"
   }
 ]
