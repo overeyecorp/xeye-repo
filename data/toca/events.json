@@ -12,5 +12,19 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T01:04:18.580Z",
     "updatedAt": "2026-06-04T01:04:18.580Z"
+  },
+  {
+    "id": "event_1780539739805_3d39d2ae4cc65",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "matchId": "match_1780539711425_520946ee2b4108",
+    "teamId": "team_1780539601506_64c83c4ff9673",
+    "playerId": "player_1780539603364_4dbb1d43ac70c8",
+    "type": "goal",
+    "minute": 3,
+    "note": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T02:22:20.282Z",
+    "updatedAt": "2026-06-04T02:22:20.282Z"
   }
 ]
