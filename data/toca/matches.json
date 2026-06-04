@@ -18,24 +18,6 @@
     "domain": "overeye.net"
   },
   {
-    "id": "match_1780603785982_d144115d47566",
-    "editionId": "edition_1780530186239_b30686b7035cd8",
-    "round": 2,
-    "homeTeamId": "team_1780556912796_4e0eb2e7d2f008",
-    "awayTeamId": "team_1780533139685_e0cf6f1f30125",
-    "date": "",
-    "time": "",
-    "venue": "",
-    "status": "scheduled",
-    "homeScore": 0,
-    "awayScore": 0,
-    "source": "toca-agent",
-    "createdAt": "2026-06-04T20:09:45.982Z",
-    "updatedAt": "2026-06-04T20:09:46.524Z",
-    "tenantId": "overeye",
-    "domain": "overeye.net"
-  },
-  {
     "id": "match_1780603785982_310e073e88fac",
     "editionId": "edition_1780530186239_b30686b7035cd8",
     "round": 3,
