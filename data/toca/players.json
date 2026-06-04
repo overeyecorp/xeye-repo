@@ -167,5 +167,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:31:32.908Z",
     "updatedAt": "2026-06-04T00:31:32.908Z"
+  },
+  {
+    "id": "player_1780533093668_3ebded0ad12a4",
+    "teamId": "team_1780533078844_96bde74a68c9b8",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Matteo Borgognoni",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:31:34.127Z",
+    "updatedAt": "2026-06-04T00:31:34.127Z"
   }
 ]
