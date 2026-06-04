@@ -193,5 +193,18 @@
     "domain": "overeye.net",
     "createdAt": "2026-06-04T00:31:35.449Z",
     "updatedAt": "2026-06-04T00:31:35.449Z"
+  },
+  {
+    "id": "player_1780533096229_70877ad68b2c28",
+    "teamId": "team_1780533078844_96bde74a68c9b8",
+    "editionId": "edition_1780530186239_b30686b7035cd8",
+    "number": "",
+    "name": "Leandro Sabatini",
+    "role": "Goalkeeper",
+    "notes": "",
+    "tenantId": "overeye",
+    "domain": "overeye.net",
+    "createdAt": "2026-06-04T00:31:36.736Z",
+    "updatedAt": "2026-06-04T00:31:36.736Z"
   }
 ]
