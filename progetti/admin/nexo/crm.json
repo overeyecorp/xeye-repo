@@ -179,7 +179,7 @@
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-06-04T07:59:17.181Z",
-      "updatedAt": "2026-06-04T07:59:17.182Z",
+      "updatedAt": "2026-06-04T08:00:00.796Z",
       "clientId": "client_1779984880646_cfbf7b9af20f78",
       "title": "Appuntamento",
       "date": "2026-06-04",
@@ -188,7 +188,7 @@
       "withPerson": "Overeye",
       "locationMode": "Online",
       "onlinePlatform": "Altro",
-      "meetingLink": "",
+      "meetingLink": "https://meet.jit.si/nexo-overeye-net-appuntamento-ef27dc68#config.prejoinConfig.enabled=false&config.disableDeepLinking=true",
       "durationMinutes": 60,
       "location": "Via Piave 37",
       "phone": "3337663583",
@@ -296,6 +296,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780560000796_49cb49726599a8",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "body": "William Firenze",
+      "type": "appointment",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780559957181_27d9fcb0af5098"
+      },
+      "read": false,
+      "createdAt": "2026-06-04T08:00:00.796Z"
+    },
     {
       "id": "notification_1780559957182_9c5e40b2717118",
       "title": "Creato appuntamento “Appuntamento”",
@@ -787,6 +799,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780560000796_2f0c2709337b2",
+      "type": "appointment",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "clientId": "client_1779984880646_cfbf7b9af20f78",
+      "meta": {
+        "appointmentId": "appointment_1780559957181_27d9fcb0af5098"
+      },
+      "createdAt": "2026-06-04T08:00:00.796Z"
+    },
     {
       "id": "timeline_1780559964208_b617c4f39d438",
       "type": "email",
@@ -1858,5 +1880,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-04T07:59:24.208Z"
+  "updatedAt": "2026-06-04T08:00:00.797Z"
 }
