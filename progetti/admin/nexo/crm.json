@@ -124,8 +124,8 @@
       "id": "appointment_1779896668373_864cb3609f3b3",
       "confirmationSent": true,
       "confirmationSentAt": "2026-05-27T15:44:32.100Z",
-      "reminderSent": false,
-      "reminderSentAt": null,
+      "reminderSent": true,
+      "reminderSentAt": "2026-06-08T10:55:53.003Z",
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-27T15:44:28.373Z",
@@ -812,6 +812,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780916153004_200252ec30f39",
+      "type": "email",
+      "title": "Promemoria inviato per “Appuntamento”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "appointmentId": "appointment_1779896668373_864cb3609f3b3",
+        "to": "dietista.elisabruscoli@gmail.com"
+      },
+      "createdAt": "2026-06-08T10:55:53.004Z"
+    },
     {
       "id": "timeline_1780916101325_51120b5cb15e9",
       "type": "email",
@@ -1914,5 +1925,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-08T10:55:01.326Z"
+  "updatedAt": "2026-06-08T10:55:53.005Z"
 }
