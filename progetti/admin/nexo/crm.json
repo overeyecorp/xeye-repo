@@ -99,7 +99,7 @@
       "confirmationSent": true,
       "confirmationSentAt": "2026-05-27T12:50:06.863Z",
       "reminderSent": true,
-      "reminderSentAt": "2026-06-03T19:07:31.398Z",
+      "reminderSentAt": "2026-06-08T10:55:01.325Z",
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-27T12:49:40.781Z",
@@ -812,6 +812,17 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780916101325_51120b5cb15e9",
+      "type": "email",
+      "title": "Promemoria inviato per “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28",
+        "to": "momento@overeye.net"
+      },
+      "createdAt": "2026-06-08T10:55:01.325Z"
+    },
     {
       "id": "timeline_1780916087630_162d991ca1f6c8",
       "type": "appointment",
@@ -1903,5 +1914,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-08T10:54:47.631Z"
+  "updatedAt": "2026-06-08T10:55:01.326Z"
 }
