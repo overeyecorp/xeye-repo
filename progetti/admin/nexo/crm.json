@@ -103,21 +103,22 @@
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-27T12:49:40.781Z",
-      "updatedAt": "2026-05-27T12:49:40.781Z",
+      "updatedAt": "2026-06-08T10:54:47.630Z",
       "clientId": "client_1779883371235_4d087b080d402",
       "title": "Appuntamento",
       "date": "2026-06-09",
       "time": "22:00",
       "type": "Visita / consulenza",
       "withPerson": "Overeye",
-      "locationMode": "Online",
+      "locationMode": "In sede",
       "onlinePlatform": "Altro",
       "meetingLink": "",
       "location": "Piazza Edoardo de Filippo 12c",
       "phone": "3337663583",
       "status": "Programmato",
       "email": "momento@overeye.net",
-      "notes": "Rinn. abbonamento Overeye + presentazione prodotti"
+      "notes": "Rinn. abbonamento Overeye + presentazione prodotti",
+      "durationMinutes": 60
     },
     {
       "id": "appointment_1779896668373_864cb3609f3b3",
@@ -296,6 +297,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780916087630_b72703188943b",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "body": "Momento Media Agency",
+      "type": "appointment",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28"
+      },
+      "read": false,
+      "createdAt": "2026-06-08T10:54:47.630Z"
+    },
     {
       "id": "notification_1780560000796_49cb49726599a8",
       "title": "Aggiornato appuntamento “Appuntamento”",
@@ -799,6 +812,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780916087630_162d991ca1f6c8",
+      "type": "appointment",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28"
+      },
+      "createdAt": "2026-06-08T10:54:47.630Z"
+    },
     {
       "id": "timeline_1780560000796_2f0c2709337b2",
       "type": "appointment",
@@ -1880,5 +1903,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-04T08:00:00.797Z"
+  "updatedAt": "2026-06-08T10:54:47.631Z"
 }
