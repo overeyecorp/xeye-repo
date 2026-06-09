@@ -103,10 +103,10 @@
       "cancellationSent": false,
       "cancellationSentAt": null,
       "createdAt": "2026-05-27T12:49:40.781Z",
-      "updatedAt": "2026-06-08T10:54:47.630Z",
+      "updatedAt": "2026-06-09T09:59:34.735Z",
       "clientId": "client_1779883371235_4d087b080d402",
       "title": "Appuntamento",
-      "date": "2026-06-09",
+      "date": "2026-06-11",
       "time": "22:00",
       "type": "Visita / consulenza",
       "withPerson": "Overeye",
@@ -297,6 +297,18 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1780999174735_ad1792e75617a",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "body": "Momento Media Agency",
+      "type": "appointment",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28"
+      },
+      "read": false,
+      "createdAt": "2026-06-09T09:59:34.735Z"
+    },
     {
       "id": "notification_1780916087630_b72703188943b",
       "title": "Aggiornato appuntamento “Appuntamento”",
@@ -812,6 +824,16 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1780999174735_fa59de2c63a348",
+      "type": "appointment",
+      "title": "Aggiornato appuntamento “Appuntamento”",
+      "clientId": "client_1779883371235_4d087b080d402",
+      "meta": {
+        "appointmentId": "appointment_1779886180781_00838ac0ab7c28"
+      },
+      "createdAt": "2026-06-09T09:59:34.735Z"
+    },
     {
       "id": "timeline_1780916153004_200252ec30f39",
       "type": "email",
@@ -1925,5 +1947,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-08T10:55:53.005Z"
+  "updatedAt": "2026-06-09T09:59:34.736Z"
 }
