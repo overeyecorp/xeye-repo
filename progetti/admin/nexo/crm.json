@@ -250,10 +250,11 @@
       "type": "Contratto",
       "content": "ciao firma la privacy",
       "requiresSignature": true,
-      "status": "sent",
-      "updatedAt": "2026-06-10T16:39:06.388Z",
+      "status": "viewed",
+      "updatedAt": "2026-06-10T16:39:25.557Z",
       "publicUrl": "https://www.overeye.net/document.html?id=document_1781109544170_0bc5883a50e008&token=beb8d8464f66d83e23655c7924a259a3c24fbb83c791ac5c5b143168e9952003",
-      "sentAt": "2026-06-10T16:39:06.388Z"
+      "sentAt": "2026-06-10T16:39:06.388Z",
+      "viewedAt": "2026-06-10T16:39:25.557Z"
     },
     {
       "id": "document_1780498866664_3e1747752d0aa",
@@ -861,8 +862,17 @@
       "createdAt": "2026-05-28T17:24:56.924Z"
     }
   ],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781109565557_1b2e4b9438ecf",
+      "type": "document",
+      "title": "Documento Contratto / documento visualizzato dal cliente",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "documentId": "document_1781109544170_0bc5883a50e008"
+      },
+      "createdAt": "2026-06-10T16:39:25.558Z"
+    },
     {
       "id": "timeline_1781109546388_fab371ede23c4",
       "type": "document",
