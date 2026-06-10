@@ -242,6 +242,20 @@
   ],
   "documents": [
     {
+      "id": "document_1781109544170_0bc5883a50e008",
+      "createdAt": "2026-06-10T16:39:04.170Z",
+      "publicToken": "beb8d8464f66d83e23655c7924a259a3c24fbb83c791ac5c5b143168e9952003",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "title": "Contratto / documento",
+      "type": "Contratto",
+      "content": "ciao firma la privacy",
+      "requiresSignature": true,
+      "status": "sent",
+      "updatedAt": "2026-06-10T16:39:06.388Z",
+      "publicUrl": "https://www.overeye.net/document.html?id=document_1781109544170_0bc5883a50e008&token=beb8d8464f66d83e23655c7924a259a3c24fbb83c791ac5c5b143168e9952003",
+      "sentAt": "2026-06-10T16:39:06.388Z"
+    },
+    {
       "id": "document_1780498866664_3e1747752d0aa",
       "createdAt": "2026-06-03T15:01:06.664Z",
       "publicToken": "0ae6b0b886c511f5107daf268688b4cf9152224420b76a0f0b0613e03853c32a",
@@ -297,6 +311,31 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notification_1781109546388_70130211166c",
+      "title": "Documento “Contratto / documento” inviato al cliente",
+      "body": "Elisa Bruscoli",
+      "type": "document",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "documentId": "document_1781109544170_0bc5883a50e008",
+        "to": "dietista.elisabruscoli@gmail.com"
+      },
+      "read": false,
+      "createdAt": "2026-06-10T16:39:06.388Z"
+    },
+    {
+      "id": "notification_1781109544170_820b864e01147",
+      "title": "Creato documento “Contratto / documento”",
+      "body": "Elisa Bruscoli",
+      "type": "document",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "documentId": "document_1781109544170_0bc5883a50e008"
+      },
+      "read": false,
+      "createdAt": "2026-06-10T16:39:04.170Z"
+    },
     {
       "id": "notification_1780999174735_ad1792e75617a",
       "title": "Aggiornato appuntamento “Appuntamento”",
@@ -824,6 +863,27 @@
   ],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781109546388_fab371ede23c4",
+      "type": "document",
+      "title": "Documento “Contratto / documento” inviato al cliente",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "documentId": "document_1781109544170_0bc5883a50e008",
+        "to": "dietista.elisabruscoli@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:39:06.388Z"
+    },
+    {
+      "id": "timeline_1781109544170_8c44b951dc8eb8",
+      "type": "document",
+      "title": "Creato documento “Contratto / documento”",
+      "clientId": "client_1779896598006_04900db1cf0cc8",
+      "meta": {
+        "documentId": "document_1781109544170_0bc5883a50e008"
+      },
+      "createdAt": "2026-06-10T16:39:04.170Z"
+    },
     {
       "id": "timeline_1780999249649_f86f4ad6df9398",
       "type": "email",
@@ -1969,5 +2029,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-09T10:00:49.650Z"
+  "updatedAt": "2026-06-10T16:39:06.390Z"
 }
