@@ -31,10 +31,11 @@
       "type": "Contratto",
       "content": "firma",
       "requiresSignature": true,
-      "status": "sent",
-      "updatedAt": "2026-06-11T20:55:18.816Z",
+      "status": "viewed",
+      "updatedAt": "2026-06-11T20:55:53.567Z",
       "publicUrl": "https://www.overeye.net/document.html?id=document_1781211316592_0d54cf72448d18&token=e336f7d20ac2cd009967ca95385ff0ce8e430ca47a327942d20bd8d076d2a295",
-      "sentAt": "2026-06-11T20:55:18.816Z"
+      "sentAt": "2026-06-11T20:55:18.816Z",
+      "viewedAt": "2026-06-11T20:55:53.567Z"
     }
   ],
   "emailTemplates": [
@@ -85,8 +86,17 @@
     }
   ],
   "automations": [],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781211353567_ac61aa372f18d",
+      "type": "document",
+      "title": "Documento Contratto / documento visualizzato dal cliente",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "documentId": "document_1781211316592_0d54cf72448d18"
+      },
+      "createdAt": "2026-06-11T20:55:53.567Z"
+    },
     {
       "id": "timeline_1781211318816_1734e48036bf08",
       "type": "document",
