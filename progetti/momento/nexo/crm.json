@@ -20,7 +20,94 @@
   "tasks": [],
   "appointments": [],
   "notes": [],
+  "quotes": [],
+  "documents": [
+    {
+      "id": "document_1781211316592_0d54cf72448d18",
+      "createdAt": "2026-06-11T20:55:16.592Z",
+      "publicToken": "e336f7d20ac2cd009967ca95385ff0ce8e430ca47a327942d20bd8d076d2a295",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "title": "Contratto / documento",
+      "type": "Contratto",
+      "content": "firma",
+      "requiresSignature": true,
+      "status": "sent",
+      "updatedAt": "2026-06-11T20:55:18.816Z",
+      "publicUrl": "https://www.overeye.net/document.html?id=document_1781211316592_0d54cf72448d18&token=e336f7d20ac2cd009967ca95385ff0ce8e430ca47a327942d20bd8d076d2a295",
+      "sentAt": "2026-06-11T20:55:18.816Z"
+    }
+  ],
+  "emailTemplates": [
+    {
+      "id": "tpl_quote_followup",
+      "name": "Follow-up preventivo",
+      "subject": "Hai avuto modo di valutare il preventivo {{quoteNumber}}?",
+      "body": "Ciao {{clientName}},\n\nvolevo capire se hai avuto modo di vedere il preventivo {{quoteNumber}}.\nSe vuoi posso aiutarti a chiarire dettagli, tempi o eventuali modifiche.\n\nA presto,\n{{userEmail}}"
+    },
+    {
+      "id": "tpl_post_meeting",
+      "name": "Dopo appuntamento",
+      "subject": "Riepilogo appuntamento con {{clientName}}",
+      "body": "Ciao {{clientName}},\n\ngrazie per il tempo dedicato. Ti mando un riepilogo operativo e resto disponibile per il prossimo step.\n\nNEXO by Overeye"
+    },
+    {
+      "id": "tpl_ticket_update",
+      "name": "Aggiornamento ticket",
+      "subject": "Aggiornamento richiesta {{clientName}}",
+      "body": "Ciao {{clientName}},\n\nabbiamo aggiornato la tua richiesta. Ti terremo informato sui prossimi passaggi.\n\nGrazie,\n{{userEmail}}"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notification_1781211318816_959f9785216e",
+      "title": "Documento “Contratto / documento” inviato al cliente",
+      "body": "Overeye",
+      "type": "document",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "documentId": "document_1781211316592_0d54cf72448d18",
+        "to": "info@overeye.net"
+      },
+      "read": false,
+      "createdAt": "2026-06-11T20:55:18.816Z"
+    },
+    {
+      "id": "notification_1781211316593_59b8d4b0ad6e3",
+      "title": "Creato documento “Contratto / documento”",
+      "body": "Overeye",
+      "type": "document",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "documentId": "document_1781211316592_0d54cf72448d18"
+      },
+      "read": false,
+      "createdAt": "2026-06-11T20:55:16.593Z"
+    }
+  ],
+  "automations": [],
+  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781211318816_1734e48036bf08",
+      "type": "document",
+      "title": "Documento “Contratto / documento” inviato al cliente",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "documentId": "document_1781211316592_0d54cf72448d18",
+        "to": "info@overeye.net"
+      },
+      "createdAt": "2026-06-11T20:55:18.816Z"
+    },
+    {
+      "id": "timeline_1781211316592_21bb83bd601e68",
+      "type": "document",
+      "title": "Creato documento “Contratto / documento”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "documentId": "document_1781211316592_0d54cf72448d18"
+      },
+      "createdAt": "2026-06-11T20:55:16.592Z"
+    },
     {
       "id": "timeline_1779841185255_d69d7be746fcf8",
       "type": "delete",
@@ -76,7 +163,30 @@
     "appointmentConfirmationEnabled": true,
     "reminderEmailEnabled": true,
     "defaultReminderHours": 24,
-    "companyName": "Overeye"
+    "meetingProviderUrl": "https://meet.jit.si",
+    "companyName": "Overeye",
+    "companyWebsite": "",
+    "defaultCurrency": "€",
+    "emailSignature": "",
+    "portalEnabled": true,
+    "smtp": {
+      "mode": "env",
+      "host": "",
+      "port": 587,
+      "secure": false,
+      "user": "",
+      "pass": "",
+      "fromName": "",
+      "fromEmail": "",
+      "replyTo": ""
+    },
+    "automations": {
+      "quoteAcceptedCreatesDeal": true,
+      "quoteAcceptedCreatesTask": true,
+      "quoteRejectedCreatesTask": true,
+      "appointmentCompletedFollowup": true,
+      "quoteSentFollowup": true
+    }
   },
-  "updatedAt": "2026-05-27T00:19:45.257Z"
+  "updatedAt": "2026-06-11T20:55:18.817Z"
 }
