@@ -107,8 +107,15 @@
     }
   ],
   "automations": [],
-  "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781211619430_159af97c455cd",
+      "type": "portal",
+      "title": "Accesso portale cliente “Overeye”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {},
+      "createdAt": "2026-06-11T21:00:19.430Z"
+    },
     {
       "id": "timeline_1781211579197_f45439e5fe82",
       "type": "portal",
