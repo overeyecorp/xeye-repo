@@ -68,6 +68,19 @@
   ],
   "notifications": [
     {
+      "id": "notification_1781211579197_23cdd9e9f877d",
+      "title": "Credenziali portale inviate a “Overeye”",
+      "body": "Overeye",
+      "type": "portal",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "to": "info@overeye.net",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "read": false,
+      "createdAt": "2026-06-11T20:59:39.197Z"
+    },
+    {
       "id": "notification_1781211318816_959f9785216e",
       "title": "Documento “Contratto / documento” inviato al cliente",
       "body": "Overeye",
@@ -96,6 +109,17 @@
   "automations": [],
   "agentDismissals": [],
   "timeline": [
+    {
+      "id": "timeline_1781211579197_f45439e5fe82",
+      "type": "portal",
+      "title": "Credenziali portale inviate a “Overeye”",
+      "clientId": "client_1779826647485_7d8545a10e75a",
+      "meta": {
+        "to": "info@overeye.net",
+        "portalUrl": "https://www.overeye.net/portal.html"
+      },
+      "createdAt": "2026-06-11T20:59:39.197Z"
+    },
     {
       "id": "timeline_1781211387273_353f97626ee85",
       "type": "document",
@@ -218,5 +242,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-11T20:59:36.075Z"
+  "updatedAt": "2026-06-11T20:59:39.198Z"
 }
