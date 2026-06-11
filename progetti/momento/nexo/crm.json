@@ -5,14 +5,17 @@
       "id": "client_1779826647485_7d8545a10e75a",
       "contacts": [],
       "createdAt": "2026-05-26T20:17:27.485Z",
-      "updatedAt": "2026-05-26T20:17:27.485Z",
+      "updatedAt": "2026-06-11T20:59:36.075Z",
       "name": "Overeye",
       "email": "info@overeye.net",
       "phone": "3337663583",
       "status": "Cliente attivo",
       "vat": "",
       "address": "via piave 37",
-      "notes": ""
+      "notes": "",
+      "portalToken": "ec59834fc37a0dac568b89a90aee3433c492dc8f428bfa19dc2b86e9936a5034",
+      "portalPassword": "NJFSJUMT8A",
+      "portalEnabled": true
     }
   ],
   "deals": [],
@@ -91,6 +94,7 @@
     }
   ],
   "automations": [],
+  "agentDismissals": [],
   "timeline": [
     {
       "id": "timeline_1781211387273_353f97626ee85",
@@ -214,5 +218,5 @@
       "quoteSentFollowup": true
     }
   },
-  "updatedAt": "2026-06-11T20:55:18.817Z"
+  "updatedAt": "2026-06-11T20:59:36.075Z"
 }
