@@ -1,0 +1,63 @@
+{
+  "id": "xeye_1788340552262_eec89649c5d438",
+  "cloudPath": "progetti/admin/invoices/2026/gabriele-bartalucci/xe_2026_090400.json",
+  "number": "XE-2026-090400",
+  "status": "Bozza",
+  "date": "2026-09-02",
+  "due": "2026-09-17",
+  "currency": "€",
+  "tax": 0,
+  "theme": "classic",
+  "template": "soft",
+  "color": "black",
+  "logoPath": "./assets/logo.png",
+  "customLogoPath": "",
+  "logoUploadData": "",
+  "resolvedLogoSrc": "/logo/admin.png",
+  "showLogo": true,
+  "documentTitle": "Preventivo",
+  "fontFamily": "system",
+  "headingFont": "system",
+  "titleSize": 64,
+  "company": "Overeye",
+  "companyDetails": "info@overeye.net\nwww.overeye.net",
+  "client": "Gabriele Bartalucci",
+  "clientDetails": "Email cliente: info@gbperformance.it\nP.IVA / CF cliente: 07565150484",
+  "notes": "Grazie per aver scelto Overeye. Pagamento entro la data di scadenza indicata.",
+  "lines": [
+    {
+      "title": "Realizzazione e pubblicazione piattaforma web",
+      "desc": "Progettazione e realizzazione del sito GB Performance, comprensivo di Home, presentazione personale, percorsi di coaching, modulo di prenotazione, Shop, carrello e area amministrativa.",
+      "qty": 1,
+      "price": 0
+    },
+    {
+      "title": "Gestione tecnica e manutenzione annuale",
+      "desc": "Mantenimento operativo del sito, aggiornamenti tecnici, controllo delle funzionalità, configurazione SSL e assistenza ordinaria. Sono inclusi 25 crediti annuali per modifiche a testi, immagini, prezzi, collegamenti e contenuti esistenti.",
+      "qty": 1,
+      "price": 55
+    },
+    {
+      "title": "Modulo Shop & Checkout START",
+      "desc": "Attivazione e gestione del catalogo online, carrello, calcolo IVA e spedizione, codici sconto, disponibilità, prezzi e collegamento al sistema di pagamento Stripe. Capacità massima: 25 elementi complessivi tra prodotti, kit e servizi.",
+      "qty": 1,
+      "price": 55
+    },
+    {
+      "title": "GB Performance Score™ BUSINESS",
+      "desc": "Licenza annuale del sistema di analisi atletica personalizzata con elaborazione tramite intelligenza artificiale, generazione del profilo individuale e indicazione del percorso consigliato. Include fino a 30 analisi personalizzate al giorno.",
+      "qty": 1,
+      "price": 110
+    },
+    {
+      "title": "Consulenza digitale a 360° e realizzazione piattaforma",
+      "desc": "Analisi completa del progetto, definizione della strategia digitale e commerciale, organizzazione dell’offerta, studio dell’esperienza utente, consulenza su contenuti e immagine coordinata, progettazione, realizzazione e pubblicazione della piattaforma web GB Performance.",
+      "qty": 1,
+      "price": 0
+    }
+  ],
+  "createdAt": "2026-09-02T09:15:52.263Z",
+  "updatedAt": "2026-09-04T00:12:25.575Z",
+  "ownerEmail": "admin@overeye.net",
+  "ownerSlug": "admin"
+}
