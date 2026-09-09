@@ -2,23 +2,35 @@
   "id": "xeye_1788340552262_eec89649c5d438",
   "cloudPath": "progetti/admin/invoices/2026/gabriele-bartalucci/xe_2026_907.json",
   "number": "XE-2026-907",
-  "status": "Bozza",
+  "status": "Pagata",
   "date": "2026-09-02",
   "due": "2026-09-17",
   "currency": "€",
   "tax": 0,
+  "docType": "ricevuta",
+  "globalDiscount": 0,
+  "cassa": {
+    "rate": 0,
+    "vat": 0
+  },
+  "ritenuta": {
+    "rate": 0,
+    "base": 100
+  },
+  "bolloCharged": true,
+  "fiscal": null,
   "theme": "classic",
-  "template": "classic",
+  "template": "glass",
   "color": "black",
   "logoPath": "./assets/logo.png",
   "customLogoPath": "",
   "logoUploadData": "",
   "resolvedLogoSrc": "/logo/admin.png",
   "showLogo": true,
-  "documentTitle": "Fattura",
+  "documentTitle": "Ricevuta per prestazione occasionale",
   "fontFamily": "system",
   "headingFont": "system",
-  "titleSize": 64,
+  "titleSize": 42,
   "company": "Overeye",
   "companyDetails": "info@overeye.net\nwww.overeye.net",
   "client": "Gabriele Bartalucci",
@@ -26,32 +38,44 @@
   "notes": "Grazie per aver scelto Overeye. Pagamento entro la data di scadenza indicata.",
   "lines": [
     {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
       "title": "Realizzazione e pubblicazione piattaforma web",
       "desc": "Progettazione e realizzazione del sito GB Performance, comprensivo di Home, presentazione personale, percorsi di coaching, modulo di prenotazione, Shop, carrello e area amministrativa.",
       "qty": 1,
       "price": 0
     },
     {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
       "title": "Gestione tecnica e manutenzione annuale",
       "desc": "Mantenimento operativo del sito, aggiornamenti tecnici, controllo delle funzionalità, configurazione SSL e assistenza ordinaria. Sono inclusi 25 crediti annuali per modifiche a testi, immagini, prezzi, collegamenti e contenuti esistenti.",
       "qty": 1,
       "price": 55
     },
     {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
       "title": "Modulo Shop & Checkout START",
       "desc": "Attivazione e gestione del catalogo online, carrello, calcolo IVA e spedizione, codici sconto, disponibilità, prezzi e collegamento al sistema di pagamento Stripe. Capacità massima: 25 elementi complessivi tra prodotti, kit e servizi.",
       "qty": 1,
       "price": 55
     },
     {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
       "title": "GB Performance Score™ START",
       "desc": "Licenza annuale del sistema di analisi atletica personalizzata, con elaborazione intelligente del profilo, identificazione dei punti di forza e delle aree di miglioramento e suggerimento del percorso più adatto. Include fino a 10 analisi personalizzate al giorno.",
       "qty": 1,
-      "price": 55
+      "price": 108
     }
   ],
   "createdAt": "2026-09-02T09:15:52.263Z",
-  "updatedAt": "2026-09-03T10:37:06.555Z",
+  "updatedAt": "2026-09-09T01:55:40.759Z",
   "ownerEmail": "admin@overeye.net",
   "ownerSlug": "admin"
 }
