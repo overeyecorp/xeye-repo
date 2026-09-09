@@ -17,7 +17,7 @@
     "rate": 0,
     "base": 100
   },
-  "bolloCharged": false,
+  "bolloCharged": true,
   "fiscal": null,
   "theme": "classic",
   "template": "soft",
@@ -53,7 +53,7 @@
       "title": "Configurazione tecnica e messa online",
       "desc": "Configurazione tecnica del sito, verifica delle funzionalità, configurazione SSL, ottimizzazione tecnica e interventi di messa in produzione,",
       "qty": 1,
-      "price": 115
+      "price": 113
     },
     {
       "vat": 0,
@@ -66,7 +66,7 @@
     }
   ],
   "createdAt": "2026-09-09T03:06:18.786Z",
-  "updatedAt": "2026-09-09T03:10:26.109Z",
+  "updatedAt": "2026-09-09T03:31:46.518Z",
   "ownerEmail": "admin@overeye.net",
   "ownerSlug": "admin"
 }
