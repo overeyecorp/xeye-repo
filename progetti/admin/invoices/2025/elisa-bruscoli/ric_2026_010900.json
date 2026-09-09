@@ -1,0 +1,72 @@
+{
+  "id": "xeye_1788922698068_aa7783d672ea8",
+  "cloudPath": "progetti/admin/invoices/2025/elisa-bruscoli/ric_2026_010900.json",
+  "number": "RIC-2026-010900",
+  "status": "Pagata",
+  "date": "2025-01-09",
+  "due": "2026-09-17",
+  "currency": "€",
+  "tax": 0,
+  "docType": "ricevuta",
+  "globalDiscount": 0,
+  "cassa": {
+    "rate": 0,
+    "vat": 0
+  },
+  "ritenuta": {
+    "rate": 0,
+    "base": 100
+  },
+  "bolloCharged": false,
+  "fiscal": null,
+  "theme": "classic",
+  "template": "soft",
+  "color": "black",
+  "logoPath": "./assets/logo.png",
+  "customLogoPath": "",
+  "logoUploadData": "",
+  "resolvedLogoSrc": "/logo/admin.png",
+  "showLogo": true,
+  "documentTitle": "Ricevuta per prestazione occasionale",
+  "fontFamily": "system",
+  "headingFont": "system",
+  "titleSize": 42,
+  "company": "Overeye",
+  "companyDetails": "info@overeye.net\nwww.overeye.net\nPrestatore: William Firenze\nC.F. FRNWLM98T23D403D\nVia piave 37 Castelfiorentino (FI)",
+  "client": "Elisa Bruscoli",
+  "clientDetails": "Email cliente: dietistaelisabruscoli@gmail.com\nP.IVA / CF cliente: 07322140489",
+  "notes": "Importo di € 50 già integralmente corrisposto tramite Stripe in data 09/01/2026.  Compenso concordato per la prestazione descritta. Documento emesso da persona fisica non titolare di partita IVA.",
+  "lines": [
+    {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
+      "title": "Realizzazione e pubblicazione piattaforma web",
+      "desc": "Progettazione e realizzazione del sito web.",
+      "qty": 1,
+      "price": 0
+    },
+    {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
+      "title": "Configurazione tecnica e messa online",
+      "desc": "Configurazione tecnica del sito, verifica delle funzionalità, configurazione SSL, ottimizzazione tecnica e interventi di messa in produzione,",
+      "qty": 1,
+      "price": 50
+    },
+    {
+      "vat": 0,
+      "discount": 0,
+      "natura": "",
+      "title": "Consulenza digitale a 360° e realizzazione piattaforma",
+      "desc": "Analisi completa del progetto, definizione della strategia digitale e commerciale, organizzazione dell’offerta, studio dell’esperienza utente, consulenza su contenuti e immagine coordinata, progettazione, realizzazione e pubblicazione della piattaforma web.",
+      "qty": 1,
+      "price": 0
+    }
+  ],
+  "createdAt": "2026-09-09T02:58:18.068Z",
+  "updatedAt": "2026-09-09T03:01:31.920Z",
+  "ownerEmail": "admin@overeye.net",
+  "ownerSlug": "admin"
+}
